@@ -50,7 +50,7 @@ function Menu() {
       </div>
 
       <Navbar className="nav" dark expand="md">
-        <NavbarBrand href="/">SEBAHATTIN OZDEMIR</NavbarBrand>
+        <NavbarBrand href="/">STORE OF ERSİN</NavbarBrand>
         <div className="container text-white">
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
