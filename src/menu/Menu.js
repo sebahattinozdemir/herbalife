@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./Menu.css"
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import CallIcon from '@material-ui/icons/Call';
+import SearchIcon from '@material-ui/icons/Search';
 import {
   Collapse,
   Navbar,
@@ -33,7 +36,7 @@ function Menu() {
                 src="https://wooticaret.com/herbalife/wp-content/uploads/2020/10/logo.png"
               />
             </div>
-            <div className="col-9">
+            <div className="col-md-6 col-sm-6 col-12">
             
                 <form class="form-inline">
                   <input
@@ -49,14 +52,14 @@ function Menu() {
         </div>
       </div>
 
-      <Navbar className="nav" dark expand="md">
-        <NavbarBrand href="/">STORE OF ERSİN</NavbarBrand>
+      <Navbar className="nav" dark expand="md" style={{paddingTop:"0px",paddingBottom:"0px",height:"3rem"}}>
+        
         <div className="container text-white">
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem >
-                <Link className="text-decoration-none btn text-white menu-item" to="/">
+                <Link className="text-decoration-none btn text-white menu-item" to="/" style={{backgroundColor:"black"}}>
                   ANASAYFA
                 </Link>
               </NavItem>
@@ -65,7 +68,7 @@ function Menu() {
                   className="text-decoration-none btn text-white menu-item"
                   to="/magaza"
                 >
-                  TUM URUNLER
+                  TÜM ÜRÜNLER
                 </Link>
               </NavItem>
               <NavItem>
@@ -82,7 +85,7 @@ function Menu() {
                   className="text-decoration-none btn text-white menu-item"
                   to="/vucut-kitle-endeksi"
                 >
-                  VUCUT KITLE ENDEKSI
+                  VÜCUT KİTLE İNDEKSİ
                 </Link>
               </NavItem>
               <NavItem>
@@ -98,18 +101,18 @@ function Menu() {
                   className="text-decoration-none btn text-white menu-item"
                   to="/iletisim"
                 >
-                  ILETISIM
+                  İLETİŞİM
                 </Link>
               </NavItem>
             </Nav>
 
             <NavbarText className="text-white">
-             
-              <p className="px-3 my-2" title="7/24 | Siparis Hizmeti" style={{borderRight:'1px solid white'}}> 7/24</p>
+              
+              <p className="px-3 my-2" title="7/24 | Siparis Hizmeti" style={{borderRight:'1px solid white'}}><AccessTimeIcon/> 7/24</p>
             </NavbarText>
             
             <NavbarText>
-               <p className="btn  px-3 my-2 text-white" data-toggle="tooltip" title=" 0542 458 78 78"> 0542 458 78 78</p>
+               <p className="btn  px-3 my-2 text-white" data-toggle="tooltip" title=" 0542 458 78 78"><CallIcon/> 0542 458 78 78</p>
             </NavbarText>
           </Collapse>
         </div>

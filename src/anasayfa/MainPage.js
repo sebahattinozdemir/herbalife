@@ -7,22 +7,38 @@ function MainPage() {
       <div className="w-100 mt-3">
         <div className="container">
           <div className="row">
-            <div className="col-4">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
               <p>
-                <span style={{ fontSize: "large" }}>
+              <img
+              className="img-fluid"
+              style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
+              src="https://herbaldamla.com/wp-content/uploads/2020/10/user-heart-line.png"
+            ></img>
+                <span style={{ fontSize: "medium" }}>
                   Ücretsiz <strong>Yaşam koçu</strong> desteği
                 </span>
               </p>
             </div>
-            <div className="col-4">
-              <p style={{ fontSize: "large" }}>
-                Sebahattin Ozdemir Herbalife Distrubutoru
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+              <p style={{ fontSize: "medium" }}>
+              <img
+              className="img-fluid"
+              style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
+              src="https://herbaldamla.com/wp-content/uploads/2020/10/secure-payment-line.png"
+            ></img>
+                Ersin Er Herbalife Distrubutoru
               </p>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+
               <p>
-                <span style={{ fontSize: "large" }}>
-                  <strong>Türkiye ‘nin</strong>her yerine kargo
+              <img
+              className="img-fluid"
+              style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
+              src="https://herbaldamla.com/wp-content/uploads/2020/10/archive-line.png"
+            ></img>
+                <span style={{ fontSize: "medium" }}>
+                  <strong>Türkiye ‘nin</strong> her yerine kargo
                 </span>
               </p>
             </div>
@@ -33,35 +49,41 @@ function MainPage() {
       <Carousel />
       <div className="container mt-2">
         <div className="row">
-          <div className="col-6">
+          <div className="col-md-6 col-sm-6 col-12 mb-2">
             <img
+              
               className="img-fluid"
+              style={{height:"12rem"}}
               src="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-kadinlar-icin-urunler.jpg"
             ></img>
           </div>
-          <div className="col-6">
+          
+          <div className="col-md-6 col-sm-6 col-12">
             <img
               className="img-fluid"
+              style={{height:"12rem"}}
               src="https://herbaldamla.com/wp-content/uploads/2020/10/herbalife-erkekler-icin-urunler.jpg"
             ></img>
           </div>
         </div>
 
         <div className="row mt-3">
-          <div className="col-3">
-            <div class="card p-3" style={{ backgroundColor: "#f5f0da" }}>
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
+            <div class="card" style={{ backgroundColor: "#f5f0da",height:"15rem" }}>
               <h5 class="card-header">Özel Setler</h5>
               <div class="card-body">
                 <p class="card-text">
-                  Her bünyeye uygun özel setlerimize göz atın!.
+                Beslenme hedeflerinize ulaşmanıza yardımcı olmak için tasarlandı.
                 </p>
+
+
                 <a href="#" class="btn btn-light text-success">
-                  Tumunu Gor
+                  Tümünü Gör
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white">
+          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
             <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -180,8 +202,8 @@ function MainPage() {
         </div>
 
         <div className="row mt-3">
-          <div className="col-3">
-            <div class="card" style={{ backgroundColor: "#81bac3" }}>
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
+            <div class="card" style={{ backgroundColor: "#81bac3",height:"15rem" }}>
               <h5 class="card-header">Kilo Yönetimi</h5>
               <div class="card-body">
                 <p class="card-text">
@@ -189,12 +211,12 @@ function MainPage() {
                   tasarlandı.
                 </p>
                 <a href="#" class="btn btn-light text-success">
-                  Tumunu Gor
+                  Tümünü Gör
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white">
+          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -313,8 +335,8 @@ function MainPage() {
         </div>
 
         <div className="row mt-3">
-          <div className="col-3">
-            <div class="card" style={{ backgroundColor: "#bcc6be" }}>
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
+            <div class="card" style={{ backgroundColor: "#bcc6be",height:"15rem" }}>
               <h5 class="card-header">Kişisel Bakım</h5>
               <div class="card-body">
                 <p class="card-text">
@@ -322,12 +344,12 @@ function MainPage() {
                   saç bakımı için uzman çözümler sunar.
                 </p>
                 <a href="#" class="btn btn-light text-success">
-                  Tumunu Gor
+                  Tümünü Gör
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white">
+          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -446,8 +468,8 @@ function MainPage() {
         </div>
 
         <div className="row mt-3">
-          <div className="col-3">
-            <div class="card" style={{ backgroundColor: "#9ec1a3" }}>
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
+            <div class="card" style={{ backgroundColor: "#9ec1a3",height:"15rem" }}>
               <h5 class="card-header">Takviye Edici Gıdalar</h5>
               <div class="card-body">
                 <p class="card-text">
@@ -455,12 +477,12 @@ function MainPage() {
                   sağlamak için geliştirilmiştir.
                 </p>
                 <a href="#" class="btn btn-light text-success">
-                  Tumunu Gor
+                  Tümünü Gör
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white">
+          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -578,7 +600,7 @@ function MainPage() {
           </div>
         </div>
         <div className="row mt-3">
-          <div className="col-3">
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
             <div class="card" style={{ backgroundColor: "#70a9a2" }}>
               <h5 class="card-header">Shaker & Suluklar</h5>
               <div class="card-body">
@@ -587,12 +609,12 @@ function MainPage() {
                   ürünler.
                 </p>
                 <a href="#" class="btn btn-light text-success">
-                  Tumunu Gor
+                  Tümünü Gör
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white">
+          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -714,27 +736,43 @@ function MainPage() {
       <div className="w-100 pt-5">
         <div className="container">
           <div className="row">
-            <div className="col-3">
-              <h4>Güvenli Ödeme</h4>
-              <p className="font-weight-light" style={{ fontSize: "large" }}>
+            <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+              <h5><img
+              className="img-fluid"
+              style={{width:"25px",height:"25px",marginRight:"0.5rem"}}
+              src="https://herbaldamla.com/wp-content/uploads/2020/10/secure-payment-line.png"
+            ></img> Güvenli Ödeme</h5>
+              <p className="font-weight-light" style={{ fontSize: "medium" }}>
                 Web sitemiz SSL sertifikalıdır. Tüm bilgileriniz şifrelenir.
               </p>
             </div>
-            <div className="col-3">
-              <h4>7/24 Destek</h4>
-              <p className="font-weight-light" style={{ fontSize: "large" }}>
+            <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+              <h5><img
+              className="img-fluid"
+              style={{width:"25px",height:"25px",marginRight:"0.5rem"}}
+              src="https://herbaldamla.com/wp-content/uploads/2020/10/user-heart-line.png"
+            ></img> 7/24 Destek</h5>
+              <p className="font-weight-light" style={{ fontSize: "medium" }}>
                 Bize günün her saatinde ulaşabilir ve destek alabilirsiniz.
               </p>
             </div>
-            <div className="col-3">
-              <h4>Ücretsiz İade</h4>
-              <p className="font-weight-light" style={{ fontSize: "large" }}>
+            <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+              <h5><img
+              className="img-fluid"
+              style={{width:"25px",height:"25px",marginRight:"0.5rem"}}
+              src="https://herbaldamla.com/wp-content/uploads/2020/10/arrow-go-back-line.png"
+            ></img> Ücretsiz İade</h5>
+              <p className="font-weight-light" style={{ fontSize: "medium" }}>
                 Ürünlerimizi koşulsuz şartsız geri iade edebilirsiniz.
               </p>
             </div>
-            <div className="col-3">
-              <h4>Güvenli Teslimat</h4>
-              <p className="font-weight-light" style={{ fontSize: "large" }}>
+            <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+              <h5><img
+              className="img-fluid"
+              style={{width:"25px",height:"25px",marginRight:"0.5rem"}}
+              src="https://herbaldamla.com/wp-content/uploads/2020/10/archive-line.png"
+            ></img> Güvenli Teslimat</h5>
+              <p className="font-weight-light" style={{ fontSize: "medium" }}>
                 Siparişlerinizi özenle paketliyor ve kargoluyoruz.
               </p>
             </div>

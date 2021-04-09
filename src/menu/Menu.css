@@ -9,3 +9,12 @@
 .menu-item:focus{
     background-color: #333;
 }
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 1200px) {
+    .nav{
+        height: auto !important;
+    }
+
+
+}

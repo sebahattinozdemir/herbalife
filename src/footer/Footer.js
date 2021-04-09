@@ -1,3 +1,4 @@
+import "./Footer.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -7,49 +8,49 @@ function Footer() {
       <div className="container">
         <hr />
         <div className="row p-3">
-          <div className="col-4">
+          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <p
               className="font-weight-bold text-dark"
               style={{ fontSize: "large" }}
             >
               Hakkımızda
             </p>
-            <p className="text-dark">
+            <p className="text-dark" style={{fontSize:"small",paddingRight:"2rem",textAlign:"justify"}}>
               1980’de kurulan Herbalife Nutrition, günümüzde 8.000 aşkın
               çalışanıyla 90’dan fazla ülkede faaliyet göstermektedir.
             </p>
           </div>
-          <div className="col-4 p-1">
+          <div className="col-lg-4 col-md-6 col-sm-6 col-12 p-1">
             <p
               className="font-weight-bold text-dark"
               style={{ fontSize: "large" }}
             >
-              One Cikan Kategoriler
+              Öne Çıkan Kategoriler
             </p>
             <ul className="list-group">
-              <li style={{ listStyleType: "none",borderBottom:'1px solid #ececec'}}>
+              <li >
                 <Link className="text-decoration-none btn-link" to="/">
                   Sporcu Beslenmesi
                 </Link>
               </li>
-              <li style={{ listStyleType: "none",borderBottom:'1px solid #ececec' }}>
+              <li  >
                 <Link className="text-decoration-none btn-link" to="/">
                   Shaker / Suluklar
                 </Link>
               </li>
-              <li style={{ listStyleType: "none",borderBottom:'1px solid #ececec' }}>
+              <li  >
                 <Link className="text-decoration-none btn-link" to="/">
-                  Kisisel Bakim Urunleri
+                  Kişisel Bakım Ürünleri
                 </Link>
               </li>
-              <li style={{ listStyleType: "none",borderBottom:'1px solid #ececec' }}>
+              <li  >
                 <Link className="text-decoration-none btn-link" to="/">
-                  Atistirmaliklar
+                  Atıştırmalıklar
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="col-4">
+          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
             <p
               className="font-weight-bold text-dark"
               style={{ fontSize: "large" }}
@@ -58,24 +59,24 @@ function Footer() {
             </p>
 
             <ul className="list-group">
-              <li style={{ listStyleType: "none",borderBottom:'1px solid #ececec'}}>
+              <li >
                 <Link className="text-decoration-none btn-link" to="/">
-                  Mesafali Satis Sozlesmesi
+                  Mesafeli Satis Sözleşmesi
                 </Link>
               </li>
-              <li style={{ listStyleType: "none",borderBottom:'1px solid #ececec' }}>
+              <li>
                 <Link className="text-decoration-none btn-link" to="/">
                   Gizlilik Politikasi
                 </Link>
               </li>
-              <li style={{ listStyleType: "none",borderBottom:'1px solid #ececec' }}>
+              <li  >
                 <Link className="text-decoration-none btn-link" to="/">
-                  Sik Sorulan Sorular
+                  Sık Sorulan Sorular
                 </Link>
               </li>
-              <li style={{ listStyleType: "none",borderBottom:'1px solid #ececec' }}>
+              <li  >
                 <Link className="text-decoration-none btn-link" to="/">
-                  Hakkimizda
+                  Hakkımızda
                 </Link>
               </li>
             </ul>
@@ -83,21 +84,23 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-100 footer-alt p-4">
+      <div className="w-100 footer-alt ">
         <div className="w-100">
           <div className="row">
-            <div className="col-4 text-white">
+            
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12 text-white">
               <img
                 className="img-fluid"
+                style={{float:"left",marginLeft:"3rem"}}
                 src="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-logo-beyaz.png"
               />
             </div>
-            <div className="col-4 text-center text-white">
-              <p className="mt-4">© 2021 Bağımsız Herbalife Üyesi</p>
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12 text-center text-white">
+              <p className="mt-4" style={{float:"center",margin:"auto"}}>© 2021 Bağımsız Herbalife Üyesi</p>
             </div>
 
-            <div className="col-4 text-center text-white">
-              <p className="mt-4">© 2021 SEBERTECH</p>
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12 text-center text-white">
+              <p className="mt-4" style={{float:"right",marginRight:"3rem"}}>© 2021 Se<strong>B</strong>er Tech</p>
             </div>
           </div>
         </div>
