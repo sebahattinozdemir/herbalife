@@ -16,6 +16,9 @@ import KitleEndeks from "./kitle-endeksi/KitleEndeks";
 import Hakkimizda from "./hakkimizda/Hakkimizda";
 import Iletisim from "./iletisim/Iletisim";
 import Blog from "./blog/Blog";
+import Sozlesme from "./satis-sozlesmesi/Sozlesme"
+import Gizlilik from "./gizlilik/Gizlilik";
+import Sorular from "./sorular/Sorular";
 
 function App() {
   return (
@@ -31,6 +34,10 @@ function App() {
             <Route exact path="/vucut-kitle-endeksi" component={KitleEndeks} />
             <Route exact path="/hakkimizda" component={Hakkimizda} />
             <Route exact path="/iletisim" component={Iletisim} />
+            <Route exact path="/mesafeli-satis-sozlesmesi" component={Sozlesme} />
+            <Route exact path="/gizlilik-politikasi" component={Gizlilik} />
+            <Route exact path="/sik-sorulan-sorular" component={Sorular} />
+            
        </Switch>
        
         

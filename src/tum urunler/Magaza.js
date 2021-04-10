@@ -12,7 +12,6 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
   },
   nested: {
@@ -34,10 +33,10 @@ function Magaza() {
         <h3>ANASAYFA / MAGAZA</h3>
       </div>
 
-      <div className="row py-4 border border-5 border-danger">
-        <div className="container bg-light border border-5">
+      <div className="row py-4">
+        <div className="container bg-light">
           <div className="row">
-            <div className="col-3 p-1 text-center border border-5 border-danger">
+            <div className="col-lg-3 col-xs-12 p-1 text-center">
               <List
                 component="nav"
                 aria-labelledby="nested-list-subheader"
@@ -54,7 +53,7 @@ function Magaza() {
                 }
                 className={classes.root}
               >
-                <ListItem button onClick={()=>setOpenKilo(!openKilo)}>
+                <ListItem button onClick={() => setOpenKilo(!openKilo)}>
                   <ListItemText primary="Kılo Yonetımı" />
                   {openKilo ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
@@ -77,7 +76,7 @@ function Magaza() {
                   <ListItemText primary="Kisisel Bakim" />
                 </ListItem>
 
-                <ListItem button onClick={()=>setOpenTakviye(!openTakviye)}>
+                <ListItem button onClick={() => setOpenTakviye(!openTakviye)}>
                   <ListItemText primary="Takviye Edici Gidalar" />
                   {openTakviye ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
@@ -90,8 +89,7 @@ function Magaza() {
                   </List>
                 </Collapse>
 
-                
-                <ListItem button onClick={()=>setOpenTanitim(!openTanitim)}>
+                <ListItem button onClick={() => setOpenTanitim(!openTanitim)}>
                   <ListItemText primary="Tanitim Urunler" />
                   {openTanitim ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
@@ -103,19 +101,36 @@ function Magaza() {
                     </ListItem>
                   </List>
                 </Collapse>
-
-
-            
-        
-
               </List>
             </div>
-            <div className="col-9 border border-5">
-              <div className="col-12 border border-5 border-danger">
-                <div className="col-3 border border-5">
+            <div className="col-lg-9 col-xs-12 ">
+              <div className="row">
+                <div className="col-lg-3 col-sm-4 col-xs-6">
+                  
                   <div class="card-deck">
                     <div class="card">
-                      <img class="card-img-top" src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg" alt="urun adi" />
+                      <img
+                        class="card-img-top"
+                        src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
+                        alt="urun adi"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title text-muted">urun tipi</h5>
+                        <p class="card-text">urun ismi</p>
+                        <p class="card-text font-weight-bold">urun fiyati</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-3 col-sm-4 col-xs-6">
+                  <div class="card-deck">
+                    <div class="card">
+                      <img
+                        class="card-img-top"
+                        src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
+                        alt="urun adi"
+                      />
                       <div class="card-body">
                         <h5 class="card-title text-muted">urun tipi</h5>
                         <p class="card-text">urun ismi</p>

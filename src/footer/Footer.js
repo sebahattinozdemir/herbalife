@@ -60,17 +60,17 @@ function Footer() {
 
             <ul className="list-group">
               <li >
-                <Link className="text-decoration-none btn-link" to="/">
+                <Link className="text-decoration-none btn-link" to="/mesafeli-satis-sozlesmesi">
                   Mesafeli Satis Sözleşmesi
                 </Link>
               </li>
               <li>
-                <Link className="text-decoration-none btn-link" to="/">
+                <Link className="text-decoration-none btn-link" to="/gizlilik-politikasi">
                   Gizlilik Politikasi
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none btn-link" to="/">
+                <Link className="text-decoration-none btn-link" to="/sik-sorulan-sorular">
                   Sık Sorulan Sorular
                 </Link>
               </li>
