@@ -1,0 +1,23 @@
+
+.blogyazi{
+    padding: 1% !important;
+    text-align:justify !important;
+    font-size: small !important;
+   
+}
+.blogbaslik{
+    font-weight: bold !important;
+    font-size: medium !important;
+   
+}
+.card{
+    width: 100% !important;
+    height: 10rem !important;
+    padding: 1%;
+    border-radius: 1rem;
+    
+}
+.duyuruholder{
+    padding-top: 1rem;
+    
+}
