@@ -1,6 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 
 function KitleEndeks() {
+
+  const [kilo, setKilo] = useState('')
+  const [boy, setBoy] = useState('')
+  const [indeks, setİndeks] = useState('')
+  const [sonuc, setSonuc] = useState('')
+  
+
+
+
+  const calculateBmi = (e)=>{
+    e.preventDefault();
+    setİndeks(kilo/((boy/100)*(boy/100)));
+    if(indeks<17.5){
+      setSonuc("Aşırı Zayıf");
+    }
+    else if(indeks>=17.5 && indeks<19.1){
+      setSonuc("Zayıf");
+    }
+    else if(indeks>=19.1 && indeks<25.8){
+      setSonuc("Normal (ideal kilo)");
+    }
+    else if(indeks>=25.8 && indeks<27.3){
+      setSonuc("Biraz kilo fazlası");
+    }
+    else if(indeks>=27.3 && indeks<32.3){
+      setSonuc("Fazla kilo");
+    }
+    else if(indeks>=32.3 && indeks<34.9){
+      setSonuc("Çok fazla kilolu");
+    }
+    else {
+      setSonuc("Süper aşırı kilolu");
+    }
+  }
+
   return (
     <div className="container border border-5">
       <div className="row">
@@ -18,6 +54,8 @@ function KitleEndeks() {
                   class="form-control"
                   id="kilo"
                   placeholder="Kilonuzu Yazin - ornek: 85"
+                  value={kilo}
+                  onChange={event => setKilo(event.target.value)}
                 />
               </div>
               <div class="form-group">
@@ -29,20 +67,24 @@ function KitleEndeks() {
                   class="form-control"
                   id="boy"
                   placeholder="Boyunuzu Girin Yazin - ornek: 177"
+                  value={boy}
+                  onChange={event => setBoy(event.target.value)}
                 />
               </div>
 
-              <button type="submit" class="btn btn-success">
+    
+
+              <button class="btn btn-success" onClick={calculateBmi}>
                 Hesapla
               </button>
 
               <div class="form-group mt-3">
                 <label className="font-weight-bold" for="text">
-                  Beden Kitle Endeksiniz
+                  Beden Kitle Endeksiniz 
                 </label>
 
                 <div class="alert alert-warning p-2" role="alert">
-                  This is a warning alert—check it out!
+                   {indeks}
                 </div>
               </div>
 
@@ -52,7 +94,7 @@ function KitleEndeks() {
                 </label>
 
                 <div class="alert alert-warning p-2" role="alert">
-                  This is a warning alert—check it out!
+                  {sonuc}
                 </div>
               </div>
             </form>

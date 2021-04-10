@@ -4,9 +4,11 @@
 
 }
 .list-group li{
-  list-style-type: "> ";
+ 
+  list-style-image: url("https://herbaldamla.com/wp-content/uploads/2021/01/favicon.png");
   border-bottom:1px solid #ECECEC;
   margin-left: 2rem !important;
+  
   
 }
 

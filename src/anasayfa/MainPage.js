@@ -15,8 +15,7 @@ function MainPage() {
               style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
               src="https://herbaldamla.com/wp-content/uploads/2020/10/user-heart-line.png"
             ></img>
-                <span style={{ fontSize: "medium" }}>
-                  Ücretsiz <strong>Yaşam koçu</strong> desteği &nbsp;
+                <span style={{ fontSize: "medium" }}>Ücretsiz <strong>Yaşam koçu</strong> desteği &nbsp;
                 </span>
               </p>
             </div>
@@ -35,11 +34,11 @@ function MainPage() {
               <p>
               <img
               className="img-fluid"
-              style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
+              style={{width:"20px",height:"20px",marginRight:"0.6rem"}}
               src="https://herbaldamla.com/wp-content/uploads/2020/10/archive-line.png"
             ></img>
                 <span style={{ fontSize: "medium" }}>
-                  <strong>Türkiye ‘nin</strong> her yerine kargo
+                <strong>Türkiye ‘nin</strong> her yerine kargo
                 </span>
               </p>
             </div>
