@@ -15,6 +15,9 @@
     .nav{
         height: auto !important;
     }
+    .search{
+        display: none !important;
+    }
 
 
 }

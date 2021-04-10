@@ -30,13 +30,13 @@ function Menu() {
       <div className="w-100 mt-4">
         <div className="container">
           <div className="row">
-            <div className="col-3">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
               <img
                 className="img-fluid"
                 src="https://wooticaret.com/herbalife/wp-content/uploads/2020/10/logo.png"
               />
             </div>
-            <div className="col-md-6 col-sm-6 col-12">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12 search">
             
                 <form class="form-inline">
                   <input
@@ -51,6 +51,7 @@ function Menu() {
           </div>
         </div>
       </div>
+      <br/>
 
       <Navbar className="nav" dark expand="md" style={{paddingTop:"0px",paddingBottom:"0px",height:"3rem"}}>
         

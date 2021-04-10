@@ -15,14 +15,14 @@ function Footer() {
             >
               Hakkımızda
             </p>
-            <p className="text-dark" style={{fontSize:"small",paddingRight:"2rem",textAlign:"justify"}}>
+            <p className="text-dark" style={{fontSize:"small",textAlign:"justify"}}>
               1980’de kurulan Herbalife Nutrition, günümüzde 8.000 aşkın
               çalışanıyla 90’dan fazla ülkede faaliyet göstermektedir.
             </p>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-6 col-12 p-1">
             <p
-              className="font-weight-bold text-dark"
+              className="font-weight-bold text-dark ml-3"
               style={{ fontSize: "large" }}
             >
               Öne Çıkan Kategoriler
@@ -50,9 +50,9 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+          <div className="col-lg-4 col-md-6 col-sm-6 col-12 p-1">
             <p
-              className="font-weight-bold text-dark"
+              className="font-weight-bold text-dark ml-3"
               style={{ fontSize: "large" }}
             >
               Bilgilendirme

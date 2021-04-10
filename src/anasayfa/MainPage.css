@@ -1,0 +1,31 @@
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 1024px) {
+    .üst-bilgi{
+        text-align: center !important;
+
+    }
+    .bg-white{
+        height:15rem !important;
+        margin-left:0.9rem !important;
+        margin-right:0.9rem !important;
+    }
+    .card-text{
+        font-size: small !important;
+    }
+    .card-header{
+        font-size: large !important;
+    }
+    
+  }
+
+  /* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 700px) {
+  
+    .card-text{
+        font-size: medium !important;
+    }
+    .card-header{
+        font-size: large !important;
+    }
+    
+  }

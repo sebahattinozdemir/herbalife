@@ -6,6 +6,7 @@
 .list-group li{
   list-style-type: "> ";
   border-bottom:1px solid #ECECEC;
+  margin-left: 2rem !important;
   
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import "./MainPage.css";
 import Carousel from "../carousel/Carousel";
 
 function MainPage() {
@@ -7,29 +8,29 @@ function MainPage() {
       <div className="w-100 mt-3">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <p>
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12 üst-bilgi">
+              <p style={{ fontSize: "medium" }}>
               <img
               className="img-fluid"
               style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
               src="https://herbaldamla.com/wp-content/uploads/2020/10/user-heart-line.png"
             ></img>
                 <span style={{ fontSize: "medium" }}>
-                  Ücretsiz <strong>Yaşam koçu</strong> desteği
+                  Ücretsiz <strong>Yaşam koçu</strong> desteği &nbsp;
                 </span>
               </p>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12 üst-bilgi">
               <p style={{ fontSize: "medium" }}>
               <img
               className="img-fluid"
               style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
               src="https://herbaldamla.com/wp-content/uploads/2020/10/secure-payment-line.png"
             ></img>
-                Ersin Er Herbalife Distrubutoru
+                <strong>Ersin Er</strong> Herbalife Distribütörü
               </p>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-12 üst-bilgi">
 
               <p>
               <img
@@ -47,6 +48,7 @@ function MainPage() {
       </div>
 
       <Carousel />
+      <br/>
       <div className="container mt-2">
         <div className="row">
           <div className="col-md-6 col-sm-6 col-12 mb-2">
@@ -83,7 +85,7 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
             <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -216,7 +218,7 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -349,7 +351,7 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -482,7 +484,7 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>
@@ -614,7 +616,7 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <div className="col-9 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
               <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
                 <div className="w-100" style={{ position: "relative" }}>

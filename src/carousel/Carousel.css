@@ -1,0 +1,50 @@
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 1220px) {
+    .react-player{
+        width:22rem !important;
+        height: 15rem !important;
+        margin: auto !important;
+        margin-bottom: -2rem !important;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 1050px) {
+    .react-player{
+        width:19rem !important;
+        height: 15rem !important;
+        margin: auto !important;
+        padding: 1rem !important;
+        margin-bottom: -2rem !important;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 700px) {
+    .react-player{
+        width:19rem !important;
+        height: 15rem !important;
+        margin: auto !important;
+        margin-bottom: -2rem !important;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 500px) {
+    .react-player{
+        width:22rem !important;
+        height: 15rem !important;
+        margin: auto !important;
+        margin-bottom: -2rem !important;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 400px) {
+    .react-player{
+        width:20rem !important;
+        height: 15rem !important;
+        margin: auto !important;
+        margin-bottom: -2rem !important;
+    }
+}
