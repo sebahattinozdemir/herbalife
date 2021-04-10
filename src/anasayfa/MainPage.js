@@ -60,7 +60,7 @@ function MainPage() {
             ></img>
           </div>
           
-          <div className="col-md-6 col-sm-6 col-12">
+          <div className="col-md-6 col-sm-6 col-12"> 
             <img
               className="img-fluid"
               style={{height:"12rem"}}
