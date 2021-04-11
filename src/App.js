@@ -19,6 +19,7 @@ import Blog from "./blog/Blog";
 import Sozlesme from "./satis-sozlesmesi/Sozlesme"
 import Gizlilik from "./gizlilik/Gizlilik";
 import Sorular from "./sorular/Sorular";
+import Admin from "./admin/Admin";
 
 function App() {
   return (
@@ -39,9 +40,9 @@ function App() {
             <Route exact path="/sik-sorulan-sorular" component={Sorular} />
             
        </Switch>
-       
-        
 
+       <Route exact path="/admin" component={Admin} />
+       
         <Footer/>
       </div>
     </BrowserRouter>
