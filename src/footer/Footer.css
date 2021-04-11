@@ -1,9 +1,9 @@
-.btn-link{
+.footer-btn-link{
   color:black !important;
   font-size: small !important;
 
 }
-.list-group li{
+.footer-list-group li{
  
   list-style-image: url("https://herbaldamla.com/wp-content/uploads/2021/01/favicon.png");
   border-bottom:1px solid #ECECEC;
@@ -13,7 +13,7 @@
 }
 
 
-.list-group li:hover a:not(.active){
+.footer-list-group li:hover a:not(.active){
     color:#7ac043 !important;
     text-decoration: none !important;
    

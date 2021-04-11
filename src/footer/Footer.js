@@ -27,24 +27,24 @@ function Footer() {
             >
               Öne Çıkan Kategoriler
             </p>
-            <ul className="list-group">
+            <ul className="list-group footer-list-group">
               <li >
-                <Link className="text-decoration-none btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/">
                   Sporcu Beslenmesi
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/">
                   Shaker / Suluklar
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/">
                   Kişisel Bakım Ürünleri
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/">
                   Atıştırmalıklar
                 </Link>
               </li>
@@ -58,24 +58,24 @@ function Footer() {
               Bilgilendirme
             </p>
 
-            <ul className="list-group">
+            <ul className="list-group footer-list-group">
               <li >
-                <Link className="text-decoration-none btn-link" to="/mesafeli-satis-sozlesmesi">
+                <Link className="text-decoration-none footer-btn-link" to="/mesafeli-satis-sozlesmesi">
                   Mesafeli Satis Sözleşmesi
                 </Link>
               </li>
               <li>
-                <Link className="text-decoration-none btn-link" to="/gizlilik-politikasi">
+                <Link className="text-decoration-none footer-btn-link" to="/gizlilik-politikasi">
                   Gizlilik Politikasi
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none btn-link" to="/sik-sorulan-sorular">
+                <Link className="text-decoration-none footer-btn-link" to="/sik-sorulan-sorular">
                   Sık Sorulan Sorular
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/">
                   Hakkımızda
                 </Link>
               </li>

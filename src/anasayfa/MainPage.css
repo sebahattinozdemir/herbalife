@@ -1,3 +1,7 @@
+.card{
+    height:15rem !important;
+}
+
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 1024px) {
     .üst-bilgi{
@@ -5,7 +9,7 @@
 
     }
     .bg-white{
-        height:15rem !important;
+       
         margin-left:0.9rem !important;
         margin-right:0.9rem !important;
     }
@@ -15,6 +19,7 @@
     .card-header{
         font-size: large !important;
     }
+    
     
   }
 

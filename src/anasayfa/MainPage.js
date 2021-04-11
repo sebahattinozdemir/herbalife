@@ -70,7 +70,7 @@ function MainPage() {
 
         <div className="row mt-3">
           <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
-            <div class="card" style={{ backgroundColor: "#f5f0da",height:"15rem" }}>
+            <div class="card" style={{ backgroundColor: "#f5f0da"}}>
               <h5 class="card-header">Özel Setler</h5>
               <div class="card-body">
                 <p class="card-text">
@@ -204,7 +204,7 @@ function MainPage() {
 
         <div className="row mt-3">
           <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
-            <div class="card" style={{ backgroundColor: "#81bac3",height:"15rem" }}>
+            <div class="card" style={{ backgroundColor: "#81bac3" }}>
               <h5 class="card-header">Kilo Yönetimi</h5>
               <div class="card-body">
                 <p class="card-text">
@@ -337,7 +337,7 @@ function MainPage() {
 
         <div className="row mt-3">
           <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
-            <div class="card" style={{ backgroundColor: "#bcc6be",height:"15rem" }}>
+            <div class="card" style={{ backgroundColor: "#bcc6be"}}>
               <h5 class="card-header">Kişisel Bakım</h5>
               <div class="card-body">
                 <p class="card-text">
@@ -470,7 +470,7 @@ function MainPage() {
 
         <div className="row mt-3">
           <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
-            <div class="card" style={{ backgroundColor: "#9ec1a3",height:"15rem" }}>
+            <div class="card" style={{ backgroundColor: "#9ec1a3" }}>
               <h5 class="card-header">Takviye Edici Gıdalar</h5>
               <div class="card-body">
                 <p class="card-text">
