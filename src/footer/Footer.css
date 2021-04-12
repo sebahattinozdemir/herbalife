@@ -5,13 +5,12 @@
 }
 .footer-list-group li{
  
-  list-style-image: url("https://herbaldamla.com/wp-content/uploads/2021/01/favicon.png");
+  list-style-image: url("./favicon_small.png");
   border-bottom:1px solid #ECECEC;
   margin-left: 2rem !important;
   
   
 }
-
 
 .footer-list-group li:hover a:not(.active){
     color:#7ac043 !important;
@@ -19,4 +18,32 @@
    
 
 }
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 700px) {
+  .footer-nutrition{
+    display: block !important;
+    margin:auto !important;
+    margin-bottom: -1rem !important;
+
+  }
+  .bagimsizuye{
+    
+    float:center !important;
+    margin:auto !important;
+    font-size: small !important;
+    
+  
+  }
+  .sebertech{
+    float:center !important;
+    margin:auto !important;
+    font-size: small !important;
+    
+   
+  }
+  
+}
+
+
 

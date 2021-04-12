@@ -1,0 +1,30 @@
+/* On screens that are less than 800px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+   
+    
+    .harita{
+        width:100% !important;
+        height:30rem !important;
+        margin-bottom: 5rem !important;
+  
+      }
+      .googleharita{
+        width:100% !important;
+        height:25rem !important;
+        margin-bottom: 5rem !important;
+        
+      }
+      .iletisim-div{
+          margin-top:-9rem !important;
+      }  
+      .iletisim-adres-bilgi{
+        font-size: large !important;
+      }
+      .iletisim-adres{
+        font-size: medium !important;
+      }
+      .iletisim-merak{
+          font-size: large !important;
+      }
+      
+}

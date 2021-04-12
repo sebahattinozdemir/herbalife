@@ -86,21 +86,21 @@ function Footer() {
       </div>
       <div className="w-100 footer-alt ">
         <div className="w-100">
-          <div className="row">
+          <div className="row mr-2 ml-2" >
             
             <div className="col-lg-4 col-md-6 col-sm-6 col-12 text-white">
               <img
-                className="img-fluid"
-                style={{float:"left",marginLeft:"3rem"}}
+                className="img-fluid footer-nutrition"
+               
                 src="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-logo-beyaz.png"
               />
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 col-12 text-center text-white">
-              <p className="mt-4" style={{float:"center",margin:"auto"}}>© 2021 Bağımsız Herbalife Üyesi</p>
+              <p className="mt-4 bagimsizuye" >© 2021 Bağımsız Herbalife Üyesi</p>
             </div>
 
             <div className="col-lg-4 col-md-6 col-sm-6 col-12 text-center text-white">
-              <p className="mt-4" style={{float:"right",marginRight:"3rem"}}>© 2021 Se<strong>B</strong>er Tech</p>
+              <p className="mt-4 sebertech" >© 2021 SeBer Tech</p>
             </div>
           </div>
         </div>
@@ -109,5 +109,6 @@ function Footer() {
     </div>
   );
 }
+
 
 export default Footer;

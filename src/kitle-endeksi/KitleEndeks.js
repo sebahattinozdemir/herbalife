@@ -1,3 +1,4 @@
+import "./KitleEndeks.css";
 import React, { useEffect, useState } from "react";
 
 
@@ -7,14 +8,23 @@ function KitleEndeks() {
   const [boy, setBoy] = useState('')
   const [indeks, setİndeks] = useState('')
   const [sonuc, setSonuc] = useState('')
-  
 
+
+  
+  const sifirla = (e)=>{
+    e.preventDefault();
+    setKilo("")
+    setBoy("")
+    setİndeks("")
+    setSonuc("")
+  }
 
 
   const calculateBmi = (e)=>{
     e.preventDefault();
-    setİndeks(kilo/((boy/100)*(boy/100)));
-    if(indeks<17.5){
+    setİndeks((kilo/((boy/100)*(boy/100))).toFixed(2));
+    
+    if(indeks<17.5 && indeks>0){
       setSonuc("Aşırı Zayıf");
     }
     else if(indeks>=17.5 && indeks<19.1){
@@ -35,13 +45,18 @@ function KitleEndeks() {
     else {
       setSonuc("Süper aşırı kilolu");
     }
+  
+    
   }
+
+  
+    
 
   return (
     <div className="container border border-5">
       <div className="row">
-        <div className="col-6">
-          <h3>Vucut Kitle Endeksi Hesaplama</h3>
+        <div className="col-md-6 col-sm-6 col-12">
+          <h3 className="kitle-index mt-4">Vücut Kitle Endeksi Hesaplama</h3>
 
           <div className="jumbotron">
             <form>
@@ -74,34 +89,42 @@ function KitleEndeks() {
 
     
 
-              <button class="btn btn-success" onClick={calculateBmi}>
+              <button class="btn btn-success" style={{width:"5rem"}} onClick={calculateBmi}>
                 Hesapla
               </button>
 
               <div class="form-group mt-3">
                 <label className="font-weight-bold" for="text">
-                  Beden Kitle Endeksiniz 
+                  Beden Kitle Endeksiniz; 
                 </label>
 
-                <div class="alert alert-warning p-2" role="alert">
-                   {indeks}
-                </div>
+                <input class="col-12" type="text" value={indeks} style={{borderRadius:"0.2rem",height:"2.5rem",backgroundColor:"#FDF8CD",border:"3px solid #E8DB6C"}}>
+                     
+                </input>
+                
               </div>
 
               <div class="form-group">
                 <label className="font-weight-bold" for="text">
-                  Bu sonuca gore
+                  Bu sonuca gore;
                 </label>
 
-                <div class="alert alert-warning p-2" role="alert">
-                  {sonuc}
-                </div>
+                <input class="col-12" type="text" value={sonuc} style={{borderRadius:"0.2rem",height:"2.5rem",backgroundColor:"#FDF8CD",border:"3px solid #E8DB6C"}}>
+                     
+                </input>
+
+      
               </div>
+
+              <button class="btn btn-success" style={{width:"5rem"}} onClick={sifirla}>
+                Sıfırla
+              </button>
+
             </form>
           </div>
         </div>
 
-        <div className="col-6">
+        <div className="col-md-6 col-sm-6 col-12">
           <div className="mt-5">
             <p className="font-weight-bold " style={{fontSize:"large"}}>Vücut Kitle İndeksi değerleri nasıl yorumlanıyor?</p>
             <p className="font-weight-light" style={{fontSize:"large"}}>
@@ -110,14 +133,14 @@ function KitleEndeks() {
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">Yetiskenler Icin</th>
+                  <th scope="col">Yetişkinler İçin</th>
                   <th scope="col">KADIN (KG/M2)	</th>
                   <th scope="col">ERKEK (KG/M2)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Anoreksi, aşırı zayıf, yüksek risk</td>
+                  <td>Anoreksi, aşırı zayıf</td>
                   <td>17.5 ve daha az</td>
                   <td></td>
                 </tr>
@@ -154,7 +177,7 @@ function KitleEndeks() {
                   <td></td>
                 </tr>
                 <tr>
-                  <td>Hastalıklı bir şekilde aşırı kilolu		</td>
+                  <td>Hastalıklı şekilde aşırı kilolu		</td>
                   <td>40 – 50</td>
                   <td></td>
                 </tr>
