@@ -103,6 +103,9 @@ function Footer() {
               <p className="mt-4 sebertech" >© 2021 SeBer Tech</p>
             </div>
 
+            
+
+            <div class="roof">
             <a
                 href="https://wa.me/+905464753883"
                 class="whatsapp_float"
@@ -110,7 +113,12 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <i class="fa fa-whatsapp whatsapp-icon"></i>
+               
             </a>
+            
+
+
+            </div>
           </div>
         </div>
       </div>

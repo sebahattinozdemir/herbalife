@@ -12,10 +12,50 @@
       font-size: 30px;
       box-shadow: 2px 2px 3px #999;
       z-index: 100;
+      
+     
+      
+  }
+  .roof{
+    background-color:green ;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    transition: 0.6s linear;
+    animation-duration: 50ms;
+    border:2px green solid;
+  }
+  
+/* The animation code */
+@keyframes roof {
+  from {background-color: green;}
+  to {background-color: white}
+}
+
+.roof {
+  animation-name: roof;
+  animation-duration: 2s;
+  
+  animation-iteration-count: infinite;
+ 
+}
+
+  .roof:hover{
+    background-color:white ;
+    
+
   }
 
   .whatsapp-icon {
-      margin-top: 16px;
+      margin-top: 16px;   
+      
+  }
+
+  .phone-icon{
+    margin-top: 16px;
   }
 
   /* for mobile */
