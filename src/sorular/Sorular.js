@@ -1,7 +1,9 @@
 import React from "react";
 import { Accordion, AccordionTab } from "primereact/accordion";
+import useDocumentTitle from "../useDocumentTitle";
 import   "./Sorular.css"
 function Sorular() {
+  useDocumentTitle('Sık Sorulan Sorular - Herbalife')
   return (
     <div className="row">
       <div className="container">

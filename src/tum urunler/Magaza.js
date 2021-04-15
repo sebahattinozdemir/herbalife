@@ -8,6 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
+import useDocumentTitle from "../useDocumentTitle";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Magaza() {
+  useDocumentTitle('Mağaza - Herbalife')
   const classes = useStyles();
   const [openKilo, setOpenKilo] = React.useState(false);
 

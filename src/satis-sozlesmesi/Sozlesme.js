@@ -1,6 +1,8 @@
 import React from "react";
+import useDocumentTitle from "../useDocumentTitle";
 
 function Sozlesme() {
+  useDocumentTitle('Satış Sözleşmesi - Herbalife')
   return (
     <div classNameName="row">
       <div className="container">

@@ -1,10 +1,19 @@
 import biz from "./whoweare.jpg"; 
 import "./Hakkimizda.css";
 import React from "react";
+import { Helmet } from 'react-helmet';
+import useDocumentTitle from '../useDocumentTitle';
+
 
 function Hakkimizda() {
+  useDocumentTitle('Hakkımızda - Herbalife')
+      
   return (
+    
+      
+    
     <div className="container">
+      
       <h3 className="mt-4">HAKKIMIZDA</h3>
 
       <div className="row mt-5">

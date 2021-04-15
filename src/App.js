@@ -21,7 +21,10 @@ import Gizlilik from "./gizlilik/Gizlilik";
 import Sorular from "./sorular/Sorular";
 import Admin from "./admin/Admin";
 
+import useDocumentTitle from './useDocumentTitle'
+
 function App() {
+  useDocumentTitle('Ersin Er - Herbalife')
   return (
     <BrowserRouter>
       <div className="app w-100">
@@ -32,7 +35,7 @@ function App() {
             <Route exact path="/" component={MainPage} />
             <Route exact path="/magaza" component={Magaza} />
             <Route exact path="/blog" component={Blog} />
-            <Route exact path="/vucut-kitle-endeksi" component={KitleEndeks} />
+            <Route exact path="/vucut-kitle-endeksi" component={KitleEndeks}  />
             <Route exact path="/hakkimizda" component={Hakkimizda} />
             <Route exact path="/iletisim" component={Iletisim} />
             <Route exact path="/mesafeli-satis-sozlesmesi" component={Sozlesme} />

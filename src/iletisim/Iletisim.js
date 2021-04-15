@@ -1,7 +1,9 @@
 import "./İletisim.css";
 import React from "react";
+import useDocumentTitle from "../useDocumentTitle";
 
 function Iletisim() {
+  useDocumentTitle('İletişim - Herbalife')
   return (
     <div>
       <div className="container">

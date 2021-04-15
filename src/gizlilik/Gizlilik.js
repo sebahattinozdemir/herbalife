@@ -1,6 +1,8 @@
 import React from "react";
+import useDocumentTitle from "../useDocumentTitle";
 
 function Gizlilik() {
+  useDocumentTitle('Gizlilik Politikası - Herbalife')
   return (
     <div className="row">
       <div className="container">

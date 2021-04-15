@@ -1,9 +1,11 @@
 import "./KitleEndeks.css";
 import İlgiliÜrün from "../ilginizi_cekebilecek_urunler/İlgi";
 import React, { useEffect, useState } from "react";
+import useDocumentTitle from "../useDocumentTitle";
 
 
 function KitleEndeks() {
+  useDocumentTitle('Vücut Kitle İndeksi - Herbalife')
 
   const [kilo, setKilo] = useState('')
   const [boy, setBoy] = useState('')

@@ -3,8 +3,10 @@ import "./Blog.css";
 import h1 from "./herbalife1.jpg";
 import h2 from "./herbalife2.jpg";
 import h3 from "./herbalife3.jpg";
+import useDocumentTitle from "../useDocumentTitle";
 
 function Blog() {
+  useDocumentTitle('Blog - Herbalife')
     return (
     <div className="container border border-5">
       <div className="row">

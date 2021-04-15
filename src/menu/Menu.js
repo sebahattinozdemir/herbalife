@@ -87,7 +87,7 @@ function Menu() {
                   TÜM ÜRÜNLER
                 </Link>
               </NavItem>
-              <NavItem>
+              <NavItem >
                 <Link
                   className="text-decoration-none btn text-white menu-item"
                   to="/blog"
@@ -99,7 +99,7 @@ function Menu() {
               <NavItem>
                 <Link
                   className="text-decoration-none btn text-white menu-item"
-                  to="/vucut-kitle-endeksi"
+                  to="/vucut-kitle-endeksi"  
                 >
                   VÜCUT KİTLE İNDEKSİ
                 </Link>
@@ -107,7 +107,7 @@ function Menu() {
               <NavItem>
                 <Link
                   className="text-decoration-none btn text-white menu-item"
-                  to="/hakkimizda"
+                  to="/hakkimizda" 
                 >
                   HAKKIMIZDA
                 </Link>
