@@ -30,7 +30,7 @@ function Magaza() {
   return (
     <div className="w-100 mx-2">
       <div className="row p-3 bg-dark text-white">
-        <h3>ANASAYFA / MAGAZA</h3>
+        <h3>ANASAYFA / MAĞAZA</h3>
       </div>
 
       <div className="row py-4">
@@ -47,37 +47,37 @@ function Magaza() {
                       style={{ fontSize: "x-large" }}
                     >
                       {" "}
-                      Urun Kategorileri
+                      Ürün Kategorileri
                     </p>
                   </ListSubheader>
                 }
                 className={classes.root}
               >
                 <ListItem button onClick={() => setOpenKilo(!openKilo)}>
-                  <ListItemText primary="Kılo Yonetımı" />
+                  <ListItemText primary="Kilo Yönetimi" />
                   {openKilo ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
 
                 <Collapse in={openKilo} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                     <ListItem button className={classes.nested}>
-                      <ListItemText primary="Atistirmalik" />
+                      <ListItemText primary="Atıştırmalık" />
                     </ListItem>
                     <ListItem button className={classes.nested}>
                       <ListItemText primary="Herbalife Shake" />
                     </ListItem>
                     <ListItem button className={classes.nested}>
-                      <ListItemText primary="Icecekler" />
+                      <ListItemText primary="İçecekler" />
                     </ListItem>
                   </List>
                 </Collapse>
 
                 <ListItem button>
-                  <ListItemText primary="Kisisel Bakim" />
+                  <ListItemText primary="Kişisel Bakım" />
                 </ListItem>
 
                 <ListItem button onClick={() => setOpenTakviye(!openTakviye)}>
-                  <ListItemText primary="Takviye Edici Gidalar" />
+                  <ListItemText primary="Takviye Edici Gıdalar" />
                   {openTakviye ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
 
@@ -90,7 +90,7 @@ function Magaza() {
                 </Collapse>
 
                 <ListItem button onClick={() => setOpenTanitim(!openTanitim)}>
-                  <ListItemText primary="Tanitim Urunler" />
+                  <ListItemText primary="Tanıtım Ürünleri" />
                   {openTanitim ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
 

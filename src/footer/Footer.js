@@ -15,7 +15,7 @@ function Footer() {
             >
               Hakkımızda
             </p>
-            <p className="text-dark" style={{fontSize:"small",textAlign:"justify"}}>
+            <p className="text-dark" style={{fontSize:"medium",textAlign:"justify"}}>
               1980’de kurulan Herbalife Nutrition, günümüzde 8.000 aşkın
               çalışanıyla 90’dan fazla ülkede faaliyet göstermektedir.
             </p>

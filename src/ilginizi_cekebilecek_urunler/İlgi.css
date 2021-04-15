@@ -13,8 +13,19 @@
     width:5rem;
     z-index: 1;
     position:relative;
-    bottom: 6rem;
+    bottom: 7rem;
 }
+.sepet{
+    color:black;
+    z-index: 1;
+    position:relative;
+    bottom: 4rem;
+}
+.sepet:hover{
+    color:greenyellow;
+    
+}
+
 .ilgili-ürün-fiyatlar{
     display: inline;
     
@@ -23,6 +34,7 @@
 .ilgili-ürün-ismi{
     color:#15A8F2;
     text-decoration-style: none;
+    margin-left: -1.5rem;
 }
 
 .ilgili-ürün-ilk-fiyat{
