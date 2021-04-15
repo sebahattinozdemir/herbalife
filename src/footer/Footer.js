@@ -75,7 +75,7 @@ function Footer() {
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/hakkimizda">
                   Hakkımızda
                 </Link>
               </li>
@@ -102,10 +102,21 @@ function Footer() {
             <div className="col-lg-4 col-md-6 col-sm-6 col-12 text-center text-white">
               <p className="mt-4 sebertech" >© 2021 SeBer Tech</p>
             </div>
+
+            <a
+                href="https://wa.me/+905464753883"
+                class="whatsapp_float"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-whatsapp whatsapp-icon"></i>
+            </a>
           </div>
         </div>
       </div>
-      <div className="w-100 footer-alt2 p-3"></div>
+      <div className="w-100 footer-alt2 p-3">
+      
+      </div>
     </div>
   );
 }

@@ -1,0 +1,41 @@
+.ilgili{
+    height: auto !important;
+}
+.ilgiliürünresmi{
+    height: 10rem !important;
+    
+}
+.ilgili-ürün-indirim{
+    background-color:#50C4DB;
+    color:white;
+    border-radius: 1rem;
+    text-align: center;
+    width:5rem;
+    z-index: 1;
+    position:relative;
+    bottom: 6rem;
+}
+.ilgili-ürün-fiyatlar{
+    display: inline;
+    
+    
+}
+.ilgili-ürün-ismi{
+    color:#15A8F2;
+    text-decoration-style: none;
+}
+
+.ilgili-ürün-ilk-fiyat{
+    float:left;
+    color:gray;
+    font-weight: bold;
+    text-decoration-line:line-through;
+    text-decoration-thickness: 1.5px;
+    margin-top: 1rem !important;
+}
+.ilgili-ürün-son-fiyat{
+    float:right;
+    font-weight: bold;
+    margin-top: 1rem !important;
+    
+}

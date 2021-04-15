@@ -42,7 +42,7 @@ function App() {
        </Switch>
 
        <Route exact path="/admin" component={Admin} />
-       
+     
         <Footer/>
       </div>
     </BrowserRouter>

@@ -1,4 +1,5 @@
 import "./KitleEndeks.css";
+import İlgiliÜrün from "../ilginizi_cekebilecek_urunler/İlgi";
 import React, { useEffect, useState } from "react";
 
 
@@ -21,30 +22,37 @@ function KitleEndeks() {
 
 
   const calculateBmi = (e)=>{
+    
     e.preventDefault();
+    
     setİndeks((kilo/((boy/100)*(boy/100))).toFixed(2));
     
-    if(indeks<17.5 && indeks>0){
-      setSonuc("Aşırı Zayıf");
-    }
-    else if(indeks>=17.5 && indeks<19.1){
-      setSonuc("Zayıf");
-    }
-    else if(indeks>=19.1 && indeks<25.8){
-      setSonuc("Normal (ideal kilo)");
-    }
-    else if(indeks>=25.8 && indeks<27.3){
-      setSonuc("Biraz kilo fazlası");
-    }
-    else if(indeks>=27.3 && indeks<32.3){
-      setSonuc("Fazla kilo");
-    }
-    else if(indeks>=32.3 && indeks<34.9){
-      setSonuc("Çok fazla kilolu");
-    }
-    else {
-      setSonuc("Süper aşırı kilolu");
-    }
+    setTimeout(() => {
+      if((kilo/((boy/100)*(boy/100)))<17.5 && (kilo/((boy/100)*(boy/100)))>0){
+        setSonuc("Aşırı Zayıf");
+      }
+      else if((kilo/((boy/100)*(boy/100)))>=17.5 && (kilo/((boy/100)*(boy/100)))<19.1){
+        setSonuc("Zayıf");
+      }
+      else if((kilo/((boy/100)*(boy/100)))>=19.1 && (kilo/((boy/100)*(boy/100)))<25.8){
+        setSonuc("Normal (ideal kilo)");
+      }
+      else if((kilo/((boy/100)*(boy/100)))>=25.8 && (kilo/((boy/100)*(boy/100)))<27.3){
+        setSonuc("Biraz kilo fazlası");
+      }
+      else if((kilo/((boy/100)*(boy/100)))>=27.3 && (kilo/((boy/100)*(boy/100)))<32.3){
+        setSonuc("Fazla kilo");
+      }
+      else if((kilo/((boy/100)*(boy/100)))>=32.3 && (kilo/((boy/100)*(boy/100)))<34.9){
+        setSonuc("Çok fazla kilolu");
+      }
+      else {
+        console.log(indeks);
+        setSonuc("Süper aşırı kilolu");
+        
+      }
+      
+    }, 500);
   
     
   }
@@ -106,7 +114,7 @@ function KitleEndeks() {
 
               <div class="form-group">
                 <label className="font-weight-bold" for="text">
-                  Bu sonuca gore;
+                  Bu sonuca göre;
                 </label>
 
                 <input class="col-12" type="text" value={sonuc} style={{borderRadius:"0.2rem",height:"2.5rem",backgroundColor:"#FDF8CD",border:"3px solid #E8DB6C"}}>
@@ -198,9 +206,10 @@ function KitleEndeks() {
 
           <p className="font-weight-bold" style={{fontSize:'x-large'}}>İLGİNİZİ ÇEKEBİLECEK ÜRÜNLER</p>
 
-        <div className="col-12">
-             URUNLERRRR
+        <div className="col-12 mb-2">
+             <İlgiliÜrün/>
         </div>
+        
           
       </div>
 

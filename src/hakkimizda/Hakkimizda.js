@@ -12,20 +12,20 @@ function Hakkimizda() {
           
 
           <img
-            className="w-100 img-fluid" style={{height:"20rem",border:"2px solid #7ac043"}}
+            className="w-100 img-fluid hakkimizda-resim" style={{height:"20rem",border:"2px solid #7ac043"}}
             src={biz}
           />
         </div>
 
-        <div className="col-lg-8 col-xs-12">
+        <div className="col-lg-8 col-xs-12 hakkimizda-harita">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5279528.782899717!2d31.69481252989785!3d39.29129111278404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b0155c964f2671%3A0x40d9dbd42a625f2a!2zdMO8cmtpeWU!5e0!3m2!1str!2str!4v1618183691786!5m2!1str!2str" 
                 className="googleharita" style={{width:"100%", height:"20rem", frameBorder:"0", allowFullScreen:"", ariaHidden:"false", tabIndex:"0",paddingBottom:"0.5rem",paddingTop:"0.5rem",border:"2px solid #7ac043"}}> </iframe>
         </div>
       </div>
 
-      <div className="row mt-5 bizkimiz">
+      <div className="row mt-5">
         <div className="col-lg-4 col-xs-12">
-          <h3>BİZ KİMİZ</h3>
+          <h3 className="bizkimiz">BİZ KİMİZ</h3>
         </div>
         <div className="col-lg-8 col-xs-12">
           <p>
