@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Menu.css"
+import LocalMallIcon from '@material-ui/icons/LocalMall';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import CallIcon from '@material-ui/icons/Call';
 import SearchIcon from '@material-ui/icons/Search';
@@ -32,7 +33,7 @@ function Menu() {
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
               <img
-                className="img-fluid"
+                className="img-fluid analogo"
                 src="https://wooticaret.com/herbalife/wp-content/uploads/2020/10/logo.png"
               />
             </div>
@@ -48,6 +49,20 @@ function Menu() {
                 </form>
            
             </div>
+
+            <div>
+                        <a href="https://herbaldamla.com/sepet/"  title="Sepet" style={{align:"center",marginLeft:"1.2rem",color:"black"}}>
+                        <LocalMallIcon className="anasepet" style={{width:"3rem",height:"2rem",padding:"0.3rem",border:"1px gray solid",borderRadius:"0.5rem"}}/>
+                       
+                        
+                      
+                        </a>
+
+            </div>
+
+
+
+
           </div>
         </div>
       </div>

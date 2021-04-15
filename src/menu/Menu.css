@@ -10,6 +10,11 @@
     background-color: #333;
 }
 
+.anasepet:hover{
+    color:white;
+    background-color: black;
+}
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 1200px) {
     .nav{
@@ -17,6 +22,15 @@
     }
     .search{
         display: none !important;
+    }
+    .analogo{
+        width:10rem !important;
+    }
+    .anasepet{
+        float:right !important;
+        position:absolute;
+        top:1rem;
+        right:2rem;
     }
 
 
