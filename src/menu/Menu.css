@@ -14,9 +14,14 @@
     color:white;
     background-color: black;
 }
+.yediyirmidort{
+    position:absolute;
+    top:1rem;
+    right:5rem;
+}
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1220px) {
     .nav{
         height: auto !important;
     }
@@ -32,6 +37,10 @@
         top:1rem;
         right:2rem;
     }
+    .yediyirmidort{
+        display: none !important;
+    }
 
 
 }
+

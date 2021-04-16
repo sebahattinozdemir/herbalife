@@ -24,7 +24,7 @@ import Admin from "./admin/Admin";
 import useDocumentTitle from './useDocumentTitle'
 
 function App() {
-  useDocumentTitle('Ersin Er - Herbalife')
+  useDocumentTitle('Herbalerya - Herbalife')
   return (
     <BrowserRouter>
       <div className="app w-100">

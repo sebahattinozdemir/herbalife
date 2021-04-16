@@ -4,6 +4,14 @@ import LocalMallIcon from '@material-ui/icons/LocalMall';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import CallIcon from '@material-ui/icons/Call';
 import SearchIcon from '@material-ui/icons/Search';
+
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
+import BusinessIcon from "@material-ui/icons/Business";
+import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
+import LoyaltyIcon from '@material-ui/icons/Loyalty';
+import HomeIcon from "@material-ui/icons/Home";
+
 import {
   Collapse,
   Navbar,
@@ -32,10 +40,15 @@ function Menu() {
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-              <img
-                className="img-fluid analogo"
-                src="https://wooticaret.com/herbalife/wp-content/uploads/2020/10/logo.png"
-              />
+              <a href="/">
+                  <img 
+                    className="img-fluid analogo"
+                    src="https://wooticaret.com/herbalife/wp-content/uploads/2020/10/logo.png"
+                    alt="Herbalalerya"
+                    title="Herbalalerya"
+                  />
+              </a>
+              
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 col-12 search">
             
@@ -49,15 +62,26 @@ function Menu() {
                 </form>
            
             </div>
+           
+            
 
             <div>
-                        <a href="https://herbaldamla.com/sepet/"  title="Sepet" style={{align:"center",marginLeft:"1.2rem",color:"black"}}>
+                        <a href="https://herbalalerya.netlify.app"  title="Sepet" style={{align:"center",marginLeft:"1.2rem",color:"black"}}>
                         <LocalMallIcon className="anasepet" style={{width:"3rem",height:"2rem",padding:"0.3rem",border:"1px gray solid",borderRadius:"0.5rem"}}/>
                        
-                        
-                      
                         </a>
 
+            </div>
+
+            <div className="yediyirmidort">
+            <NavbarText className="text-black" >
+              
+              <p className="yedi" style={{marginRight:"2rem"}} title="7/24 | Siparis Hizmeti" ><AccessTimeIcon/> 7/24</p>
+            </NavbarText>
+            
+            <NavbarText>
+               <p className="ceptel" data-toggle="tooltip" title=" 0542 458 78 78"><CallIcon/> 0542 458 78 78</p>
+            </NavbarText>
             </div>
 
 
@@ -76,23 +100,21 @@ function Menu() {
             <Nav className="mr-auto" navbar>
               <NavItem >
                 <Link className="text-decoration-none btn text-white menu-item" to="/" style={{backgroundColor:"black"}}>
-                  ANASAYFA
+                <HomeIcon style={{fontSize:"large",marginRight:"3px"}} />ANASAYFA 
                 </Link>
               </NavItem>
               <NavItem>
                 <Link
                   className="text-decoration-none btn text-white menu-item"
                   to="/magaza"
-                >
-                  TÜM ÜRÜNLER
+                ><EnhancedEncryptionIcon style={{fontSize:"large",marginRight:"3px"}} />TÜM ÜRÜNLER 
                 </Link>
               </NavItem>
               <NavItem >
                 <Link
                   className="text-decoration-none btn text-white menu-item"
                   to="/blog"
-                >
-                  BLOG
+                ><AssignmentIcon style={{fontSize:"large",marginRight:"3px"}} />BLOG
                 </Link>
               </NavItem>
 
@@ -100,36 +122,25 @@ function Menu() {
                 <Link
                   className="text-decoration-none btn text-white menu-item"
                   to="/vucut-kitle-endeksi"  
-                >
-                  VÜCUT KİTLE İNDEKSİ
+                ><LoyaltyIcon style={{fontSize:"large",marginRight:"3px"}} />VÜCUT KİTLE İNDEKSİ 
                 </Link>
               </NavItem>
               <NavItem>
                 <Link
                   className="text-decoration-none btn text-white menu-item"
                   to="/hakkimizda" 
-                >
-                  HAKKIMIZDA
+                ><BusinessIcon style={{fontSize:"large",marginRight:"3px"}} />HAKKIMIZDA  
                 </Link>
               </NavItem>
               <NavItem>
                 <Link
                   className="text-decoration-none btn text-white menu-item"
                   to="/iletisim"
-                >
-                  İLETİŞİM
+                ><ContactPhoneIcon style={{fontSize:"large",marginRight:"3px"}} />İLETİŞİM
                 </Link>
               </NavItem>
             </Nav>
-
-            <NavbarText className="text-white">
-              
-              <p className="px-3 my-2" title="7/24 | Siparis Hizmeti" style={{borderRight:'1px solid white'}}><AccessTimeIcon/> 7/24</p>
-            </NavbarText>
             
-            <NavbarText>
-               <p className="btn  px-3 my-2 text-white" data-toggle="tooltip" title=" 0542 458 78 78"><CallIcon/> 0542 458 78 78</p>
-            </NavbarText>
           </Collapse>
         </div>
       </Navbar>

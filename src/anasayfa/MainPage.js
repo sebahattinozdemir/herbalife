@@ -26,7 +26,7 @@ function MainPage() {
               style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
               src="https://herbaldamla.com/wp-content/uploads/2020/10/secure-payment-line.png"
             ></img>
-                <strong>Ersin Er</strong> Herbalife Distribütörü
+                <strong>Herbalalerya</strong> Herbalife Distribütörü
               </p>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 col-12 üst-bilgi">
@@ -34,11 +34,11 @@ function MainPage() {
               <p>
               <img
               className="img-fluid"
-              style={{width:"20px",height:"20px",marginRight:"0.6rem"}}
+              style={{width:"20px",height:"20px",marginRight:"0.5rem"}}
               src="https://herbaldamla.com/wp-content/uploads/2020/10/archive-line.png"
             ></img>
                 <span style={{ fontSize: "medium" }}>
-                <strong>Türkiye ‘nin</strong> her yerine kargo
+                <strong>Türkiye</strong>‘nin her yerine kargo &nbsp;
                 </span>
               </p>
             </div>
