@@ -12,11 +12,9 @@
       font-size: 30px;
       box-shadow: 2px 2px 3px #999;
       z-index: 100;
-      
-     
-      
+        
   }
-  .roof{
+  .roof-whatsapp{
     background-color:green ;
     position: fixed;
     bottom: 35px;
@@ -27,20 +25,20 @@
     transition: 0.6s linear;
     animation-duration: 50ms;
     border:2px green solid;
-    animation-name: roof;
+    animation-name: roof-whatsapp;
     animation-duration: 2s;
     animation-iteration-count: infinite;
   }
   
 /* The animation code */
-@keyframes roof {
+@keyframes roof-whatsapp {
   from {background-color: green;}
   to {background-color: white}
 }
 
 
 
-  .roof:hover{
+  .roof-whatsapp:hover{
     background-color:white ;
     
 
@@ -53,13 +51,64 @@
 
   .phone-icon{
     margin-top: 16px;
+    color:white;
   }
+
+  .phone-icon:hover{
+    color:rgb(54, 189, 27);
+  }
+
+/*  for phone icone */
+.phone_float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 120px;
+  right: 40px;
+  background-color: #424de2;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+    
+}
+
+.roof-phone{
+  background-color:blueviolet ;
+  position: fixed;
+  bottom: 115px;
+  right: 35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  transition: 0.6s linear;
+  animation-duration: 50ms;
+  border:2px rgb(7, 30, 163) solid;
+  animation-name: roof-phone;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* The animation code */
+@keyframes roof-phone {
+  from {background-color: blue;}
+  to {background-color: white}
+}
+
+
+
+
 
   /* for mobile */
   @media screen and (max-width: 767px) {
       .whatsapp-icon {
           margin-top: 10px;
       }
+      .phone-icon {
+        margin-top: 10px;
+    }
 
       .whatsapp_float {
           width: 40px;
@@ -68,8 +117,23 @@
           right: 10px;
           font-size: 22px;
       }
-      .roof{
+      .phone_float {
+        width: 40px;
+        height: 40px;
+        bottom: 75px;
+        right: 10px;
+        font-size: 22px;
+    }
+
+      .roof-whatsapp{
         bottom: 15px;
+        right: 5px;
+        width: 50px;
+        height: 50px;
+
+      }
+      .roof-phone{
+        bottom: 70px;
         right: 5px;
         width: 50px;
         height: 50px;

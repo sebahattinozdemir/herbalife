@@ -3,6 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const scrollToTop = (e)=>{
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+  
   return (
     <div id="footer" className="footer w-100">
       <div className="container">
@@ -29,22 +36,22 @@ function Footer() {
             </p>
             <ul className="list-group footer-list-group">
               <li >
-                <Link className="text-decoration-none footer-btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/" onClick={scrollToTop}>
                   Sporcu Beslenmesi
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/" onClick={scrollToTop}>
                   Shaker / Suluklar
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/" onClick={scrollToTop}>
                   Kişisel Bakım Ürünleri
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/">
+                <Link className="text-decoration-none footer-btn-link" to="/" onClick={scrollToTop}>
                   Atıştırmalıklar
                 </Link>
               </li>
@@ -60,22 +67,22 @@ function Footer() {
 
             <ul className="list-group footer-list-group">
               <li >
-                <Link className="text-decoration-none footer-btn-link" to="/mesafeli-satis-sozlesmesi">
+                <Link className="text-decoration-none footer-btn-link" to="/mesafeli-satis-sozlesmesi" onClick={scrollToTop}>
                   Mesafeli Satis Sözleşmesi
                 </Link>
               </li>
               <li>
-                <Link className="text-decoration-none footer-btn-link" to="/gizlilik-politikasi">
+                <Link className="text-decoration-none footer-btn-link" to="/gizlilik-politikasi" onClick={scrollToTop}>
                   Gizlilik Politikasi
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/sik-sorulan-sorular">
+                <Link className="text-decoration-none footer-btn-link" to="/sik-sorulan-sorular" onClick={scrollToTop}>
                   Sık Sorulan Sorular
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/hakkimizda">
+                <Link className="text-decoration-none footer-btn-link" to="/hakkimizda" onClick={scrollToTop}>
                   Hakkımızda
                 </Link>
               </li>
@@ -103,22 +110,33 @@ function Footer() {
               <p className="mt-4 sebertech" >© 2021 SeBer Tech</p>
             </div>
 
-            
-
-            <div class="roof">
-            <a
-                href="https://wa.me/+905464753883"
-                class="whatsapp_float"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa fa-whatsapp whatsapp-icon"></i>
-               
-            </a>
-            
-
-
+            <div class="roof-phone">
+                <a
+                    href="tel: +905464753883"
+                    class="phone_float"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    
+                    <i class="fa fa-phone phone-icon"></i>
+                  
+                </a>
             </div>
+
+            
+
+            <div class="roof-whatsapp">
+                <a
+                    href="https://wa.me/+905464753883"
+                    class="whatsapp_float"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-whatsapp whatsapp-icon"></i>
+                  
+                </a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -127,6 +145,7 @@ function Footer() {
       </div>
     </div>
   );
+  
 }
 
 

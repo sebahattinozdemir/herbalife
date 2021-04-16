@@ -97,7 +97,7 @@ function Menu() {
         <div className="container text-white">
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar>
+            <Nav className="m-auto" navbar>
               <NavItem >
                 <Link className="text-decoration-none btn text-white menu-item" to="/" style={{backgroundColor:"black"}}>
                 <HomeIcon style={{fontSize:"large",marginRight:"3px"}} />ANASAYFA 
