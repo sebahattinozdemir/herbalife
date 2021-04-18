@@ -18,7 +18,7 @@ export default class Ürün extends Component{
                     <p className="ürünün_ilk_fiyatı">{ürünün_ilk_fiyatı}</p>
                     <p className="ürünün_son_fiyatı">{ürünün_son_fiyatı}</p>
                 </div>
-            </div>
+            </div> 
 
 
         
