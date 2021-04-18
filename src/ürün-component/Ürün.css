@@ -1,11 +1,12 @@
-.ilgili{
-    height: auto !important;
-}
-.ilgiliürünresmi{
+/* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
+
+
+.ürünün_resmi{
     height: 10rem !important;
     
+    
 }
-.ilgili-ürün-indirim{
+.ürün_indirim_etiketi{
     background-color:#50C4DB;
     color:white;
     border-radius: 1rem;
@@ -15,41 +16,43 @@
     position:relative;
     bottom: 7rem;
 }
-.sepet{
+.sepet_ikonu{
     color:black;
     z-index: 1;
     position:relative;
-    bottom: 4rem;
+    bottom: 5rem;
 }
-.sepet:hover{
+.sepet_ikonu:hover{
     color:greenyellow;
     
 }
+.ürünün_ismi{
+    color:#15A8F2;
+    text-decoration-style: none;
+    font-size: small;
+    float:left;
+    margin-top: -3rem;
+    
+}
 
-.ilgili-ürün-fiyatlar{
+.ürünlerin_fiyat_bilgileri{
     display: inline;
     margin-left: 1rem;
     margin-right: 1rem;
-    
-    
-}
-.ilgili-ürün-ismi{
-    color:#15A8F2;
-    text-decoration-style: none;
-    margin-left: -1.5rem;
 }
 
-.ilgili-ürün-ilk-fiyat{
+
+.ürünün_ilk_fiyatı{
     float:left;
     color:gray;
     font-weight: bold;
     text-decoration-line:line-through;
     text-decoration-thickness: 1.5px;
-    margin-top: 1rem !important;
+    
 }
-.ilgili-ürün-son-fiyat{
+.ürünün_son_fiyatı{
     float:right;
     font-weight: bold;
-    margin-top: 1rem !important;
+    
     
 }

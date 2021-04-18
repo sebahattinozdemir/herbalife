@@ -85,7 +85,7 @@
   border-radius: 50px;
   transition: 0.6s linear;
   animation-duration: 50ms;
-  border:2px rgb(7, 30, 163) solid;
+  border:2px #3B099F solid;
   animation-name: roof-phone;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -93,7 +93,7 @@
 
 /* The animation code */
 @keyframes roof-phone {
-  from {background-color: blue;}
+  from {background-color: rgb(86, 86, 204);}
   to {background-color: white}
 }
 

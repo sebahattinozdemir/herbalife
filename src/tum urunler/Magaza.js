@@ -10,6 +10,7 @@ import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import useDocumentTitle from "../useDocumentTitle";
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -78,6 +79,10 @@ function Magaza() {
                   <ListItemText primary="Kişisel Bakım" />
                 </ListItem>
 
+                <ListItem button>
+                  <ListItemText primary="Özel Setler" />
+                </ListItem>
+
                 <ListItem button onClick={() => setOpenTakviye(!openTakviye)}>
                   <ListItemText primary="Takviye Edici Gıdalar" />
                   {openTakviye ? <ExpandLess /> : <ExpandMore />}
@@ -105,6 +110,10 @@ function Magaza() {
                 </Collapse>
               </List>
             </div>
+
+               
+
+
             <div className="col-lg-9 col-xs-12 ">
               <div className="row">
                 <div className="col-lg-3 col-sm-4 col-xs-6">
