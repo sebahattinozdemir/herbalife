@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Admin.css";
-import db from "./../firebase";
+import {firebaseApp}  from "./../firebase";
 import Login from "./Login";
 import AdminManager from "./AdminManager";
 
@@ -26,7 +26,7 @@ function Admin() {
 
   const handleLogin = () => {
     clearErrors();
-    db.auth()
+  firebaseApp.auth()
       .signInWithEmailAndPassword(email, password)
       .catch((err) => {
         // eslint-disable-next-line default-case
@@ -44,11 +44,11 @@ function Admin() {
   };
 
   const handleLogout = () => {
-    db.auth().signOut();
+    firebaseApp.auth().signOut();
   };
 
   const authListener = () => {
-    db.auth().onAuthStateChanged((user) => {
+   firebaseApp.auth().onAuthStateChanged((user) => {
       if (user) {
         clearInputs();
         setLogin(user);

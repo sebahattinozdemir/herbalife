@@ -6,11 +6,13 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-
+import Table from "./Table/Table";
 import { Slide } from "@material-ui/core";
+import {db} from "./../../firebase";
+import firebase from "firebase";
+import { useSnackbar } from 'notistack';
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -31,7 +33,7 @@ function Blog() {
     const classes = useStyles();
   
     const [open, setOpen] = React.useState(false);
-  
+    const { enqueueSnackbar } = useSnackbar();
     const [blogs, setBlogs] = useState([]);
     const [url, setUrl] = useState("");
     const [heading, setHeading] = useState("");
@@ -43,7 +45,18 @@ function Blog() {
     }, []);
   
     const getBlogs = () => {
-     
+      db.collection("blogs")
+      .orderBy("timeStamp", "desc")
+      .onSnapshot((snapshot) => {
+        setBlogs(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            url:doc.data().url,
+            heading: doc.data().heading,
+            blogContent: doc.data().blog_content,
+          }))
+        );
+      });
     }
   
     const handleClickOpen = () => {
@@ -56,7 +69,28 @@ function Blog() {
   
     const kaydet = (e) => {
       e.preventDefault();
-     
+      db.collection("blogs").add({
+        url:url,
+        heading: heading,
+        blog_content: blogContent,
+        timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
+      }).then((data)=>{
+        getBlogs()
+        enqueueSnackbar('Blog güncellendi.', {
+          autoHideDuration: 3000,
+          variant: 'info'
+        });
+      }).catch((err) => {
+        enqueueSnackbar('Hata oluştu.', {
+          autoHideDuration: 3000,
+          variant: 'error'
+        });
+      });;
+  
+      setHeading("");
+      setBlogContent("");
+      setUrl("")
+      setOpen(false);
     };
   return (
     <div className="container" id="blog">
@@ -82,13 +116,13 @@ function Blog() {
           </AppBar>
 
           <div className="col-12 bg-dark blog-pop">
-            <div className="container" style={{ marginTop: "10%" }}>
+            <div className="container mx-auto mt-5">
               <form>
                 <div class="form-group text-white">
-                  <label for="exampleFormControlInput1">Foto Url</label>
+                  <label style={{fontSize:'x-large'}} for="exampleFormControlInput1">Foto Url</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control form-control-lg "
                     id="exampleFormControlInput1"
                     placeholder="Url"
                     value={url}
@@ -96,10 +130,10 @@ function Blog() {
                   />
                 </div>
                 <div class="form-group text-white">
-                  <label for="exampleFormControlInput1">Baslik Ekle</label>
+                  <label  style={{fontSize:'x-large'}} for="exampleFormControlInput1">Baslik Ekle</label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control form-control-lg"
                     id="exampleFormControlInput1"
                     placeholder="Sayfa Adi"
                     value={heading}
@@ -107,7 +141,7 @@ function Blog() {
                   />
                 </div>
                 <div class="form-group">
-                  <label className="text-white" for="exampleFormControlTextarea1">
+                  <label  style={{fontSize:'x-large'}} className="text-white" for="exampleFormControlTextarea1">
                     Blog Yazisi Ekle
                   </label>
                   <CKEditor
@@ -130,7 +164,7 @@ function Blog() {
                   />
                 </div>
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-lg btn-success"
                   type="submit"
                   onClick={kaydet}
                 >
@@ -146,7 +180,7 @@ function Blog() {
           Blog Sayfasi Guncelleme
         </h3>
      
-          <button className="btn btn-primary" onClick={handleClickOpen}>
+          <button className="btn btn-success" onClick={handleClickOpen}>
             Blog Sayfasi Ekle
           </button>
           
@@ -161,10 +195,11 @@ function Blog() {
                 <th scope="col">Guncelle</th>
               </tr>
             </thead>
-         
+            {blogs.map((blog, index) => (
+            <Table key={blog.id} blog={blog} index={index} getBlogs={getBlogs} />
+          ))}
           </table>
         
-      
     </div>
   );
 }
