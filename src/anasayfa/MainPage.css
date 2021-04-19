@@ -14,7 +14,7 @@
     margin: auto !important;
     display: block !important;
     border-radius: 2rem !important;
-    width: 60% !important;
+    width: 75% !important;
    
 }
 .card-text{
@@ -67,6 +67,9 @@
     }
     .card{
         height: auto !important;
+    }
+    .tümünü_gör_butonu{
+        width: 50% !important;
     }
     
     

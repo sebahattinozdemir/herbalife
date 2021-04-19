@@ -27,7 +27,7 @@ import { SnackbarProvider } from "notistack";
 
 
 function App() {
-  useDocumentTitle("Herbalerya - Herbalife");
+  useDocumentTitle("Herbalalerya - Herbalife");
   return (
     <SnackbarProvider>
       <BrowserRouter>
