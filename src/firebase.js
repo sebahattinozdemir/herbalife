@@ -1,14 +1,15 @@
 import firebase from "firebase";
 
-const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyBNAM4tH2ufpe-FLs-geBPeR1Xl5_i30UM",
-    authDomain: "herbalife-a0ed5.firebaseapp.com",
-    projectId: "herbalife-a0ed5",
-    storageBucket: "herbalife-a0ed5.appspot.com",
-    messagingSenderId: "917791129890",
-    appId: "1:917791129890:web:13ce518d7fea5fe76e657b"
+var firebaseApp = firebase.initializeApp({
+    apiKey: "AIzaSyDMIRAPG2GadBvRcukHdWqnIm930cdpEaY",
+  authDomain: "herbalife-backend.firebaseapp.com",
+  projectId: "herbalife-backend",
+  storageBucket: "herbalife-backend.appspot.com",
+  messagingSenderId: "676243905708",
+  appId: "1:676243905708:web:39d82af748f3480aa79309",
+  measurementId: "G-2S1MET2Z80"
 });
 
+const db = firebaseApp.firestore()
 
-
-export default firebaseApp;
+export  {firebaseApp, db} ;

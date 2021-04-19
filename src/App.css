@@ -14,3 +14,7 @@
 .footer-alt2{
   background-color: #7ac043;
 }
+
+.ck-editor__editable {
+  min-height: 30vh;
+}
