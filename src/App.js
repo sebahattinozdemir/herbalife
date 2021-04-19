@@ -35,19 +35,25 @@ function App() {
           <Menu />
 
           <Switch>
-            <Route exact path="/" component={MainPage} />
-            <Route exact path="/magaza" component={Magaza} />
-            <Route exact path="/blog" component={Blog} />
-            <Route exact path="/vucut-kitle-endeksi" component={KitleEndeks} />
-            <Route exact path="/hakkimizda" component={Hakkimizda} />
-            <Route exact path="/iletisim" component={Iletisim} />
-            <Route
-              exact
-              path="/mesafeli-satis-sozlesmesi"
-              component={Sozlesme}
-            />
-            <Route exact path="/gizlilik-politikasi" component={Gizlilik} />
-            <Route exact path="/sik-sorulan-sorular" component={Sorular} />
+            <div style={{minHeight:"100vh"}} className="mvh-100">
+              <Route exact path="/" component={MainPage} />
+              <Route exact path="/magaza" component={Magaza} />
+              <Route exact path="/blog" component={Blog} />
+              <Route
+                exact
+                path="/vucut-kitle-endeksi"
+                component={KitleEndeks}
+              />
+              <Route exact path="/hakkimizda" component={Hakkimizda} />
+              <Route exact path="/iletisim" component={Iletisim} />
+              <Route
+                exact
+                path="/mesafeli-satis-sozlesmesi"
+                component={Sozlesme}
+              />
+              <Route exact path="/gizlilik-politikasi" component={Gizlilik} />
+              <Route exact path="/sik-sorulan-sorular" component={Sorular} />
+            </div>
           </Switch>
 
           <Route exact path="/admin" component={Admin} />
