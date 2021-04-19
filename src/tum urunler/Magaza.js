@@ -9,6 +9,7 @@ import DataView from "./urunDataViewComponent/DataView";
 import { db } from "./../firebase";
 import firebase from "firebase";
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -113,6 +114,10 @@ function Magaza() {
                 </ListItem>
 
                 <ListItem button>
+                  <ListItemText primary="Özel Setler" />
+                </ListItem>
+
+                <ListItem button>
                   <ListItemText primary="Takviye Edici Gıdalar" />
                 </ListItem>
 
@@ -122,6 +127,10 @@ function Magaza() {
 
               </List>
             </div>
+
+               
+
+
             <div className="col-lg-9 col-xs-12 ">
                 <DataView/>
             </div>

@@ -4,6 +4,7 @@ import LocalMallIcon from '@material-ui/icons/LocalMall';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import CallIcon from '@material-ui/icons/Call';
 import SearchIcon from '@material-ui/icons/Search';
+import { Divider } from 'primereact/divider';
 
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
@@ -77,8 +78,9 @@ function Menu() {
             <NavbarText className="text-black" >
               
               <p className="yedi" style={{marginRight:"2rem"}} title="7/24 | Siparis Hizmeti" ><AccessTimeIcon/> 7/24</p>
+              
             </NavbarText>
-            
+           
             <NavbarText>
                <p className="ceptel" data-toggle="tooltip" title=" 0542 458 78 78"><CallIcon/> 0542 458 78 78</p>
             </NavbarText>

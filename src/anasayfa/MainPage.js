@@ -1,6 +1,11 @@
 import React from "react";
 import "./MainPage.css";
 import Carousel from "../carousel/Carousel";
+import Sepet from '@material-ui/icons/AddShoppingCart';
+
+import Owl from "../owlcarousel/Owl.js";
+
+
 
 function MainPage() {
   return (
@@ -70,7 +75,7 @@ function MainPage() {
 
         <div className="row mt-3">
           <div className="col-lg-3 col-md-6 col-sm-6 col-12 mb-2">
-            <div class="card" style={{ backgroundColor: "#f5f0da"}}>
+            <div class="card" style={{ backgroundColor: "#F3F1AA"}}>
               <h5 class="card-header">Özel Setler</h5>
               <div class="card-body">
                 <p class="card-text">
@@ -78,125 +83,17 @@ function MainPage() {
                 </p>
 
 
-                <a href="#" class="btn btn-light text-success">
-                  Tümünü Gör
+                <a href="#" class="btn btn-light text-success tümünü_gör_butonu">
+                <strong><span style={{color:"#F3F1AA"}}>Tümünü Gör</span></strong>
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white owl-main-page" style={{borderRadius:"0.5rem"}}>
             <div className="row m-0 p-0" >
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 pt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
+             
+                  <Owl/>
+            
 
             </div>
           </div>
@@ -211,126 +108,16 @@ function MainPage() {
                   Beslenme hedeflerinize ulaşmanıza yardımcı olmak için
                   tasarlandı.
                 </p>
-                <a href="#" class="btn btn-light text-success">
-                  Tümünü Gör
+                <a href="#" class="btn btn-light text-success tümünü_gör_butonu">
+                <strong><span style={{color:"#81bac3"}}>Tümünü Gör</span></strong>
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white owl-main-page" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2020/10/0142_TU_Chocolate_Square-247x247.png"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
               
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2020/10/0142_TU_Chocolate_Square-247x247.png"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2020/10/0142_TU_Chocolate_Square-247x247.png"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2020/10/0142_TU_Chocolate_Square-247x247.png"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2020/10/0142_TU_Chocolate_Square-247x247.png"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 pt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
+                    <Owl/>
             </div>
           </div>
         </div>
@@ -344,126 +131,15 @@ function MainPage() {
                   Herbalife SKIN® ve Herbal Aloe güzellik ürünlerimiz, cilt ve
                   saç bakımı için uzman çözümler sunar.
                 </p>
-                <a href="#" class="btn btn-light text-success">
-                  Tümünü Gör
+                <a href="#" class="btn btn-light text-success tümünü_gör_butonu">
+                <strong><span style={{color:"#bcc6be"}}>Tümünü Gör</span></strong>
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white owl-main-page" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 pt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
+                  <Owl/>
             </div>
           </div>
         </div>
@@ -477,126 +153,15 @@ function MainPage() {
                   Vücudunuzun ihtiyaç duyabileceği vitamin ve mineralleri
                   sağlamak için geliştirilmiştir.
                 </p>
-                <a href="#" class="btn btn-light text-success">
-                  Tümünü Gör
+                <a href="#" class="btn btn-light text-success tümünü_gör_butonu">
+                <strong><span style={{color:"#9ec1a3"}}>Tümünü Gör</span></strong>
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
+          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white owl-main-page" style={{borderRadius:"0.5rem"}}>
           <div className="row m-0 p-0" >
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 pt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
+                <Owl/>
             </div>
           </div>
         </div>
@@ -609,128 +174,22 @@ function MainPage() {
                   Yaşam tarzı olarak Herbalife’ı seçtiğinizi gösteren faydalı
                   ürünler.
                 </p>
-                <a href="#" class="btn btn-light text-success">
-                  Tümünü Gör
+                <a href="#" class="btn btn-light text-success tümünü_gör_butonu">
+                <strong><span style={{color:"#70a9a2"}}>Tümünü Gör</span></strong>
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-xl-9 col-lg-8 col-md-8 shadow bg-white" style={{borderRadius:"0.5rem"}}>
-          <div className="row m-0 p-0" >
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
 
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 mt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
-
-              <div className="m-0 p-0 text-center" style={{ width: "20%" }}>
-                <div className="w-100" style={{ position: "relative" }}>
-                  <span
-                    class="badge badge-info p-2"
-                    style={{ position: "absolute", top: "25%" }}
-                  >
-                    INDIRIM !
-                  </span>
-                  <img
-                    class="card-img-top"
-                    src="https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"
-                    alt="urun adi"
-                  />
-                </div>
-
-                <div className="w-100 pt-1">
-                <p style={{ lineHeight: "5px" }}>Tanisma Paketi</p>
-                <p style={{ lineHeight: "5px" }}>250 TL</p>
-                </div>
-              
-              </div>
-
+          <div className="col-xl-9 col-lg-8 col-md-8 col-sm-12 shadow bg-white owl-main-page" style={{borderRadius:"0.5rem"}}>
+            <div className="row m-0 p-0" >
+                
+                <Owl/>
             </div>
+
           </div>
+
+         
         </div>
       </div>
 
@@ -777,9 +236,11 @@ function MainPage() {
                 Siparişlerinizi özenle paketliyor ve kargoluyoruz.
               </p>
             </div>
+
           </div>
         </div>
       </div>
+
     </div>
   );
 }
