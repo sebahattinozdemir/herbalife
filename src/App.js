@@ -20,6 +20,7 @@ import Sozlesme from "./satis-sozlesmesi/Sozlesme";
 import Gizlilik from "./gizlilik/Gizlilik";
 import Sorular from "./sorular/Sorular";
 import Admin from "./admin/Admin";
+import SiparişToplamÖdeme from "./SepetVeÖdemeSayfası/SepetVeKapıdaÖdeme";
 
 import useDocumentTitle from "./useDocumentTitle";
 import { SnackbarProvider } from "notistack";
@@ -53,6 +54,8 @@ function App() {
               />
               <Route exact path="/gizlilik-politikasi" component={Gizlilik} />
               <Route exact path="/sik-sorulan-sorular" component={Sorular} />
+
+              <Route exact path="/siparis-toplami-odeme" component={SiparişToplamÖdeme}/>
             </div>
           </Switch>
 

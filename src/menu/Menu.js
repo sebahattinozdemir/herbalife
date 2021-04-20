@@ -67,7 +67,7 @@ function Menu() {
             
 
             <div>
-                        <a href="https://herbalalerya.netlify.app"  title="Sepet" style={{align:"center",marginLeft:"1.2rem",color:"black"}}>
+                        <a href="/siparis-toplami-odeme"  title="Sepet" style={{align:"center",marginLeft:"1.2rem",color:"black"}}>
                         <LocalMallIcon className="anasepet" style={{width:"3rem",height:"2rem",padding:"0.3rem",border:"1px gray solid",borderRadius:"0.5rem"}}/>
                        
                         </a>
