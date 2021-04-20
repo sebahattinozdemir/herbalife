@@ -53,9 +53,9 @@ function Menu() {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 col-12 search">
             
-                <form class="form-inline">
+                <form className="form-inline">
                   <input
-                    class="form-control mr-sm-2 w-100 border-radius-5"
+                    className="form-control mr-sm-2 w-100 border-radius-5"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"

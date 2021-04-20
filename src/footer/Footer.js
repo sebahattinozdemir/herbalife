@@ -110,29 +110,29 @@ function Footer() {
               <p className="mt-4 sebertech" >© 2021 SeBer Tech</p>
             </div>
 
-            <div class="roof-phone">
+            <div className="roof-phone">
                 <a
                     href="tel: +905464753883"
-                    class="phone_float"
+                    className="phone_float"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     
-                    <i class="fa fa-phone phone-icon"></i>
+                    <i className="fa fa-phone phone-icon"></i>
                   
                 </a>
             </div>
 
             
 
-            <div class="roof-whatsapp">
+            <div className="roof-whatsapp">
                 <a
                     href="https://wa.me/+905464753883"
-                    class="whatsapp_float"
+                    className="whatsapp_float"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i class="fa fa-whatsapp whatsapp-icon"></i>
+                    <i className="fa fa-whatsapp whatsapp-icon"></i>
                   
                 </a>
             </div>

@@ -70,26 +70,26 @@ function KitleEndeks() {
 
           <div className="jumbotron">
             <form>
-              <div class="form-group">
+              <div className="form-group">
                 <label className="font-weight-bold" for="kilo">
                   Kilonuz(kg)
                 </label>
                 <input
                   type="number"
-                  class="form-control"
+                  className="form-control"
                   id="kilo"
                   placeholder="Kilonuzu Yazin - ornek: 85"
                   value={kilo}
                   onChange={event => setKilo(event.target.value)}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label className="font-weight-bold" for="boy">
                   Boyunuz(cm)
                 </label>
                 <input
                   type="number"
-                  class="form-control"
+                  className="form-control"
                   id="boy"
                   placeholder="Boyunuzu Girin Yazin - ornek: 177"
                   value={boy}
@@ -99,34 +99,34 @@ function KitleEndeks() {
 
     
 
-              <button class="btn btn-success" style={{width:"5rem"}} onClick={calculateBmi}>
+              <button className="btn btn-success" style={{width:"5rem"}} onClick={calculateBmi}>
                 Hesapla
               </button>
 
-              <div class="form-group mt-3">
+              <div className="form-group mt-3">
                 <label className="font-weight-bold" for="text">
                   Beden Kitle Endeksiniz; 
                 </label>
 
-                <input class="col-12" type="text" value={indeks} style={{borderRadius:"0.2rem",height:"2.5rem",backgroundColor:"#FDF8CD",border:"3px solid #E8DB6C"}}>
+                <input className="col-12" type="text" value={indeks} style={{borderRadius:"0.2rem",height:"2.5rem",backgroundColor:"#FDF8CD",border:"3px solid #E8DB6C"}}>
                      
                 </input>
                 
               </div>
 
-              <div class="form-group">
+              <div className="form-group">
                 <label className="font-weight-bold" for="text">
                   Bu sonuca göre;
                 </label>
 
-                <input class="col-12" type="text" value={sonuc} style={{borderRadius:"0.2rem",height:"2.5rem",backgroundColor:"#FDF8CD",border:"3px solid #E8DB6C"}}>
+                <input className="col-12" type="text" value={sonuc} style={{borderRadius:"0.2rem",height:"2.5rem",backgroundColor:"#FDF8CD",border:"3px solid #E8DB6C"}}>
                      
                 </input>
 
       
               </div>
 
-              <button class="btn btn-success" style={{width:"5rem"}} onClick={sifirla}>
+              <button className="btn btn-success" style={{width:"5rem"}} onClick={sifirla}>
                 Sıfırla
               </button>
 
@@ -140,7 +140,7 @@ function KitleEndeks() {
             <p className="font-weight-light" style={{fontSize:"large"}}>
              Vücut Kitle İndeksinize göre aşağıdaki tablodan vücudunuzun genel durumunu hakkında bilgi sahibi olabilirsiniz.
             </p>
-            <table class="table">
+            <table className="table">
               <thead>
                 <tr>
                   <th scope="col">Yetişkinler İçin</th>

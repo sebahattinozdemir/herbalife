@@ -26,15 +26,15 @@ function AdminManager(props) {
 
   return (
     <div className="row">
-      <div class="container-fluid">
+      <div className="container-fluid">
         <div className="row d-lg-none d-xl-none d-md-block d-sm-block d-xs-block ">
           <div className="col-12 text-center">
             <h3>ADMIN PANEL</h3>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-lg-2 col-xs-12 px-1 bg-success vh-lg-100 overflow-scroll">
+        <div className="row">
+          <div className="col-lg-2 col-xs-12 px-1 bg-success vh-lg-100 overflow-scroll">
             <div className="col-12 mt-lg-5">
               <button
                 className="btn btn-outline text-white m-3"
@@ -73,7 +73,7 @@ function AdminManager(props) {
             </div>
           </div>
 
-          <div style={{minHeight:"100vh",}} class="col-lg-10 col-xs-12  mvh-100 bg-dark">
+          <div style={{minHeight:"100vh",}} className="col-lg-10 col-xs-12  mvh-100 bg-dark">
             <div className="row d-none d-lg-block d-md-none d-xl-block">
               <div className="col-12 text-center text-white mt-3">
                 <h3>ADMIN PANEL</h3>

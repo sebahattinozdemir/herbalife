@@ -5,8 +5,8 @@ import Login from "./Login";
 import AdminManager from "./AdminManager";
 
 function Admin() {
-  const [login, setLogin] = useState({});
 
+  const [login, setLogin] = useState({});
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

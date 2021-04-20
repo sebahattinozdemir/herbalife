@@ -36,7 +36,7 @@ function App() {
           <Menu />
 
           <Switch>
-            <div style={{minHeight:"100vh"}} className="mvh-100">
+         
               <Route exact path="/" component={MainPage} />
               <Route exact path="/magaza" component={Magaza} />
               <Route exact path="/blog" component={Blog} />
@@ -56,7 +56,7 @@ function App() {
               <Route exact path="/sik-sorulan-sorular" component={Sorular} />
 
               <Route exact path="/siparis-toplami-odeme" component={SiparişToplamÖdeme}/>
-            </div>
+           
           </Switch>
 
           <Route exact path="/admin" component={Admin} />

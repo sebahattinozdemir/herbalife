@@ -118,30 +118,30 @@ function Blog() {
           <div className="col-12 bg-dark blog-pop">
             <div className="container mx-auto mt-5">
               <form>
-                <div class="form-group text-white">
-                  <label style={{fontSize:'x-large'}} for="exampleFormControlInput1">Foto Url</label>
+                <div className="form-group text-white">
+                  <label style={{fontSize:'x-large'}} htmlfor="exampleFormControlInput1">Foto Url</label>
                   <input
                     type="text"
-                    class="form-control form-control-lg "
+                    className="form-control form-control-lg "
                     id="exampleFormControlInput1"
                     placeholder="Url"
                     value={url}
                     onChange={(event) => setUrl(event.target.value)}
                   />
                 </div>
-                <div class="form-group text-white">
-                  <label  style={{fontSize:'x-large'}} for="exampleFormControlInput1">Baslik Ekle</label>
+                <div className="form-group text-white">
+                  <label  style={{fontSize:'x-large'}} htmlfor="exampleFormControlInput1">Baslik Ekle</label>
                   <input
                     type="text"
-                    class="form-control form-control-lg"
+                    className="form-control form-control-lg"
                     id="exampleFormControlInput1"
                     placeholder="Sayfa Adi"
                     value={heading}
                     onChange={(event) => setHeading(event.target.value)}
                   />
                 </div>
-                <div class="form-group">
-                  <label  style={{fontSize:'x-large'}} className="text-white" for="exampleFormControlTextarea1">
+                <div className="form-group">
+                  <label  style={{fontSize:'x-large'}} className="text-white" htmlfor="exampleFormControlTextarea1">
                     Blog Yazisi Ekle
                   </label>
                   <CKEditor
@@ -185,7 +185,7 @@ function Blog() {
           </button>
           
           <h2 className="text-success mt-4">Bloglar</h2>
-          <table class="table text-white mt-3">
+          <table className="table text-white mt-3">
             <thead>
               <tr>
                 <th scope="col">#</th>

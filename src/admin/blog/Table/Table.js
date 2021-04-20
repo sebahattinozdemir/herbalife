@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Table({key,blog,index,getBlogs}) {
+function Table({blog,index,getBlogs}) {
   const [open, setOpen] = React.useState(false);
   const [url, setUrl] = useState(blog.url);
   const [heading, setHeading] = useState(blog.heading);
@@ -95,29 +95,29 @@ function Table({key,blog,index,getBlogs}) {
         <div className="col-12 blog-pop bg-dark">
           <div className="container mx-auto mt-5">
             <form>
-              <div class="form-group text-white">
+              <div className="form-group text-white">
               <label style={{fontSize:'x-large'}} for="exampleFormControlInput1">Foto Url</label>
                 <input
                   type="text"
-                  class="form-control form-control-lg"
+                  className="form-control form-control-lg"
                   id="exampleFormControlInput1"
                   placeholder="Foto Url"
                   value={url}
                   onChange={(event) => setUrl(event.target.value)}
                 />
               </div>
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label style={{fontSize:'x-large'}} for="exampleFormControlInput1">Baslik Ekle</label>
                 <input
                   type="text"
-                  class="form-control form-control-lg"
+                  className="form-control form-control-lg"
                   id="exampleFormControlInput1"
                   placeholder="Sayfa Basligi"
                   value={heading}
                   onChange={(event) => setHeading(event.target.value)}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label style={{fontSize:'x-large'}} className="text-white" for="exampleFormControlTextarea1">
                   Blog Yazisi Ekle
                 </label>
