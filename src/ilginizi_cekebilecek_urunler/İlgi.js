@@ -6,12 +6,12 @@ import React from 'react'
 export default function İlgi() {
     return (
     
-            <div class="row row-cols-1 row-cols-md-4 g-4">
-                <div class="col">
-                    <div class="card h-100 ilgili">
+            <div className="row row-cols-1 row-cols-md-4 g-4">
+                <div className="col">
+                    <div className="card h-100 ilgili">
                    
-                        <div class="card-body ürün-div">
-                            <img src={ilgiliürün} class="card-img-top ilgiliürünresmi" alt={ilgiliürün}></img>
+                        <div className="card-body ürün-div">
+                            <img src={ilgiliürün} className="card-img-top ilgiliürünresmi" alt={ilgiliürün}></img>
                             <p className="ilgili-ürün-indirim" style={{}}>İndirim!</p>
                             <a href=""><Sepet className="sepet"/></a>
                             <a className="ilgili-ürün-ismi" href="">Besleyici Shake Karışımı Formül 1 (Ahududu ve Beyaz Çikolata Aromalı)</a>
@@ -24,11 +24,11 @@ export default function İlgi() {
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="card h-100 ilgili">
+                <div className="col">
+                    <div className="card h-100 ilgili">
                    
-                        <div class="card-body">
-                            <img src={ilgiliürün} class="card-img-top ilgiliürünresmi" alt={ilgiliürün}></img>
+                        <div className="card-body">
+                            <img src={ilgiliürün} className="card-img-top ilgiliürünresmi" alt={ilgiliürün}></img>
                             <p className="ilgili-ürün-indirim" style={{}}>İndirim!</p>
                             <a href=""><Sepet className="sepet"/></a>
                             <a className="ilgili-ürün-ismi" href="">Besleyici Shake Karışımı Formül 1 (Ahududu ve Beyaz Çikolata Aromalı)</a>
@@ -41,11 +41,11 @@ export default function İlgi() {
                 </div>
 
 
-                <div class="col">
-                    <div class="card h-100 ilgili">
+                <div className="col">
+                    <div className="card h-100 ilgili">
                    
-                        <div class="card-body">
-                            <img src={ilgiliürün} class="card-img-top ilgiliürünresmi" alt={ilgiliürün}></img>
+                        <div className="card-body">
+                            <img src={ilgiliürün} className="card-img-top ilgiliürünresmi" alt={ilgiliürün}></img>
                             <p className="ilgili-ürün-indirim" style={{}}>İndirim!</p>
                             <a href=""><Sepet className="sepet"/></a>
                             <a className="ilgili-ürün-ismi" href="">Besleyici Shake Karışımı Formül 1 (Ahududu ve Beyaz Çikolata Aromalı)</a>
@@ -57,11 +57,11 @@ export default function İlgi() {
                     </div>
                 </div>
 
-                <div class="col">
-                    <div class="card h-100 ilgili">
+                <div className="col">
+                    <div className="card h-100 ilgili">
                    
-                        <div class="card-body">
-                            <img src={ilgiliürün} class="card-img-top ilgiliürünresmi" alt={ilgiliürün}></img>
+                        <div className="card-body">
+                            <img src={ilgiliürün} className="card-img-top ilgiliürünresmi" alt={ilgiliürün}></img>
                             <p className="ilgili-ürün-indirim" style={{}}>İndirim!</p>
                             <a href=""><Sepet className="sepet"/></a>
                             <a className="ilgili-ürün-ismi" href="">Besleyici Shake Karışımı Formül 1 (Ahududu ve Beyaz Çikolata Aromalı)</a>

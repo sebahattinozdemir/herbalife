@@ -7,11 +7,11 @@ function Gizlilik() {
     <div className="row">
       <div className="container">
                 
-              <h1 class="mt-2">Gizlilik politikası</h1>
+              <h1 className="mt-2">Gizlilik politikası</h1>
 
-              <div class="row" id="row-907753893">
-                <div id="col-956660236" class="col medium-8 small-12 large-8">
-                  <div class="col-inner">
+              <div className="row" id="row-907753893">
+                <div id="col-956660236" className="col medium-8 small-12 large-8">
+                  <div className="col-inner">
                     <h2>Hangi kişisel bilgileri ne amaçla topluyoruz</h2>
                     <h3>Yorumlar</h3>
                     <p>
@@ -32,19 +32,19 @@ function Gizlilik() {
                   </div>
                 </div>
 
-                <div id="col-1763197399" class="col medium-4 small-12 large-4">
-                  <div class="col-inner">
+                <div id="col-1763197399" className="col medium-4 small-12 large-4">
+                  <div className="col-inner">
                     <div
-                      class="img has-hover x md-x lg-x y md-y lg-y"
+                      className="img has-hover x md-x lg-x y md-y lg-y"
                       id="image_1068915918"
                     >
-                      <div class="img-inner dark">
+                      <div className="img-inner dark">
                         <img
                           width="450"
                           height="300"
                           src="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-guvenli-odeme-ssl-sertifikasi.png"
                           data-src="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-guvenli-odeme-ssl-sertifikasi.png"
-                          class="attachment-large size-large lazy-load-active"
+                          className="attachment-large size-large lazy-load-active"
                           alt=""
                           loading="lazy"
                           srcset="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-guvenli-odeme-ssl-sertifikasi.png 450w, https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-guvenli-odeme-ssl-sertifikasi-247x165.png 247w"
@@ -56,20 +56,20 @@ function Gizlilik() {
                   </div>
                 </div>
               </div>
-              <div class="row" id="row-335948866">
-                <div id="col-1906012489" class="col medium-3 small-12 large-3">
-                  <div class="col-inner">
+              <div className="row" id="row-335948866">
+                <div id="col-1906012489" className="col medium-3 small-12 large-3">
+                  <div className="col-inner">
                     <div
-                      class="img has-hover x md-x lg-x y md-y lg-y"
+                      className="img has-hover x md-x lg-x y md-y lg-y"
                       id="image_756579150"
                     >
-                      <div class="img-inner dark">
+                      <div className="img-inner dark">
                         <img
                           width="495"
                           height="212"
                           src="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-ssl.png"
                           data-src="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-ssl.png"
-                          class="attachment-large size-large lazy-load-active"
+                          className="attachment-large size-large lazy-load-active"
                           alt=""
                           loading="lazy"
                           srcset="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-ssl.png 495w, https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-ssl-247x106.png 247w"
@@ -81,8 +81,8 @@ function Gizlilik() {
                   </div>
                 </div>
 
-                <div id="col-2091993361" class="col medium-9 small-12 large-9">
-                  <div class="col-inner">
+                <div id="col-2091993361" className="col medium-9 small-12 large-9">
+                  <div className="col-inner">
                     <h2>Ortam</h2>
                     <p>
                       Görselleri web sitesine yüklerseniz, gömülmüş konum
@@ -95,9 +95,9 @@ function Gizlilik() {
                   </div>
                 </div>
               </div>
-              <div class="row" id="row-1330621769">
-                <div id="col-1291128010" class="col small-12 large-12">
-                  <div class="col-inner">
+              <div className="row" id="row-1330621769">
+                <div id="col-1291128010" className="col small-12 large-12">
+                  <div className="col-inner">
                     <h3>Çerezler</h3>
                     <p>
                       Sitemize bir yorum bırakırsanız, isminizi, e-posta

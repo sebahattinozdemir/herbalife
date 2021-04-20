@@ -140,7 +140,7 @@ function Urunler() {
         <div className="col-12 bg-dark blog-pop">
           <div className="container mx-auto my-5">
             <form>
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label
                   style={{ fontSize: "x-large" }}
                   for="exampleFormControlInput1"
@@ -149,14 +149,14 @@ function Urunler() {
                 </label>
                 <input
                   type="text"
-                  class="form-control form-control-lg "
+                  className="form-control form-control-lg "
                   id="exampleFormControlInput1"
                   placeholder="Url"
                   value={urunAdi}
                   onChange={(event) => setUrunAdi(event.target.value)}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label
                   className="text-white"
                   style={{ fontSize: "x-large" }}
@@ -165,7 +165,7 @@ function Urunler() {
                   Urun Kategori
                 </label>
                 <select
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlSelect1"
                   onChange={categoryChanged}
                   value={urunKategorisi}
@@ -179,7 +179,7 @@ function Urunler() {
                 </select>
               </div>
              
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label
                   style={{ fontSize: "x-large" }}
                   for="exampleFormControlInput1"
@@ -188,14 +188,14 @@ function Urunler() {
                 </label>
                 <input
                   type="text"
-                  class="form-control form-control-lg"
+                  className="form-control form-control-lg"
                   id="exampleFormControlInput1"
                   placeholder="urun resim url"
                   value={urunResmi}
                   onChange={(event) => setUrunResmi(event.target.value)}
                 />
               </div>
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label
                   style={{ fontSize: "x-large" }}
                   for="exampleFormControlInput1"
@@ -204,14 +204,14 @@ function Urunler() {
                 </label>
                 <input
                   type="number"
-                  class="form-control form-control-lg"
+                  className="form-control form-control-lg"
                   id="exampleFormControlInput1"
                   placeholder="Urun Fiyati"
                   value={urunFiyati}
                   onChange={(event) => setUrunFiyati(event.target.value)}
                 />
               </div>
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label
                   style={{ fontSize: "x-large" }}
                   for="exampleFormControlInput1"
@@ -220,7 +220,7 @@ function Urunler() {
                 </label>
                 <input
                   type="number"
-                  class="form-control form-control-lg"
+                  className="form-control form-control-lg"
                   id="exampleFormControlInput1"
                   placeholder="Urun Indirimli Fiyati"
                   value={urunIndirimliFiyati}
@@ -229,7 +229,7 @@ function Urunler() {
                   }
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label
                   style={{ fontSize: "x-large" }}
                   className="text-white"
@@ -256,7 +256,7 @@ function Urunler() {
                   }}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label
                   style={{ fontSize: "x-large" }}
                   className="text-white"
@@ -302,7 +302,7 @@ function Urunler() {
       </button>
 
       <h2 className="text-success mt-4">Urunler</h2>
-      <table class="table text-white mt-3">
+      <table className="table text-white mt-3">
         <thead>
           <tr>
             <th scope="col">#</th>

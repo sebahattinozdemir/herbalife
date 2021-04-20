@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Table({ key, product, index, getProducts }) {
+function Table({ product, index, getProducts }) {
   const [open, setOpen] = React.useState(false);
   const [urunAdi, setUrunAdi] = useState(product.urunAdi);
   const [urunKategorisi, setUrunKategorisi] = useState(product.urunKategorisi);
@@ -112,32 +112,32 @@ function Table({ key, product, index, getProducts }) {
         <div className="col-12 bg-dark blog-pop">
           <div className="container mx-auto my-5">
             <form>
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label
                   style={{ fontSize: "x-large" }}
-                  for="exampleFormControlInput1"
+                  htmlfor="exampleFormControlInput1"
                 >
                   Urun Adi
                 </label>
                 <input
                   type="text"
-                  class="form-control form-control-lg "
+                  className="form-control form-control-lg "
                   id="exampleFormControlInput1"
                   placeholder="Url"
                   value={urunAdi}
                   onChange={(event) => setUrunAdi(event.target.value)}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label
                   className="text-white"
                   style={{ fontSize: "x-large" }}
-                  for="exampleFormControlSelect1"
+                  htmlfor="exampleFormControlSelect1"
                 >
                   Urun Kategori
                 </label>
                 <select
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlSelect1"
                   onChange={categoryChanged}
                   value={urunKategorisi}
@@ -151,48 +151,48 @@ function Table({ key, product, index, getProducts }) {
                 </select>
               </div>
 
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label
                   style={{ fontSize: "x-large" }}
-                  for="exampleFormControlInput1"
+                  htmlfor="exampleFormControlInput1"
                 >
                   Urun Resmi
                 </label>
                 <input
                   type="text"
-                  class="form-control form-control-lg"
+                  className="form-control form-control-lg"
                   id="exampleFormControlInput1"
                   placeholder="urun resim url"
                   value={urunResmi}
                   onChange={(event) => setUrunResmi(event.target.value)}
                 />
               </div>
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label
                   style={{ fontSize: "x-large" }}
-                  for="exampleFormControlInput1"
+                  htmlfor="exampleFormControlInput1"
                 >
                   Urun Fiyati
                 </label>
                 <input
                   type="number"
-                  class="form-control form-control-lg"
+                  className="form-control form-control-lg"
                   id="exampleFormControlInput1"
                   placeholder="Urun Fiyati"
                   value={urunFiyati}
                   onChange={(event) => setUrunFiyati(event.target.value)}
                 />
               </div>
-              <div class="form-group text-white">
+              <div className="form-group text-white">
                 <label
                   style={{ fontSize: "x-large" }}
-                  for="exampleFormControlInput1"
+                  htmlfor="exampleFormControlInput1"
                 >
                   Urun Indirimli Fiyati
                 </label>
                 <input
                   type="number"
-                  class="form-control form-control-lg"
+                  className="form-control form-control-lg"
                   id="exampleFormControlInput1"
                   placeholder="Urun Indirimli Fiyati"
                   value={urunIndirimliFiyati}
@@ -201,11 +201,11 @@ function Table({ key, product, index, getProducts }) {
                   }
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label
                   style={{ fontSize: "x-large" }}
                   className="text-white"
-                  for="exampleFormControlTextarea1"
+                  htmlfor="exampleFormControlTextarea1"
                 >
                   Urun Aciklamasi
                 </label>
@@ -228,11 +228,11 @@ function Table({ key, product, index, getProducts }) {
                   }}
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label
                   style={{ fontSize: "x-large" }}
                   className="text-white"
-                  for="exampleFormControlTextarea1"
+                  htmlfor="exampleFormControlTextarea1"
                 >
                   Urun Ekbilgisi
                 </label>

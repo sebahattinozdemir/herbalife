@@ -10,9 +10,9 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <App />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

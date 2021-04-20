@@ -66,20 +66,20 @@ function Hakkimizda() {
         </div>
       </div>
 
-      <div class="container">
+      <div className="container">
         <div id="accordion">
-          <div class="card">
-            <div class="card-header">
+          <div className="card">
+            <div className="card-header">
               <span
-                class="card-link font-weight-bold"
+                className="card-link font-weight-bold"
                 style={{ color: "#7ac043"}}
                 data-toggle="collapse"
               >
                 NEDEN BİZİM ÜRÜNLERİMİZ
               </span>
             </div>
-            <div class="collapse show" data-parent="#accordion">
-              <div class="card-body" style={{textAlign:"justify"}}>
+            <div className="collapse show" data-parent="#accordion">
+              <div className="card-body" style={{textAlign:"justify"}}>
                 Dünyanın önde gelen uzmanlarını bir araya getiren Herbalife
                 Nutrition Enstitüsü, klinik araştırmalar ve eğitim faaliyetleri
                 aracılığıyla beslenme alanında ürün geliştirilmesini
@@ -88,18 +88,18 @@ function Hakkimizda() {
             </div>
           </div>
           <br/>
-          <div class="card">
-            <div class="card-header">
+          <div className="card">
+            <div className="card-header">
               <span
                 style={{ color: "#7ac043" }}
-                class="collapsed card-link font-weight-bold"
+                className="collapsed card-link font-weight-bold"
                 data-toggle="collapse"
               >
                 HAYATA DOKUNMAK
               </span>
             </div>
-            <div class="collapse show" data-parent="#accordion">
-              <div class="card-body" style={{textAlign:"justify"}}>
+            <div className="collapse show" data-parent="#accordion">
+              <div className="card-body" style={{textAlign:"justify"}}>
                Bu bakımdan, kar amacı gütmeyen bir kuruluş
                 olan Herbalife Nutrition Vakfı tarafından iyi beslenmeyi ve
                 aktif yaşam tarzını desteklemek için düzenlenen programlar

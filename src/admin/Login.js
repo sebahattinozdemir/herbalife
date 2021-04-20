@@ -22,7 +22,7 @@ function Login(props) {
                 <label>UserName</label>
                 <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     onChange={(event) => setEmail(event.target.value)}
                     value={email}
                   />
@@ -33,7 +33,7 @@ function Login(props) {
                   <label>Password</label>
                 <input
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     onChange={(event) => setPassword(event.target.value)}
                     value={password}
                   />

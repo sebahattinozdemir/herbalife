@@ -8,7 +8,7 @@ import useDocumentTitle from "../useDocumentTitle";
 import DataView from "./urunDataViewComponent/DataView";
 import { db } from "./../firebase";
 import firebase from "firebase";
-
+import { Paginator } from 'primereact/paginator';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,40 +25,13 @@ function Magaza() {
   const classes = useStyles();
   const [products, setProducts] = useState([]);
 
-  const [kiloYonetimi, setKiloYonetimi] = useState([]);
-  const [kisiselBakim, setKisiselBakim] = useState([]);
-  const [takviye, setTakviye] = useState([]);
-  const [tanitim, setTanitim] = useState([]);
-
   useEffect(() => {
     // fires once when the app loads
     getProducts();
   }, []);
 
-  const getKiloYonetimi = ()=>{
-    db.collection("products").where("urunKategorisi", "==", 'Kilo Yonetimi')
-    .get()
-    .then((snapshot) => {
-      setKiloYonetimi(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          urunAdi: doc.data().urunAdi,
-          urunKategorisi: doc.data().urunKategorisi,
-          urunResmi: doc.data().urunResmi,
-          urunFiyati: doc.data().urunFiyati,
-          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-          urunAciklamasi: doc.data().urunAciklamasi,
-          urunEkbilgisi: doc.data().urunEkbilgisi,
-        }))
-      );
-    })
-    .catch((error) => {
-        console.log("Error getting documents: ", error);
-    });
-
-  }
-  
   const getProducts = () => {
+    setProducts([])
     db.collection("products")
       .orderBy("timeStamp", "desc")
       .onSnapshot((snapshot) => {
@@ -78,6 +51,137 @@ function Magaza() {
      
    
   };
+
+  const getKiloYonetimi = ()=>{
+
+    setProducts([])
+    db.collection("products").where("urunKategorisi", "==", 'Kilo Yonetimi')
+    .get()
+    .then((snapshot) => {
+      setProducts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+        }))
+      );
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+  }
+
+  const getKisiselBakim = ()=>{
+
+    setProducts([])
+    db.collection("products").where("urunKategorisi", "==", 'Kisisel Bakim')
+    .get()
+    .then((snapshot) => {
+      setProducts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+        }))
+      );
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+  }
+
+  const getOzelSetler = ()=>{
+
+    setProducts([])
+    db.collection("products").where("urunKategorisi", "==", 'Ozel Setler')
+    .get()
+    .then((snapshot) => {
+      setProducts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+        }))
+      );
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+  }
+
+  const getTakviye = ()=>{
+
+    setProducts([])
+    db.collection("products").where("urunKategorisi", "==", 'Takviye Edici Gidalar')
+    .get()
+    .then((snapshot) => {
+      setProducts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+        }))
+      );
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+  }
+
+  const getTanitim = ()=>{
+
+    setProducts([])
+    db.collection("products").where("urunKategorisi", "==", 'Tanitim Urunleri')
+    .get()
+    .then((snapshot) => {
+      setProducts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+        }))
+      );
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+  }
+  const [basicFirst, setBasicFirst] = useState(0);
+  const [basicRows, setBasicRows] = useState(10);
+  const onBasicPageChange = (event) => {
+    setBasicFirst(event.first);
+    setBasicRows(event.rows);
+}
 
   return (
     <div className="w-100 mx-2">
@@ -105,24 +209,24 @@ function Magaza() {
                 className={classes.root}
               >
                 <ListItem button>
-                  <ListItemText primary="Kilo Yönetimi" />
+                  <ListItemText primary="Kilo Yönetimi" onClick={getKiloYonetimi}/>
                 </ListItem>
 
 
                 <ListItem button>
-                  <ListItemText primary="Kişisel Bakım" />
+                  <ListItemText primary="Kişisel Bakım"  onClick={getKisiselBakim} />
                 </ListItem>
 
                 <ListItem button>
-                  <ListItemText primary="Özel Setler" />
+                  <ListItemText primary="Özel Setler"  onClick={getOzelSetler}/>
                 </ListItem>
 
                 <ListItem button>
-                  <ListItemText primary="Takviye Edici Gıdalar" />
+                  <ListItemText primary="Takviye Edici Gıdalar"  onClick={getTakviye}/>
                 </ListItem>
 
                 <ListItem button>
-                  <ListItemText primary="Tanıtım Ürünleri" />
+                  <ListItemText primary="Tanıtım Ürünleri"  onClick={getTanitim}/>
                 </ListItem>
 
               </List>
@@ -132,7 +236,9 @@ function Magaza() {
 
 
             <div className="col-lg-9 col-xs-12 ">
-                <DataView/>
+                <DataView products = {products}/>
+
+                <Paginator first={basicFirst} rows={basicRows} totalRecords={products.length}  onPageChange={onBasicPageChange}></Paginator>
             </div>
           </div>
         </div>
