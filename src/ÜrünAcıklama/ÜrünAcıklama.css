@@ -98,3 +98,7 @@ a:hover{
     border-left: 2px blue solid;
     border-right: 2px blue solid;
 }
+.acıklama_tabs:hover{
+    background-color: #F2F4F5 !important;
+
+}
