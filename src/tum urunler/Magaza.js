@@ -241,8 +241,11 @@ function Magaza() {
 
                 <Paginator first={basicFirst} rows={basicRows} totalRecords={products.length}  onPageChange={onBasicPageChange}></Paginator>
             
+                <br/>
+                <br/>
                 <ÜrünDetay/>
             </div>
+            
 
            
           </div>
