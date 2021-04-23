@@ -59,8 +59,21 @@
 .ürünün_son_fiyatı{
     float:left;
     font-weight: bold;
-    margin-left: 1rem !important;
+    margin-left: 1rem;
     
-    
-    
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 700px) {
+    .ürünün_ilk_fiyatı{
+        font-size: small !important;
+    }
+    .ürünün_son_fiyatı{
+        font-size: small !important;
+        margin-left: .5rem !important;
+
+    }
+    .ürünlerin_fiyat_bilgileri{
+        margin-right: 3px !important;
+        margin-left: 3px !important;
+    }
 }

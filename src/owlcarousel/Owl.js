@@ -15,7 +15,7 @@ import Ürün from "../ürün-component/Ürün.js";
 
 //Owl Carousel Settings
 const options = {
-    margin: 10,
+    margin: 5,
     responsiveClass: true,
     dots:2,
     autoplay: true,
