@@ -13,7 +13,12 @@ export default class Ürün extends Component{
                 <img src={ürünün_resmi} class="ürünün_resmi" alt=""></img>
                 <p className="ürün_indirim_etiketi">İndirim!</p>
                 <a href=""><Sepet className="sepet_ikonu"/></a>
-                <a className="ürünün_ismi" href={ürünün_linki}>{ürünün_ismi}</a>
+                <br/>
+                <div style={{height:"auto"}}>
+                    <a className="ürünün_ismi" href={ürünün_linki}>{ürünün_ismi}</a>
+                </div>
+            
+                <br/>
                 <div className="ürünlerin_fiyat_bilgileri">
                     <p className="ürünün_ilk_fiyatı">{ürünün_ilk_fiyatı}</p>
                     <p className="ürünün_son_fiyatı">{ürünün_son_fiyatı}</p>

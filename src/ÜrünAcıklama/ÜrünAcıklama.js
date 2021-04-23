@@ -86,11 +86,8 @@ export default function ÜrünAcıklama() {
                     <hr style={{style:"dotted",marginBottom:"2px",marginTop:"-2px"}}/>
                     <p style={{fontSize:"small"}}>Kategori: Kişisel Bakım</p>
                 </div>
-                <br/>
-                <br/>
                 
-               
-              
+            
             </div>
             <div className="col-lg-12 col-xs-12 ürünacıklama_alt_taraf">
                 <hr/>
