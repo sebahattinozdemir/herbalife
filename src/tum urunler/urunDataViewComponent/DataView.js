@@ -16,9 +16,9 @@ function DataView({products}) {
                   }
                   ürünün_ismi={product.urunAdi}
                   ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
-                  ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                  ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"} 
                 />
-              </div>
+              </div> 
         
             )
         })}
