@@ -3,6 +3,7 @@
 
 .ürünün_resmi{
     height: 10rem !important;
+  
     
     
 }
@@ -42,10 +43,7 @@
     margin-right: 1rem;
 
    
-    
-    
-  
-}
+    }
 
 
 .ürünün_ilk_fiyatı{
@@ -76,4 +74,13 @@
         margin-right: 3px !important;
         margin-left: 3px !important;
     }
+    .ürünün_resmi{
+        
+        height: 10rem !important;
+        display: block !important;
+        align-content: center !important;
+        margin:auto !important;
+        
+    }
+
 }

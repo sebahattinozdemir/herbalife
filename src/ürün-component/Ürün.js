@@ -9,7 +9,7 @@ export default class Ürün extends Component{
         const {ürünün_resmi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı}=this.props;
         return (
 
-            <div class="container">
+            <div class="col-12">
                 <img src={ürünün_resmi} class="ürünün_resmi" alt=""></img>
                 <p className="ürün_indirim_etiketi">İndirim!</p>
                 <a href=""><Sepet className="sepet_ikonu"/></a>

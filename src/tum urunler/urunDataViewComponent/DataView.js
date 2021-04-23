@@ -3,12 +3,12 @@ import Ürün from "../../ürün-component/Ürün";
 
 function DataView({products}) {
   return (
-    <div className="row">
+    <div className="row" style={{backgroundColor:"white"}}>
 
 
         {products.map(product=>{
             return(
-                <div className="col-lg-3 col-md-4 col-sm-4 col-xs-6  border border-danger">
+                <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6 col-6  border border-light">
                 <Ürün
                   /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                   ürünün_resmi={
