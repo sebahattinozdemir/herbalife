@@ -1,0 +1,100 @@
+.ürünacıklama_tepe{
+    display: inline;
+}
+.ürünacıklama_sol_taraf{
+    background-color: white;
+    width: 95%;
+    float:left;
+    height: auto;
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+    
+}
+.ürünacıklama_indirim{
+    float:left;
+    background-color:#37ACB0;
+    border-radius: 1rem;
+    color: white;
+    padding: 5px;   
+}
+.ürünacıklama_resmi{
+    width: 90%;
+    height: 20rem;
+    display: block;
+    align-content: center;
+    margin: auto;
+    
+}
+.ürünacıklama_zoom{
+    
+}
+.ürünacıklama_zoom:hover{
+    background-color: black;
+    color:white;
+    
+}
+
+.ürünacıklama_sag_taraf{
+    background-color: white;
+    float: left;
+    width: 95%;
+    height: auto;
+    display: inline;
+   
+}
+.ürünacıklama_alt_taraf{
+    background-color: white;
+    width: 100%;
+}
+
+.ürünacıklama_ilk_fiyat{
+    float:left;
+    color:gray;
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration-line:line-through;
+    text-decoration-thickness: 1.5px;
+    
+}
+.ürünacıklama_indirimli_fiyat{
+    float:left;
+    font-weight: bold;
+    margin-left: 2rem;
+    font-size: x-large;
+    
+    
+}
+.ürünacıklama_azalt,.ürünacıklama_arttır{
+
+    width:3rem;
+    background-color:#F6F6F6;
+    border:1px lightgray solid;
+    height: 3rem;
+    font-size: x-large;
+}
+.whatsappMesajıGönder{
+    background-color: #F2F4F5 !important;
+    border-radius: 0.3rem;
+    padding:0.5rem !important;
+    border-left: 2px #26F91E solid;
+    border-right: 2px #26F91E solid;
+}
+.whatsappMesajıGönder:hover{
+    background-color: #E3FAEC !important;
+}
+.siziArayalım:hover{
+    background-color: #EAF7FC !important;
+}
+a:hover{
+    text-decoration: none !important;
+
+}
+.siziArayalım{
+    background-color: #F2F4F5 !important;
+    border-radius: 0.3rem;
+    padding:0.5rem !important;
+    border-left: 2px blue solid;
+    border-right: 2px blue solid;
+}

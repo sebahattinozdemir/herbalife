@@ -9,6 +9,7 @@ import DataView from "./urunDataViewComponent/DataView";
 import { db } from "./../firebase";
 import firebase from "firebase";
 import { Paginator } from 'primereact/paginator';
+import ÜrünDetay from "../ÜrünAcıklama/ÜrünAcıklama.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -239,7 +240,11 @@ function Magaza() {
                 <DataView products = {products}/>
 
                 <Paginator first={basicFirst} rows={basicRows} totalRecords={products.length}  onPageChange={onBasicPageChange}></Paginator>
+            
+                <ÜrünDetay/>
             </div>
+
+           
           </div>
         </div>
       </div>
