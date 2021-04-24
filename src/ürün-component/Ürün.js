@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Sepet from '@material-ui/icons/AddShoppingCart';
 import "./Ürün.css";
+import { Link } from 'react-router-dom';
 
 
 export default class Ürün extends Component{
         render(){
         //Destructing
-        const {ürünün_resmi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı}=this.props;
+        const {ürünün_resmi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı,urun_aciklama,urun_ekbilgi,urun_kategori}=this.props;
         return (
 
             <div class="col-12">
@@ -15,7 +16,17 @@ export default class Ürün extends Component{
                 <a href=""><Sepet className="sepet_ikonu"/></a>
                 <br/>
                 <div style={{height:"auto"}}>
-                    <a className="ürünün_ismi" href={ürünün_linki}>{ürünün_ismi}</a>
+                    <Link
+                      className="ürünün_ismi"
+                      to=""
+                      // eslint-disable-next-line react/jsx-no-duplicate-props
+                      to={{
+                        pathname: "/magaza/urun-aciklama",
+                        state: this.props
+                      }}
+                    >
+                      {ürünün_ismi}
+                    </Link>
                 </div>
             
                 <br/>

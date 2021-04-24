@@ -24,6 +24,7 @@ import SiparişToplamÖdeme from "./SepetVeÖdemeSayfası/SepetVeKapıdaÖdeme";
 
 import useDocumentTitle from "./useDocumentTitle";
 import { SnackbarProvider } from "notistack";
+import ÜrünAcıklama from "./ÜrünAcıklama/ÜrünAcıklama";
 
 
 
@@ -44,6 +45,7 @@ function App() {
               <Route exact path="/magaza/ozel-setler" component={Magaza} />
               <Route exact path="/magaza/takviye-edici-gidalar" component={Magaza} />
               <Route exact path="/magaza/tanitim-urunleri" component={Magaza} />
+              <Route exact path="/magaza/urun-aciklama" component={ÜrünAcıklama} />
               <Route exact path="/blog" component={Blog} />
               <Route
                 exact
