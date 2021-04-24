@@ -148,7 +148,7 @@ class Kayıt extends Component {
         formErrors.nameAndSurname = value.length < 1 ? "Lütfen adınızı soyadınızı girin." : "";
         break;
       case "cellphone":
-          formErrors.cellphone = value.length < 1 ? "Please enter a cellphone" : "";
+          formErrors.cellphone = value.length < 1 ? "lütfen cep telefonu numaranızı giriniz." : "";
           break;
       case "email":
         formErrors.email = emailRegex.test(value)
@@ -162,7 +162,7 @@ class Kayıt extends Component {
         formErrors.province = value.length < 1 ? "Lütfen ilçe ismini giriniz." : "";
         break;
         case "address":
-          formErrors.address = value.length < 1 ? "Please enter an address" : "";
+          formErrors.address = value.length < 1 ? "Lütfen adresinizi giriniz." : "";
           break;
         
         case "additionalNotes":
@@ -191,7 +191,7 @@ class Kayıt extends Component {
             
           }}
         >
-          <div className="col-lg-8 col-md-8 col-sm-12 col-12 m-3">
+          <div className="col-sm-12 col-12 m-3">
             <p className="kayıt_formu"
               style={{
                 display: "flex",
