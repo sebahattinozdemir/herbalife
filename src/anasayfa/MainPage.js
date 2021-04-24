@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MainPage.css";
 import Carousel from "../carousel/Carousel";
 import Sepet from "@material-ui/icons/AddShoppingCart";
 
 import Owl from "../owlcarousel/Owl.js";
+import { Link } from "react-router-dom";
 
 function MainPage() {
+
   return (
     <div>
       <div className="w-100 mt-3">
@@ -92,14 +94,17 @@ function MainPage() {
                   tasarlandı.
                 </p>
 
-                <a
-                  href="#"
-                  className="btn btn-light text-success tümünü_gör_butonu"
-                >
+                <Link
+                      className="text-decoration-none w-100 btn btn-light text-dark"
+                      to="/magaza/ozel-setler"
+                    >
+                      
                   <strong>
                     <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-                </a>
+
+                </Link>
+
               </div>
             </div>
           </div>
@@ -122,14 +127,18 @@ function MainPage() {
                   Beslenme hedeflerinize ulaşmanıza yardımcı olmak için
                   tasarlandı.
                 </p>
-                <a
-                  href="#"
-                  className="btn btn-light text-success tümünü_gör_butonu"
-                >
+          
+                <Link
+                      className="text-decoration-none w-100 btn btn-light"
+                      to="/magaza/ozel-setler"
+                    >
+                      
                   <strong>
-                    <span style={{ color: "#81bac3" }}>Tümünü Gör</span>
+                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-                </a>
+
+                </Link>
+
               </div>
             </div>
           </div>
@@ -152,14 +161,16 @@ function MainPage() {
                   Herbalife SKIN® ve Herbal Aloe güzellik ürünlerimiz, cilt ve
                   saç bakımı için uzman çözümler sunar.
                 </p>
-                <a
-                  href="#"
-                  className="btn btn-light text-success tümünü_gör_butonu"
-                >
+                 <Link
+                      className="text-decoration-none w-100 btn btn-light"
+                      to="/magaza/kisisel-bakim"
+                    >
+                      
                   <strong>
-                    <span style={{ color: "#bcc6be" }}>Tümünü Gör</span>
+                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-                </a>
+
+                </Link>
               </div>
             </div>
           </div>
@@ -182,14 +193,16 @@ function MainPage() {
                   Vücudunuzun ihtiyaç duyabileceği vitamin ve mineralleri
                   sağlamak için geliştirilmiştir.
                 </p>
-                <a
-                  href="#"
-                  className="btn btn-light text-success tümünü_gör_butonu"
-                >
+                <Link
+                      className="text-decoration-none w-100 btn btn-light"
+                      to="/magaza/takviye-edici-gidalar"
+                    >
+                      
                   <strong>
-                    <span style={{ color: "#9ec1a3" }}>Tümünü Gör</span>
+                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-                </a>
+
+                </Link>
               </div>
             </div>
           </div>
@@ -211,14 +224,16 @@ function MainPage() {
                   Yaşam tarzı olarak Herbalife’ı seçtiğinizi gösteren faydalı
                   ürünler.
                 </p>
-                <a
-                  href="#"
-                  className="btn btn-light text-success tümünü_gör_butonu"
-                >
+                <Link
+                      className="text-decoration-none w-100 btn btn-light"
+                      to="/magaza/tanitim-urunleri"
+                    >
+                      
                   <strong>
-                    <span style={{ color: "#70a9a2" }}>Tümünü Gör</span>
+                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-                </a>
+
+                </Link>
               </div>
             </div>
           </div>

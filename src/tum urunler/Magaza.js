@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import List from "@material-ui/core/List";
@@ -8,8 +8,11 @@ import useDocumentTitle from "../useDocumentTitle";
 import DataView from "./urunDataViewComponent/DataView";
 import { db } from "./../firebase";
 import firebase from "firebase";
-import { Paginator } from 'primereact/paginator';
+import { Paginator } from "primereact/paginator";
 import ÜrünDetay from "../ÜrünAcıklama/ÜrünAcıklama.js";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,19 +25,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Magaza() {
-  useDocumentTitle('Mağaza - Herbalife')
+  useDocumentTitle("Mağaza - Herbalife");
   const classes = useStyles();
   const [products, setProducts] = useState([]);
+  const [page, setPage] = useState(1);
+  const [category, setCategory] = useState();
 
   useEffect(() => {
     // fires once when the app loads
     getProducts();
   }, []);
 
+  // tum urunler
   const getProducts = () => {
-    setProducts([])
+    setProducts([]);
+    setCategory("tum-urunler");
     db.collection("products")
       .orderBy("timeStamp", "desc")
+      .limit(12)
       .onSnapshot((snapshot) => {
         setProducts(
           snapshot.docs.map((doc) => ({
@@ -46,143 +54,407 @@ function Magaza() {
             urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
             urunAciklamasi: doc.data().urunAciklamasi,
             urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
           }))
         );
       });
-     
-   
   };
 
-  const getKiloYonetimi = ()=>{
+  //kilo yonetim urunleri
+  const getKiloYonetimi = () => {
+    setProducts([]);
+    setCategory("kilo-yonetimi");
 
-    setProducts([])
-    db.collection("products").where("urunKategorisi", "==", 'Kilo Yonetimi')
-    .get()
-    .then((snapshot) => {
-      setProducts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          urunAdi: doc.data().urunAdi,
-          urunKategorisi: doc.data().urunKategorisi,
-          urunResmi: doc.data().urunResmi,
-          urunFiyati: doc.data().urunFiyati,
-          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-          urunAciklamasi: doc.data().urunAciklamasi,
-          urunEkbilgisi: doc.data().urunEkbilgisi,
-        }))
-      );
-    })
-    .catch((error) => {
-        console.log("Error getting documents: ", error);
-    });
+    db.collection("products")
+      .where("urunKategorisi", "==", "Kilo Yonetimi")
+      .orderBy("timeStamp", "desc")
+      .limit(12)
+      .onSnapshot((snapshot) => {
+        setProducts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
 
-  }
+  //kisisel bakim urunleri
+  const getKisiselBakim = () => {
+    setProducts([]);
+    setCategory("kisisel-bakim");
 
-  const getKisiselBakim = ()=>{
+    db.collection("products")
+      .where("urunKategorisi", "==", "Kisisel Bakim")
+      .orderBy("timeStamp", "desc")
+      .limit(12)
+      .onSnapshot((snapshot) => {
+        setProducts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
 
-    setProducts([])
-    db.collection("products").where("urunKategorisi", "==", 'Kisisel Bakim')
-    .get()
-    .then((snapshot) => {
-      setProducts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          urunAdi: doc.data().urunAdi,
-          urunKategorisi: doc.data().urunKategorisi,
-          urunResmi: doc.data().urunResmi,
-          urunFiyati: doc.data().urunFiyati,
-          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-          urunAciklamasi: doc.data().urunAciklamasi,
-          urunEkbilgisi: doc.data().urunEkbilgisi,
-        }))
-      );
-    })
-    .catch((error) => {
-        console.log("Error getting documents: ", error);
-    });
+  const getOzelSetler = () => {
+    setProducts([]);
+    setCategory("ozel-setler");
 
-  }
+    db.collection("products")
+      .where("urunKategorisi", "==", "Ozel Setler")
+      .orderBy("timeStamp", "desc")
+      .limit(12)
+      .onSnapshot((snapshot) => {
+        setProducts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
 
-  const getOzelSetler = ()=>{
+  const getTakviye = () => {
+    setProducts([]);
+    setCategory("takviye-edici-gidalar");
+    db.collection("products")
+      .where("urunKategorisi", "==", "Takviye Edici Gidalar")
+      .orderBy("timeStamp", "desc")
+      .limit(12)
+      .onSnapshot((snapshot) => {
+        setProducts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
 
-    setProducts([])
-    db.collection("products").where("urunKategorisi", "==", 'Ozel Setler')
-    .get()
-    .then((snapshot) => {
-      setProducts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          urunAdi: doc.data().urunAdi,
-          urunKategorisi: doc.data().urunKategorisi,
-          urunResmi: doc.data().urunResmi,
-          urunFiyati: doc.data().urunFiyati,
-          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-          urunAciklamasi: doc.data().urunAciklamasi,
-          urunEkbilgisi: doc.data().urunEkbilgisi,
-        }))
-      );
-    })
-    .catch((error) => {
-        console.log("Error getting documents: ", error);
-    });
+  const getTanitim = () => {
+    setProducts([]);
+    setCategory("tanitim-urunleri");
+    db.collection("products")
+      .where("urunKategorisi", "==", "Tanitim Urunleri")
+      .orderBy("timeStamp", "desc")
+      .limit(12)
+      .onSnapshot((snapshot) => {
+        setProducts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
 
-  }
+  const showNext = ({ item }) => {
+    if (products.length === 0) {
+    } else {
+      setProducts([]);
+      if (category === "tum-urunler") {
+        db.collection("products")
+          .orderBy("timeStamp", "desc")
+          .limit(12)
+          .startAfter(item.timeStamp)
+          .onSnapshot((snapshot) => {
+            setProducts(
+              snapshot.docs.map((doc) => ({
+                id: doc.id,
+                urunAdi: doc.data().urunAdi,
+                urunKategorisi: doc.data().urunKategorisi,
+                urunResmi: doc.data().urunResmi,
+                urunFiyati: doc.data().urunFiyati,
+                urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+                urunAciklamasi: doc.data().urunAciklamasi,
+                urunEkbilgisi: doc.data().urunEkbilgisi,
+                timeStamp: doc.data().timeStamp,
+              }))
+            );
+            setPage(page + 1);
+          });
+      } else if (category === "kilo-yonetimi") {
+        db.collection("products")
+          .where("urunKategorisi", "==", "Kilo Yonetimi")
+          .orderBy("timeStamp", "desc")
+          .limit(12)
+          .startAfter(item.timeStamp)
+          .onSnapshot((snapshot) => {
+            setProducts(
+              snapshot.docs.map((doc) => ({
+                id: doc.id,
+                urunAdi: doc.data().urunAdi,
+                urunKategorisi: doc.data().urunKategorisi,
+                urunResmi: doc.data().urunResmi,
+                urunFiyati: doc.data().urunFiyati,
+                urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+                urunAciklamasi: doc.data().urunAciklamasi,
+                urunEkbilgisi: doc.data().urunEkbilgisi,
+                timeStamp: doc.data().timeStamp,
+              }))
+            );
+          });
+      } else if (category === "kisisel-bakim") {
+        db.collection("products")
+          .where("urunKategorisi", "==", "Kisisel Bakim")
+          .orderBy("timeStamp", "desc")
+          .limit(12)
+          .startAfter(item.timeStamp)
+          .onSnapshot((snapshot) => {
+            setProducts(
+              snapshot.docs.map((doc) => ({
+                id: doc.id,
+                urunAdi: doc.data().urunAdi,
+                urunKategorisi: doc.data().urunKategorisi,
+                urunResmi: doc.data().urunResmi,
+                urunFiyati: doc.data().urunFiyati,
+                urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+                urunAciklamasi: doc.data().urunAciklamasi,
+                urunEkbilgisi: doc.data().urunEkbilgisi,
+                timeStamp: doc.data().timeStamp,
+              }))
+            );
+          });
+      } else if (category === "ozel-setler") {
+        db.collection("products")
+          .where("urunKategorisi", "==", "Ozel Setler")
+          .orderBy("timeStamp", "desc")
+          .limit(12)
+          .startAfter(item.timeStamp)
+          .onSnapshot((snapshot) => {
+            setProducts(
+              snapshot.docs.map((doc) => ({
+                id: doc.id,
+                urunAdi: doc.data().urunAdi,
+                urunKategorisi: doc.data().urunKategorisi,
+                urunResmi: doc.data().urunResmi,
+                urunFiyati: doc.data().urunFiyati,
+                urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+                urunAciklamasi: doc.data().urunAciklamasi,
+                urunEkbilgisi: doc.data().urunEkbilgisi,
+                timeStamp: doc.data().timeStamp,
+              }))
+            );
+          });
+      } else if (category === "takviye-edici-gidalar") {
+        db.collection("products")
+          .where("urunKategorisi", "==", "Takviye Edici Gidalar")
+          .orderBy("timeStamp", "desc")
+          .limit(12)
+          .startAfter(item.timeStamp)
+          .onSnapshot((snapshot) => {
+            setProducts(
+              snapshot.docs.map((doc) => ({
+                id: doc.id,
+                urunAdi: doc.data().urunAdi,
+                urunKategorisi: doc.data().urunKategorisi,
+                urunResmi: doc.data().urunResmi,
+                urunFiyati: doc.data().urunFiyati,
+                urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+                urunAciklamasi: doc.data().urunAciklamasi,
+                urunEkbilgisi: doc.data().urunEkbilgisi,
+                timeStamp: doc.data().timeStamp,
+              }))
+            );
+          });
+      } else {
+        db.collection("products")
+          .where("urunKategorisi", "==", "Tanitim Urunleri")
+          .orderBy("timeStamp", "desc")
+          .limit(12)
+          .startAfter(item.timeStamp)
+          .onSnapshot((snapshot) => {
+            setProducts(
+              snapshot.docs.map((doc) => ({
+                id: doc.id,
+                urunAdi: doc.data().urunAdi,
+                urunKategorisi: doc.data().urunKategorisi,
+                urunResmi: doc.data().urunResmi,
+                urunFiyati: doc.data().urunFiyati,
+                urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+                urunAciklamasi: doc.data().urunAciklamasi,
+                urunEkbilgisi: doc.data().urunEkbilgisi,
+                timeStamp: doc.data().timeStamp,
+              }))
+            );
+          });
+      }
+    }
+  };
 
-  const getTakviye = ()=>{
+  const showPrevious = ({ item }) => {
+    setProducts([]);
 
-    setProducts([])
-    db.collection("products").where("urunKategorisi", "==", 'Takviye Edici Gidalar')
-    .get()
-    .then((snapshot) => {
-      setProducts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          urunAdi: doc.data().urunAdi,
-          urunKategorisi: doc.data().urunKategorisi,
-          urunResmi: doc.data().urunResmi,
-          urunFiyati: doc.data().urunFiyati,
-          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-          urunAciklamasi: doc.data().urunAciklamasi,
-          urunEkbilgisi: doc.data().urunEkbilgisi,
-        }))
-      );
-    })
-    .catch((error) => {
-        console.log("Error getting documents: ", error);
-    });
-
-  }
-
-  const getTanitim = ()=>{
-
-    setProducts([])
-    db.collection("products").where("urunKategorisi", "==", 'Tanitim Urunleri')
-    .get()
-    .then((snapshot) => {
-      setProducts(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          urunAdi: doc.data().urunAdi,
-          urunKategorisi: doc.data().urunKategorisi,
-          urunResmi: doc.data().urunResmi,
-          urunFiyati: doc.data().urunFiyati,
-          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-          urunAciklamasi: doc.data().urunAciklamasi,
-          urunEkbilgisi: doc.data().urunEkbilgisi,
-        }))
-      );
-    })
-    .catch((error) => {
-        console.log("Error getting documents: ", error);
-    });
-
-  }
-  const [basicFirst, setBasicFirst] = useState(0);
-  const [basicRows, setBasicRows] = useState(10);
-  const onBasicPageChange = (event) => {
-    setBasicFirst(event.first);
-    setBasicRows(event.rows);
-}
+    if (category === "tum-urunler") {
+      db.collection("products")
+        .orderBy("timeStamp", "desc")
+        .endBefore(item.timeStamp)
+        .limitToLast(12)
+        .onSnapshot((snapshot) => {
+          setProducts(
+            snapshot.docs.map((doc) => ({
+              id: doc.id,
+              urunAdi: doc.data().urunAdi,
+              urunKategorisi: doc.data().urunKategorisi,
+              urunResmi: doc.data().urunResmi,
+              urunFiyati: doc.data().urunFiyati,
+              urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+              urunAciklamasi: doc.data().urunAciklamasi,
+              urunEkbilgisi: doc.data().urunEkbilgisi,
+              timeStamp: doc.data().timeStamp,
+            }))
+          );
+          setPage(page - 1);
+        });
+    } else if (category === "kilo-yonetimi") {
+      db.collection("products")
+        .where("urunKategorisi", "==", "Kilo Yonetimi")
+        .orderBy("timeStamp", "desc")
+        .endBefore(item.timeStamp)
+        .limitToLast(12)
+        .onSnapshot((snapshot) => {
+          setProducts(
+            snapshot.docs.map((doc) => ({
+              id: doc.id,
+              urunAdi: doc.data().urunAdi,
+              urunKategorisi: doc.data().urunKategorisi,
+              urunResmi: doc.data().urunResmi,
+              urunFiyati: doc.data().urunFiyati,
+              urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+              urunAciklamasi: doc.data().urunAciklamasi,
+              urunEkbilgisi: doc.data().urunEkbilgisi,
+              timeStamp: doc.data().timeStamp,
+            }))
+          );
+          setPage(page - 1);
+        });
+    } else if (category === "kisisel-bakim") {
+      db.collection("products")
+        .where("urunKategorisi", "==", "Kisisel Bakim")
+        .orderBy("timeStamp", "desc")
+        .endBefore(item.timeStamp)
+        .limitToLast(12)
+        .onSnapshot((snapshot) => {
+          setProducts(
+            snapshot.docs.map((doc) => ({
+              id: doc.id,
+              urunAdi: doc.data().urunAdi,
+              urunKategorisi: doc.data().urunKategorisi,
+              urunResmi: doc.data().urunResmi,
+              urunFiyati: doc.data().urunFiyati,
+              urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+              urunAciklamasi: doc.data().urunAciklamasi,
+              urunEkbilgisi: doc.data().urunEkbilgisi,
+              timeStamp: doc.data().timeStamp,
+            }))
+          );
+          setPage(page - 1);
+        });
+    } else if (category === "ozel-setler") {
+      db.collection("products")
+        .where("urunKategorisi", "==", "Ozel Setler")
+        .orderBy("timeStamp", "desc")
+        .endBefore(item.timeStamp)
+        .limitToLast(12)
+        .onSnapshot((snapshot) => {
+          setProducts(
+            snapshot.docs.map((doc) => ({
+              id: doc.id,
+              urunAdi: doc.data().urunAdi,
+              urunKategorisi: doc.data().urunKategorisi,
+              urunResmi: doc.data().urunResmi,
+              urunFiyati: doc.data().urunFiyati,
+              urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+              urunAciklamasi: doc.data().urunAciklamasi,
+              urunEkbilgisi: doc.data().urunEkbilgisi,
+              timeStamp: doc.data().timeStamp,
+            }))
+          );
+          setPage(page - 1);
+        });
+    } else if (category === "takviye-edici-gidalar") {
+      db.collection("products")
+        .where("urunKategorisi", "==", "Takviye Edici Gidalar")
+        .orderBy("timeStamp", "desc")
+        .endBefore(item.timeStamp)
+        .limitToLast(12)
+        .onSnapshot((snapshot) => {
+          setProducts(
+            snapshot.docs.map((doc) => ({
+              id: doc.id,
+              urunAdi: doc.data().urunAdi,
+              urunKategorisi: doc.data().urunKategorisi,
+              urunResmi: doc.data().urunResmi,
+              urunFiyati: doc.data().urunFiyati,
+              urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+              urunAciklamasi: doc.data().urunAciklamasi,
+              urunEkbilgisi: doc.data().urunEkbilgisi,
+              timeStamp: doc.data().timeStamp,
+            }))
+          );
+          setPage(page - 1);
+        });
+    } else {
+      db.collection("products")
+        .where("urunKategorisi", "==", "Tanitim Urunleri")
+        .orderBy("timeStamp", "desc")
+        .endBefore(item.timeStamp)
+        .limitToLast(12)
+        .onSnapshot((snapshot) => {
+          setProducts(
+            snapshot.docs.map((doc) => ({
+              id: doc.id,
+              urunAdi: doc.data().urunAdi,
+              urunKategorisi: doc.data().urunKategorisi,
+              urunResmi: doc.data().urunResmi,
+              urunFiyati: doc.data().urunFiyati,
+              urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+              urunAciklamasi: doc.data().urunAciklamasi,
+              urunEkbilgisi: doc.data().urunEkbilgisi,
+              timeStamp: doc.data().timeStamp,
+            }))
+          );
+          setPage(page - 1);
+        });
+    }
+  };
 
   return (
     <div className="w-100 mx-2">
@@ -199,55 +471,105 @@ function Magaza() {
                 aria-labelledby="nested-list-subheader"
                 subheader={
                   <ListSubheader component="div" id="nested-list-subheader">
-                    <p
-                      className="w-100 font-weight-bold"
-                      style={{ fontSize: "x-large" }}
+                    <Link
+                      onClick={getProducts}
+                      className="text-decoration-none btn btn-success w-100"
+                      to="/magaza"
                     >
                       Ürün Kategorileri
-                    </p>
+                    </Link>
                   </ListSubheader>
                 }
                 className={classes.root}
               >
                 <ListItem button>
-                  <ListItemText primary="Kilo Yönetimi" onClick={getKiloYonetimi}/>
-                </ListItem>
-
-
-                <ListItem button>
-                  <ListItemText primary="Kişisel Bakım"  onClick={getKisiselBakim} />
-                </ListItem>
-
-                <ListItem button>
-                  <ListItemText primary="Özel Setler"  onClick={getOzelSetler}/>
+                  <Link
+                    onClick={getKiloYonetimi}
+                    className="text-decoration-none btn btn-light w-100"
+                    to="/magaza/kilo-yonetimi"
+                  >
+                    Kilo Yönetimi
+                  </Link>
                 </ListItem>
 
                 <ListItem button>
-                  <ListItemText primary="Takviye Edici Gıdalar"  onClick={getTakviye}/>
+                  <Link
+                    onClick={getKisiselBakim}
+                    className="text-decoration-none btn btn-light w-100"
+                    to="/magaza/kisisel-bakim"
+                  >
+                    Kişisel Bakım
+                  </Link>
                 </ListItem>
 
                 <ListItem button>
-                  <ListItemText primary="Tanıtım Ürünleri"  onClick={getTanitim}/>
+                  <Link
+                    onClick={getOzelSetler}
+                    className="text-decoration-none btn btn-light w-100"
+                    to="/magaza/ozel-setler"
+                  >
+                    Özel Setler
+                  </Link>
                 </ListItem>
 
+                <ListItem button>
+                  <Link
+                    onClick={getTakviye}
+                    className="text-decoration-none btn btn-light w-100"
+                    to="/magaza/takviye-edici-gidalar"
+                  >
+                    Takviye Edici Gıdalar
+                  </Link>
+                </ListItem>
+
+                <ListItem button>
+                  <Link
+                    onClick={getTanitim}
+                    className="text-decoration-none btn btn-light w-100"
+                    to="/magaza/tanitim-urunleri"
+                  >
+                    Tanıtım Ürünleri
+                  </Link>
+                </ListItem>
               </List>
             </div>
 
-               
-
-
             <div className="col-lg-9 col-xs-12 ">
-                <DataView products = {products}/>
+              <DataView products={products} />
 
-                <Paginator first={basicFirst} rows={basicRows} totalRecords={products.length}  onPageChange={onBasicPageChange}></Paginator>
-            
-                <br/>
-                <br/>
-                <ÜrünDetay/>
+              <div className="d-flex justify-content-center mt-3">
+                <ul className="pagination">
+                  {page === 1 ? (
+                    ""
+                  ) : (
+                    <li
+                      className="btn btn-link page-item mx-2"
+                      onClick={() => showPrevious({ item: products[0] })}
+                    >
+                      <a className="page-link">
+                        <ArrowBackIosIcon />
+                        Geri
+                      </a>
+                    </li>
+                  )}
+                  {products.length < 12 ? (
+                    ""
+                  ) : (
+                    <li
+                      className="btn btn-link page-item mx-2"
+                      onClick={() =>
+                        showNext({ item: products[products.length - 1] })
+                      }
+                    >
+                      <a className="page-link">
+                        <ArrowForwardIosIcon />
+                        Ileri
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </div>
             </div>
-            
-
-           
           </div>
         </div>
       </div>

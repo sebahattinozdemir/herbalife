@@ -39,6 +39,11 @@ function App() {
          
               <Route exact path="/" component={MainPage} />
               <Route exact path="/magaza" component={Magaza} />
+              <Route exact path="/magaza/kilo-yonetimi" component={Magaza} />
+              <Route exact path="/magaza/kisisel-bakim" component={Magaza} />
+              <Route exact path="/magaza/ozel-setler" component={Magaza} />
+              <Route exact path="/magaza/takviye-edici-gidalar" component={Magaza} />
+              <Route exact path="/magaza/tanitim-urunleri" component={Magaza} />
               <Route exact path="/blog" component={Blog} />
               <Route
                 exact
