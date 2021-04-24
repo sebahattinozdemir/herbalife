@@ -3,10 +3,6 @@ import './Owl.css';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.min.css'
 import 'owl.carousel/dist/assets/owl.theme.default.min.css'
-import i1 from '../images/cin1.jpg';
-import i2 from '../images/cin2.jpg';
-import i3 from '../images/cin3.jpg';
-import i4 from '../images/cin4.jpg';
 import { NavigateBeforeSharp } from '@material-ui/icons';
 
 import Sepet from '@material-ui/icons/AddShoppingCart';
