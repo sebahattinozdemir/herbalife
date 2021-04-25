@@ -27,8 +27,8 @@ export default function ÜrünAcıklama(props) {
   };
 
   return (
-    <div className="container">
-      <div className="row ürünacıklama_tepe">
+    
+      <div className="row ürünacıklama_tepe" style={{padding:"2rem"}}>
         <div className="col-lg-6 col-xs-12 ürünacıklama_sol_taraf">
           <br/>
           <h4 className="ürünacıklama_indirim">İndirim!</h4>
@@ -179,6 +179,6 @@ export default function ÜrünAcıklama(props) {
         <br />
         <br />
       </div>
-    </div>
+    
   );
 }
