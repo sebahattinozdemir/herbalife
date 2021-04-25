@@ -23,13 +23,13 @@ function Iletisim() {
 
           <div className="col-12 text-center">
             <p className="font-weight-bold" style={{ fontSize: "x-large" }}>
-              Bizi Arayin
+              Bizi Arayın
             </p>
             <p className="font-weight-normal iletisim-merak" style={{ fontSize: "x-large" }}>Merak ettiklerinizi birlikte yanıtlayalım.</p>
           </div>
 
           <div className="col-12 text-center">
-            <p className="badge badge-info btn font-weight-normal" style={{ fontSize: "x-large",backgroundColor:"#7ac043" }}>0552 575 41 32</p>
+            <p className="badge badge-info btn font-weight-normal" style={{ fontSize: "x-large",backgroundColor:"#7ac043" }}>0546 475 38 83</p>
           </div>
 
           <div className="col-sm-12 col-12 harita" style={{align:"center",display:"block",margin:"auto"}}>
