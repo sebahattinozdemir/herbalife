@@ -43,13 +43,14 @@ export default function ÜrünAcıklama(props) {
       
       console.log(eklenenUrunler)
     }, 500);
-    
+
   };
 
   return (
     <div className="container">
       <div className="row ürünacıklama_tepe">
         <div className="col-lg-6 col-xs-12 ürünacıklama_sol_taraf">
+          <br/>
           <h4 className="ürünacıklama_indirim">İndirim!</h4>
           <img
             src={props.location.state.ürünün_resmi}
@@ -63,7 +64,8 @@ export default function ÜrünAcıklama(props) {
         </div>
 
         <div className="col-lg-6 col-xs-12 ürünacıklama_sag_taraf">
-          <div class="container">
+          <br/>
+          
             <h3>{props.location.state.ürünün_ismi}</h3>
             <hr />
             <div className="" style={{ display: "inline" }}>
@@ -154,11 +156,8 @@ export default function ÜrünAcıklama(props) {
                 marginTop: "-2px",
               }}
             />
-            <p style={{ fontSize: "small" }}>
-              {" "}
-              <strong>Kategori:</strong> {props.location.state.urun_kategori}
-            </p>
-          </div>
+            <p style={{ fontSize: "small" }}> <strong>Kategori:</strong> {props.location.state.urun_kategori}</p>
+          
         </div>
         <div className="col-lg-12 col-xs-12 ürünacıklama_alt_taraf">
           <hr />
@@ -197,6 +196,7 @@ export default function ÜrünAcıklama(props) {
                 {...html(props.location.state.urun_ekbilgi)}
               ></p>
             </TabPanel>
+            <br/>
           </Tabs>
         </div>
 
