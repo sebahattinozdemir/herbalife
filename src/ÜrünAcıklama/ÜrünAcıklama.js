@@ -45,7 +45,7 @@ export default function ÜrünAcıklama(props) {
 
         <div className="col-lg-6 col-xs-12 ürünacıklama_sag_taraf">
           <br/>
-          <div class="container">
+          
             <h3>{props.location.state.ürünün_ismi}</h3>
             <hr />
             <div className="" style={{ display: "inline" }}>
@@ -136,7 +136,7 @@ export default function ÜrünAcıklama(props) {
               }}
             />
             <p style={{ fontSize: "small" }}> <strong>Kategori:</strong> {props.location.state.urun_kategori}</p>
-          </div>
+          
         </div>
         <div className="col-lg-12 col-xs-12 ürünacıklama_alt_taraf">
           <hr />
