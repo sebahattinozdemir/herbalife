@@ -1,17 +1,4 @@
-.ürünacıklama_tepe{
-    display: inline;
-}
-.ürünacıklama_sol_taraf{
-    background-color: white;
-    width: 95%;
-    float:left;
-    height: auto;
-    
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    
-    
-}
+
 .ürünacıklama_indirim{
     float:left;
     background-color:#37ACB0;
@@ -19,31 +6,15 @@
     color: white;
     padding: 5px;   
 }
-.ürünacıklama_resmi{
-    width: 90%;
-    height: 20rem;
-    display: block;
-    align-content: center;
-    margin: auto;
-    
-}
-.ürünacıklama_zoom{
-    
-}
+
+
 .ürünacıklama_zoom:hover{
     background-color: black;
     color:white;
     
 }
 
-.ürünacıklama_sag_taraf{
-    background-color: white;
-    float: left;
-    width: 95%;
-    height: auto;
-    display: inline;
-   
-}
+
 .ürünacıklama_alt_taraf{
     background-color: white;
     width: 100%;
