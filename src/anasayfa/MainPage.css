@@ -5,7 +5,35 @@
     height:auto !important;
 }
 
-
+.owl-slider{
+   
+    width:100% !important;
+    margin: 0.5rem;
+    margin-top: 1rem;
+   
+     
+ }
+ .owl-slider-img{
+    height: 10rem !important;
+    width: 100% !important;
+    
+  
+ }
+ 
+ 
+ /* On screens that are 600px or less, set the background color to olive */
+ @media screen and (max-width: 700px) {
+     .owl-slider-img{
+         height: 7rem !important;
+         width: 95% !important;
+         margin:auto !important;
+      }
+      .owl-roof{
+          margin: .5rem !important;
+          width:90% !important;
+      }
+     
+ }
 
 .tümünü_gör_butonu{
     align-content:center !important;

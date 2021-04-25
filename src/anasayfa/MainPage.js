@@ -1,12 +1,170 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MainPage.css";
 import Carousel from "../carousel/Carousel";
 import Sepet from "@material-ui/icons/AddShoppingCart";
+import Ürün from "../ürün-component/Ürün.js";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.min.css";
+import "owl.carousel/dist/assets/owl.theme.default.min.css";
 
 import Owl from "../owlcarousel/Owl.js";
 import { Link } from "react-router-dom";
+import { db } from "./../firebase";
 
 function MainPage() {
+  const [kiloYonetimi, setKiloYonetimi] = useState([]);
+  const [kisiselBakim, setKisiselBakim] = useState([]);
+  const [ozelSet, setOzelSet] = useState([]);
+  const [takviye, setTakviye] = useState([]);
+  const [tanitim, setTanitim] = useState([]);
+
+  useEffect(() => {
+    // fires once when the app loads
+    getKiloYonetimi();
+    getKisiselBakim();
+    getOzelSet();
+    getTakviye();
+    getTanitim();
+  }, []);
+
+  //kilo yonetim urunleri
+  const getKiloYonetimi = () => {
+    db.collection("products")
+      .where("urunKategorisi", "==", "Kilo Yonetimi")
+      .orderBy("timeStamp", "desc")
+      .limit(4)
+      .onSnapshot((snapshot) => {
+        setKiloYonetimi(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
+
+  //kisisel bakim urunleri
+  const getKisiselBakim = () => {
+    db.collection("products")
+      .where("urunKategorisi", "==", "Kisisel Bakim")
+      .orderBy("timeStamp", "desc")
+      .limit(4)
+      .onSnapshot((snapshot) => {
+        setKisiselBakim(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
+
+  const getOzelSet = () => {
+    db.collection("products")
+      .where("urunKategorisi", "==", "Ozel Setler")
+      .orderBy("timeStamp", "desc")
+      .limit(4)
+      .onSnapshot((snapshot) => {
+        setOzelSet(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
+
+  const getTakviye = () => {
+    db.collection("products")
+      .where("urunKategorisi", "==", "Takviye Edici Gidalar")
+      .orderBy("timeStamp", "desc")
+      .limit(4)
+      .onSnapshot((snapshot) => {
+        setTakviye(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
+
+  const getTanitim = () => {
+    db.collection("products")
+      .where("urunKategorisi", "==", "Tanitim Urunleri")
+      .orderBy("timeStamp", "desc")
+      .limit(4)
+      .onSnapshot((snapshot) => {
+        setTanitim(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            urunResmi: doc.data().urunResmi,
+            urunFiyati: doc.data().urunFiyati,
+            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+            urunAciklamasi: doc.data().urunAciklamasi,
+            urunEkbilgisi: doc.data().urunEkbilgisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
+
+  const options = {
+    margin: 5,
+    responsiveClass: true,
+    dots: 2,
+    autoplay: true,
+    dotsSpeed: 2,
+    navText: ["", ""],
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      400: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      700: {
+        items: 4,
+      },
+      1000: {
+        items: 4,
+      },
+    },
+  };
 
   return (
     <div>
@@ -17,6 +175,7 @@ function MainPage() {
               <p style={{ fontSize: "medium" }}>
                 <img
                   className="img-fluid"
+                  alt="destek"
                   style={{
                     width: "20px",
                     height: "20px",
@@ -24,6 +183,7 @@ function MainPage() {
                   }}
                   src="https://herbaldamla.com/wp-content/uploads/2020/10/user-heart-line.png"
                 ></img>
+
                 <span style={{ fontSize: "medium" }}>
                   Ücretsiz <strong>Yaşam koçu</strong> desteği &nbsp;
                 </span>
@@ -33,6 +193,7 @@ function MainPage() {
               <p style={{ fontSize: "medium" }}>
                 <img
                   className="img-fluid"
+                  alt="distribitor"
                   style={{
                     width: "20px",
                     height: "20px",
@@ -52,6 +213,7 @@ function MainPage() {
                     height: "20px",
                     marginRight: "0.5rem",
                   }}
+                  alt="kargo"
                   src="https://herbaldamla.com/wp-content/uploads/2020/10/archive-line.png"
                 ></img>
                 <span style={{ fontSize: "medium" }}>
@@ -69,6 +231,7 @@ function MainPage() {
         <div className="row">
           <div className="col-md-6 col-sm-6 col-12 mb-2">
             <img
+              alt="kadinlar icin urunler"
               className="img-fluid"
               style={{ height: "12rem" }}
               src="https://herbaldamla.com/wp-content/uploads/2020/11/herbalife-kadinlar-icin-urunler.jpg"
@@ -78,6 +241,7 @@ function MainPage() {
           <div className="col-md-6 col-sm-6 col-12">
             <img
               className="img-fluid"
+              alt="erkerler icin urunler"
               style={{ height: "12rem" }}
               src="https://herbaldamla.com/wp-content/uploads/2020/10/herbalife-erkekler-icin-urunler.jpg"
             ></img>
@@ -95,25 +259,39 @@ function MainPage() {
                 </p>
 
                 <Link
-                      className="text-decoration-none w-100 btn btn-light text-dark"
-                      to="/magaza/ozel-setler"
-                    >
-                      
+                  className="text-decoration-none w-100 btn btn-light text-dark"
+                  to="/magaza/ozel-setler"
+                >
                   <strong>
                     <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-
                 </Link>
-
               </div>
             </div>
           </div>
+
+          {/* ozel setler */}
           <div
             className="col-xl-9 col-lg-8 col-md-8 shadow bg-white owl-main-page"
             style={{ borderRadius: "0.5rem" }}
           >
             <div className="row m-0 p-0">
-              <Owl />
+              <OwlCarousel className="owl-theme owl-roof" {...options}>
+                <div className="item owl-slider">
+                  {ozelSet.map((product, index) => (
+                    <Ürün
+                      /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
+                      ürünün_resmi={product.urunResmi}
+                      ürünün_ismi={product.urunAdi}
+                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      urun_aciklama={product.urunAciklamasi}
+                      urun_ekbilgi={product.urunEkbilgisi}
+                      urun_kategori={product.urunKategorisi}
+                    />
+                  ))}
+                </div>
+              </OwlCarousel>
             </div>
           </div>
         </div>
@@ -127,27 +305,42 @@ function MainPage() {
                   Beslenme hedeflerinize ulaşmanıza yardımcı olmak için
                   tasarlandı.
                 </p>
-          
+
                 <Link
-                      className="text-decoration-none w-100 btn btn-light"
-                      to="/magaza/ozel-setler"
-                    >
-                      
+                  className="text-decoration-none w-100 btn btn-light"
+                  to="/magaza/ozel-setler"
+                >
                   <strong>
                     <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-
                 </Link>
-
               </div>
             </div>
           </div>
+          {/* kilo yonetimi */}
           <div
             className="col-xl-9 col-lg-8 col-md-8 shadow bg-white owl-main-page"
             style={{ borderRadius: "0.5rem" }}
           >
             <div className="row m-0 p-0">
-              <Owl />
+              <OwlCarousel className="owl-theme owl-roof" {...options}>
+              
+                {kiloYonetimi.map((product, index) => (
+                    <div className="item owl-slider">
+                    <Ürün
+                      /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
+                      ürünün_resmi={product.urunResmi}
+                      ürünün_ismi={product.urunAdi}
+                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      urun_aciklama={product.urunAciklamasi}
+                      urun_ekbilgi={product.urunEkbilgisi}
+                      urun_kategori={product.urunKategorisi}
+                    />
+                    </div>
+                  ))}
+                
+              </OwlCarousel>
             </div>
           </div>
         </div>
@@ -161,25 +354,39 @@ function MainPage() {
                   Herbalife SKIN® ve Herbal Aloe güzellik ürünlerimiz, cilt ve
                   saç bakımı için uzman çözümler sunar.
                 </p>
-                 <Link
-                      className="text-decoration-none w-100 btn btn-light"
-                      to="/magaza/kisisel-bakim"
-                    >
-                      
+                <Link
+                  className="text-decoration-none w-100 btn btn-light"
+                  to="/magaza/kisisel-bakim"
+                >
                   <strong>
                     <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-
                 </Link>
               </div>
             </div>
           </div>
+          {/* kisisel bakim */}
           <div
             className="col-xl-9 col-lg-8 col-md-8 shadow bg-white owl-main-page"
             style={{ borderRadius: "0.5rem" }}
           >
             <div className="row m-0 p-0">
-              <Owl />
+              <OwlCarousel className="owl-theme owl-roof" {...options}>
+              {kisiselBakim.map((product, index) => (
+                    <div className="item owl-slider">
+                    <Ürün
+                      /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
+                      ürünün_resmi={product.urunResmi}
+                      ürünün_ismi={product.urunAdi}
+                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      urun_aciklama={product.urunAciklamasi}
+                      urun_ekbilgi={product.urunEkbilgisi}
+                      urun_kategori={product.urunKategorisi}
+                    />
+                    </div>
+                  ))}
+              </OwlCarousel>
             </div>
           </div>
         </div>
@@ -194,24 +401,38 @@ function MainPage() {
                   sağlamak için geliştirilmiştir.
                 </p>
                 <Link
-                      className="text-decoration-none w-100 btn btn-light"
-                      to="/magaza/takviye-edici-gidalar"
-                    >
-                      
+                  className="text-decoration-none w-100 btn btn-light"
+                  to="/magaza/takviye-edici-gidalar"
+                >
                   <strong>
                     <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-
                 </Link>
               </div>
             </div>
           </div>
+          {/* takviye edici */}
           <div
             className="col-xl-9 col-lg-8 col-md-8 shadow bg-white owl-main-page"
             style={{ borderRadius: "0.5rem" }}
           >
             <div className="row m-0 p-0">
-              <Owl />
+              <OwlCarousel className="owl-theme owl-roof" {...options}>
+              {takviye.map((product, index) => (
+                    <div className="item owl-slider">
+                    <Ürün
+                      /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
+                      ürünün_resmi={product.urunResmi}
+                      ürünün_ismi={product.urunAdi}
+                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      urun_aciklama={product.urunAciklamasi}
+                      urun_ekbilgi={product.urunEkbilgisi}
+                      urun_kategori={product.urunKategorisi}
+                    />
+                    </div>
+                  ))}
+              </OwlCarousel>
             </div>
           </div>
         </div>
@@ -225,25 +446,39 @@ function MainPage() {
                   ürünler.
                 </p>
                 <Link
-                      className="text-decoration-none w-100 btn btn-light"
-                      to="/magaza/tanitim-urunleri"
-                    >
-                      
+                  className="text-decoration-none w-100 btn btn-light"
+                  to="/magaza/tanitim-urunleri"
+                >
                   <strong>
                     <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
                   </strong>
-
                 </Link>
               </div>
             </div>
           </div>
 
+          {/* shaker suluk */}
           <div
             className="col-xl-9 col-lg-8 col-md-8 col-sm-12 shadow bg-white owl-main-page"
             style={{ borderRadius: "0.5rem" }}
           >
             <div className="row m-0 p-0">
-              <Owl />
+              <OwlCarousel className="owl-theme owl-roof" {...options}>
+              {tanitim.map((product, index) => (
+                    <div className="item owl-slider">
+                    <Ürün
+                      /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
+                      ürünün_resmi={product.urunResmi}
+                      ürünün_ismi={product.urunAdi}
+                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      urun_aciklama={product.urunAciklamasi}
+                      urun_ekbilgi={product.urunEkbilgisi}
+                      urun_kategori={product.urunKategorisi}
+                    />
+                    </div>
+                  ))}
+              </OwlCarousel>
             </div>
           </div>
         </div>
@@ -255,6 +490,7 @@ function MainPage() {
             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
               <h5>
                 <img
+                  alt="odeme"
                   className="img-fluid"
                   style={{
                     width: "25px",
@@ -272,6 +508,7 @@ function MainPage() {
             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
               <h5>
                 <img
+                  alt="7/24 destek"
                   className="img-fluid"
                   style={{
                     width: "25px",
@@ -290,6 +527,7 @@ function MainPage() {
               <h5>
                 <img
                   className="img-fluid"
+                  alt="ucretsiz iade"
                   style={{
                     width: "25px",
                     height: "25px",
@@ -306,6 +544,7 @@ function MainPage() {
             <div className="col-lg-3 col-md-6 col-sm-6 col-12">
               <h5>
                 <img
+                  alt="guvenli odeme"
                   className="img-fluid"
                   style={{
                     width: "25px",
