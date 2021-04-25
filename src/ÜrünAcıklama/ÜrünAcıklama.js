@@ -5,7 +5,7 @@ import ÜrünResmi from "./ürün_acıklama_resmi.png";
 import ZoomOutMapIcon from "@material-ui/icons/ZoomOutMap";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import SettingsPhoneIcon from "@material-ui/icons/SettingsPhone";
-import html from 'react-inner-html';
+import html from "react-inner-html";
 
 export default function ÜrünAcıklama(props) {
   const [miktar, setMiktar] = useState(1);
@@ -24,6 +24,26 @@ export default function ÜrünAcıklama(props) {
     if (miktar < 1) {
       setMiktar(0);
     }
+  };
+
+  const [eklenenUrunler, setEklenenUrunler] = useState([]);
+
+  const sepeteEkle = () => {
+
+    
+   
+    setEklenenUrunler(eklenenUrunler => [...eklenenUrunler,{
+      urunAdi: props.location.state.ürünün_ismi,
+      urununResmi: props.location.state.ürünün_resmi,
+      miktar: miktar,
+      urunFiyati: props.location.state.ürünün_son_fiyatı,
+    }] );
+
+    setTimeout(() => {
+      
+      console.log(eklenenUrunler)
+    }, 500);
+    
   };
 
   return (
@@ -94,6 +114,7 @@ export default function ÜrünAcıklama(props) {
                     fontSize: "medium",
                     padding: "auto",
                   }}
+                  onClick={sepeteEkle}
                 >
                   Sepete Ekle
                 </button>
@@ -133,7 +154,10 @@ export default function ÜrünAcıklama(props) {
                 marginTop: "-2px",
               }}
             />
-            <p style={{ fontSize: "small" }}> <strong>Kategori:</strong> {props.location.state.urun_kategori}</p>
+            <p style={{ fontSize: "small" }}>
+              {" "}
+              <strong>Kategori:</strong> {props.location.state.urun_kategori}
+            </p>
           </div>
         </div>
         <div className="col-lg-12 col-xs-12 ürünacıklama_alt_taraf">
@@ -162,13 +186,16 @@ export default function ÜrünAcıklama(props) {
               </Tab>
             </TabList>
             <TabPanel tabId="one" style={{ margin: "2rem" }}>
-
-              <p style={{ textAlign: "justify", fontSize: "small" }}  {...html(props.location.state.urun_aciklama)}>
-              </p>
+              <p
+                style={{ textAlign: "justify", fontSize: "small" }}
+                {...html(props.location.state.urun_aciklama)}
+              ></p>
             </TabPanel>
             <TabPanel tabId="two" style={{ margin: "2rem" }}>
-              <p style={{ textAlign: "justify", fontSize: "small" }} {...html(props.location.state.urun_ekbilgi)}>
-              </p>
+              <p
+                style={{ textAlign: "justify", fontSize: "small" }}
+                {...html(props.location.state.urun_ekbilgi)}
+              ></p>
             </TabPanel>
           </Tabs>
         </div>

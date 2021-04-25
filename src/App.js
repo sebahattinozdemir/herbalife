@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   BrowserRouter as Router,
@@ -26,10 +26,35 @@ import useDocumentTitle from "./useDocumentTitle";
 import { SnackbarProvider } from "notistack";
 import ÜrünAcıklama from "./ÜrünAcıklama/ÜrünAcıklama";
 
-
+import {db} from "./firebase";
 
 function App() {
   useDocumentTitle("Herbalalerya - Herbalife");
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    // fires once when the app loads
+    getProducts();
+  }, []);
+
+  // tum urunler
+  const getProducts = () => {
+    setProducts([]);
+    db.collection("products")
+      .orderBy("timeStamp", "desc")
+      .onSnapshot((snapshot) => {
+        setProducts(
+          snapshot.docs.map((doc) => ({
+            urunAdi: doc.data().urunAdi,
+            urunKategorisi: doc.data().urunKategorisi,
+            timeStamp: doc.data().timeStamp,
+          }))
+        );
+      });
+  };
+  
+
   return (
     <SnackbarProvider>
       <BrowserRouter>
@@ -45,13 +70,36 @@ function App() {
               <Route exact path="/magaza/ozel-setler" component={Magaza} />
               <Route exact path="/magaza/takviye-edici-gidalar" component={Magaza} />
               <Route exact path="/magaza/tanitim-urunleri" component={Magaza} />
-              <Route exact path="/magaza/urun-aciklama" component={ÜrünAcıklama} />
               <Route exact path="/blog" component={Blog} />
               <Route
                 exact
                 path="/vucut-kitle-endeksi"
                 component={KitleEndeks}
               />
+
+
+{products.map((product, index) => (
+              <Route
+                exact
+                path={"/magaza/" + product.urunAdi.trim().replaceAll(" ", "-")
+                .replaceAll("ş", "s")
+                .replaceAll("ç", "c")
+                .replaceAll("ğ", "g")
+                .replaceAll("ı", "i")
+                .replaceAll("ö", "o")
+                .replaceAll("ü", "u")
+                .replaceAll("Ş", "S")
+                .replaceAll("Ç", "C")
+                .replaceAll("Ğ", "G")
+                .replaceAll("İ", "I")
+                .replaceAll("Ü", "U")
+                .replaceAll("Ö", "O")
+                .replaceAll("(", "")
+                .replaceAll(")", "")}
+                component={ÜrünAcıklama}
+              />
+            ))}
+
               <Route exact path="/hakkimizda" component={Hakkimizda} />
               <Route exact path="/iletisim" component={Iletisim} />
               <Route

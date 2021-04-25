@@ -55,44 +55,10 @@ export default function Owl() {
                     ürünün_ismi="Besleyici Shake Karışımı Formül 1 (Ahududu ve Beyaz Çikolata Aromalı)"
                     ürünün_ilk_fiyatı="148,42₺"
                     ürünün_son_fiyatı="89,99₺"
-
                 />
                
             </div>
-            <div className="item owl-slider">
-                <Ürün 
-                   /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
-                    ürünün_resmi={"https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"}
-                    ürünün_ismi="Aloe Özlü Rahatlatıcı Yüz Temizleme Jeli 150 ml"
-                    ürünün_ilk_fiyatı="148,42₺"
-                    ürünün_son_fiyatı="89,99₺"
-
-                />
-            </div>
-            <div className="item owl-slider">
-                <Ürün 
-                   /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
-                    ürünün_resmi={"https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"}
-                    ürünün_ismi="Besleyici Shake Karışımı Formül 1 (Ahududu ve Beyaz Çikolata Aromalı)"
-                    ürünün_ilk_fiyatı="148,42₺"
-                    ürünün_son_fiyatı="89,99₺"
-
-                />
-               
-            </div>
-            <div className="item owl-slider">
-                <Ürün 
-                   /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
-                    ürünün_resmi={"https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"}
-                    ürünün_ismi="Besleyici Shake Karışımı Formül 1 "
-                    ürünün_ilk_fiyatı="148,42₺"
-                    ürünün_son_fiyatı="89,99₺"
-
-                />
-            </div>
-            
-            
-           
+             
         </OwlCarousel>
 
         
