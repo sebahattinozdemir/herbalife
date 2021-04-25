@@ -25,118 +25,120 @@ function MainPage() {
     getOzelSet();
     getTakviye();
     getTanitim();
+
+    console.log("heree");
   }, []);
 
   //kilo yonetim urunleri
-  const getKiloYonetimi = () => {
-    db.collection("products")
-      .where("urunKategorisi", "==", "Kilo Yonetimi")
-      .orderBy("timeStamp", "desc")
-      .limit(4)
-      .onSnapshot((snapshot) => {
-        setKiloYonetimi(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            urunAdi: doc.data().urunAdi,
-            urunKategorisi: doc.data().urunKategorisi,
-            urunResmi: doc.data().urunResmi,
-            urunFiyati: doc.data().urunFiyati,
-            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-            urunAciklamasi: doc.data().urunAciklamasi,
-            urunEkbilgisi: doc.data().urunEkbilgisi,
-            timeStamp: doc.data().timeStamp,
-          }))
-        );
-      });
+  const getKiloYonetimi = async () => {
+    var res = db
+      .collection("products")
+      .where("urunKategorisi", "==", "Kilo Yonetimi");
+
+    res.limit(4).onSnapshot((snapshot) => {
+      setKiloYonetimi(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+          timeStamp: doc.data().timeStamp,
+        }))
+      );
+    });
   };
 
   //kisisel bakim urunleri
-  const getKisiselBakim = () => {
-    db.collection("products")
-      .where("urunKategorisi", "==", "Kisisel Bakim")
-      .orderBy("timeStamp", "desc")
-      .limit(4)
-      .onSnapshot((snapshot) => {
-        setKisiselBakim(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            urunAdi: doc.data().urunAdi,
-            urunKategorisi: doc.data().urunKategorisi,
-            urunResmi: doc.data().urunResmi,
-            urunFiyati: doc.data().urunFiyati,
-            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-            urunAciklamasi: doc.data().urunAciklamasi,
-            urunEkbilgisi: doc.data().urunEkbilgisi,
-            timeStamp: doc.data().timeStamp,
-          }))
-        );
-      });
+  const getKisiselBakim = async () => {
+    var res = db
+      .collection("products")
+      .where("urunKategorisi", "==", "Kisisel Bakim");
+
+    res.limit(4).onSnapshot((snapshot) => {
+      setKisiselBakim(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+          timeStamp: doc.data().timeStamp,
+        }))
+      );
+    });
   };
 
-  const getOzelSet = () => {
-    db.collection("products")
-      .where("urunKategorisi", "==", "Ozel Setler")
-      .orderBy("timeStamp", "desc")
-      .limit(4)
-      .onSnapshot((snapshot) => {
-        setOzelSet(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            urunAdi: doc.data().urunAdi,
-            urunKategorisi: doc.data().urunKategorisi,
-            urunResmi: doc.data().urunResmi,
-            urunFiyati: doc.data().urunFiyati,
-            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-            urunAciklamasi: doc.data().urunAciklamasi,
-            urunEkbilgisi: doc.data().urunEkbilgisi,
-            timeStamp: doc.data().timeStamp,
-          }))
-        );
-      });
+  const getOzelSet = async () => {
+    var res = db
+      .collection("products")
+      .where("urunKategorisi", "==", "Ozel Setler");
+
+    res.limit(4).onSnapshot((snapshot) => {
+      setOzelSet(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+          timeStamp: doc.data().timeStamp,
+        }))
+      );
+    });
   };
 
-  const getTakviye = () => {
-    db.collection("products")
-      .where("urunKategorisi", "==", "Takviye Edici Gidalar")
-      .orderBy("timeStamp", "desc")
-      .limit(4)
-      .onSnapshot((snapshot) => {
-        setTakviye(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            urunAdi: doc.data().urunAdi,
-            urunKategorisi: doc.data().urunKategorisi,
-            urunResmi: doc.data().urunResmi,
-            urunFiyati: doc.data().urunFiyati,
-            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-            urunAciklamasi: doc.data().urunAciklamasi,
-            urunEkbilgisi: doc.data().urunEkbilgisi,
-            timeStamp: doc.data().timeStamp,
-          }))
-        );
-      });
+  const getTakviye = async () => {
+    var res = db
+      .collection("products")
+      .where("urunKategorisi", "==", "Takviye Edici Gidalar");
+
+    res.limit(4).onSnapshot((snapshot) => {
+      setTakviye(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+          timeStamp: doc.data().timeStamp,
+        }))
+      );
+    });
   };
 
-  const getTanitim = () => {
-    db.collection("products")
-      .where("urunKategorisi", "==", "Tanitim Urunleri")
-      .orderBy("timeStamp", "desc")
-      .limit(4)
-      .onSnapshot((snapshot) => {
-        setTanitim(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            urunAdi: doc.data().urunAdi,
-            urunKategorisi: doc.data().urunKategorisi,
-            urunResmi: doc.data().urunResmi,
-            urunFiyati: doc.data().urunFiyati,
-            urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
-            urunAciklamasi: doc.data().urunAciklamasi,
-            urunEkbilgisi: doc.data().urunEkbilgisi,
-            timeStamp: doc.data().timeStamp,
-          }))
-        );
-      });
+  const getTanitim = async () => {
+    var res = db
+      .collection("products")
+      .where("urunKategorisi", "==", "Tanitim Urunleri");
+
+    res.limit(4).onSnapshot((snapshot) => {
+      setTanitim(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          urunAdi: doc.data().urunAdi,
+          urunKategorisi: doc.data().urunKategorisi,
+          urunResmi: doc.data().urunResmi,
+          urunFiyati: doc.data().urunFiyati,
+          urunIndirimliFiyati: doc.data().urunIndirimliFiyati,
+          urunAciklamasi: doc.data().urunAciklamasi,
+          urunEkbilgisi: doc.data().urunEkbilgisi,
+          timeStamp: doc.data().timeStamp,
+        }))
+      );
+    });
   };
 
   const options = {
@@ -324,9 +326,8 @@ function MainPage() {
           >
             <div className="row m-0 p-0">
               <OwlCarousel className="owl-theme owl-roof" {...options}>
-              
                 {kiloYonetimi.map((product, index) => (
-                    <div className="item owl-slider">
+                  <div className="item owl-slider">
                     <Ürün
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
@@ -337,9 +338,8 @@ function MainPage() {
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
                     />
-                    </div>
-                  ))}
-                
+                  </div>
+                ))}
               </OwlCarousel>
             </div>
           </div>
@@ -372,8 +372,8 @@ function MainPage() {
           >
             <div className="row m-0 p-0">
               <OwlCarousel className="owl-theme owl-roof" {...options}>
-              {kisiselBakim.map((product, index) => (
-                    <div className="item owl-slider">
+                {kisiselBakim.map((product, index) => (
+                  <div className="item owl-slider">
                     <Ürün
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
@@ -384,8 +384,8 @@ function MainPage() {
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
                     />
-                    </div>
-                  ))}
+                  </div>
+                ))}
               </OwlCarousel>
             </div>
           </div>
@@ -418,8 +418,8 @@ function MainPage() {
           >
             <div className="row m-0 p-0">
               <OwlCarousel className="owl-theme owl-roof" {...options}>
-              {takviye.map((product, index) => (
-                    <div className="item owl-slider">
+                {takviye.map((product, index) => (
+                  <div className="item owl-slider">
                     <Ürün
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
@@ -430,8 +430,8 @@ function MainPage() {
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
                     />
-                    </div>
-                  ))}
+                  </div>
+                ))}
               </OwlCarousel>
             </div>
           </div>
@@ -464,8 +464,8 @@ function MainPage() {
           >
             <div className="row m-0 p-0">
               <OwlCarousel className="owl-theme owl-roof" {...options}>
-              {tanitim.map((product, index) => (
-                    <div className="item owl-slider">
+                {tanitim.map((product, index) => (
+                  <div className="item owl-slider">
                     <Ürün
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
@@ -476,8 +476,8 @@ function MainPage() {
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
                     />
-                    </div>
-                  ))}
+                  </div>
+                ))}
               </OwlCarousel>
             </div>
           </div>

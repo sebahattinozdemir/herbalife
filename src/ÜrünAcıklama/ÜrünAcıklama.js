@@ -45,7 +45,9 @@ export default function ÜrünAcıklama(props) {
   };
 
   return (
-    <div
+
+    <div className="container">
+  <div
       className="row bg-white"
       style={{ padding: "2rem" }}
     >
@@ -190,5 +192,7 @@ export default function ÜrünAcıklama(props) {
       <br />
       <br />
     </div>
+    </div>
+  
   );
 }
