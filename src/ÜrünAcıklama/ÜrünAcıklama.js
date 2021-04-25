@@ -30,6 +30,7 @@ export default function ÜrünAcıklama(props) {
     <div className="container">
       <div className="row ürünacıklama_tepe">
         <div className="col-lg-6 col-xs-12 ürünacıklama_sol_taraf">
+          <br/>
           <h4 className="ürünacıklama_indirim">İndirim!</h4>
           <img
             src={props.location.state.ürünün_resmi}
@@ -43,6 +44,7 @@ export default function ÜrünAcıklama(props) {
         </div>
 
         <div className="col-lg-6 col-xs-12 ürünacıklama_sag_taraf">
+          <br/>
           <div class="container">
             <h3>{props.location.state.ürünün_ismi}</h3>
             <hr />
@@ -170,6 +172,7 @@ export default function ÜrünAcıklama(props) {
               <p style={{ textAlign: "justify", fontSize: "small" }} {...html(props.location.state.urun_ekbilgi)}>
               </p>
             </TabPanel>
+            <br/>
           </Tabs>
         </div>
 
