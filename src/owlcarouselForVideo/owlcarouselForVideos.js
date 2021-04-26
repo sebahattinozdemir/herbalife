@@ -12,7 +12,7 @@ import herbal3 from "../carousel/herbalife3.mp4";
 
 //Owl Carousel Settings
 const options = {
-    margin: 1,
+    margin: 10,
     responsiveClass: true,
    // dots:2,
    // dotsSpeed:2,

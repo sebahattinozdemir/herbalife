@@ -107,7 +107,7 @@ function Footer() {
               </p>
 
               <a className="footeremail" href="mailto:Herbalalerya@gmail.com" style={{ float: "left"}} >
-                    <EmailIcon style={{fontSize:"24px"}}/>
+                    &nbsp;<EmailIcon style={{fontSize:"24px"}}/>
                   </a> 
                   <p style={{fontSize:"medium"}}>&nbsp;Herbalalerya@gmail.com</p>
                   
@@ -115,7 +115,7 @@ function Footer() {
                   href="tel: +905345699125"
                   style={{ float: "left"}}
                 >
-                  <SettingsPhoneIcon style={{fontSize:"24px"}}/> 
+                  &nbsp;<SettingsPhoneIcon style={{fontSize:"24px"}}/> 
                   </a> 
                   <p style={{fontSize:"medium"}}>&nbsp;0534 569 91 25</p>
 
@@ -123,7 +123,7 @@ function Footer() {
                   href="tel: +905526587882"
                   style={{ float: "left"}}
                 >
-                  <SettingsPhoneIcon style={{fontSize:"24px"}}/> 
+                  &nbsp;<SettingsPhoneIcon style={{fontSize:"24px"}}/> 
                   </a> 
                   <p style={{fontSize:"medium"}}>&nbsp;0552 658 78 82</p>
 
@@ -131,13 +131,13 @@ function Footer() {
                   href="tel: +905525754132"
                   style={{ float: "left"}}
                 >
-                  <SettingsPhoneIcon style={{fontSize:"24px"}}/> 
+                  &nbsp;<SettingsPhoneIcon style={{fontSize:"24px"}}/> 
                   </a> 
                   <p style={{fontSize:"medium"}}>&nbsp;0552 575 41 32</p>
-
+                  
                   <a href="https://www.instagram.com/herbal_alerya?r=nametag" target="_blank">
-                    <InstagramIcon  
-                        style={{float:"left"}}
+                  <InstagramIcon  
+                        style={{float:"left",marginLeft:"5px"}}
                     />
                   </a>
                   <a href="https://www.facebook.com/HerbalAlerya" target="_blank">
