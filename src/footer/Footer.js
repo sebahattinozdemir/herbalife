@@ -6,6 +6,7 @@ import SettingsPhoneIcon from "@material-ui/icons/SettingsPhone";
 import EmailIcon from '@material-ui/icons/Email';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import SSL from "./ssl.png";
 
 function Footer() {
   const scrollToTop = (e)=>{
@@ -31,6 +32,8 @@ function Footer() {
               1980’de kurulan Herbalife Nutrition, günümüzde 8.000 aşkın
               çalışanıyla 90’dan fazla ülkede faaliyet göstermektedir.
             </p>
+           
+            <img src={SSL} style={{width:"90%",display:"block",margin:"auto"}}></img>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-6 col-12 p-1">
             <p
@@ -109,24 +112,38 @@ function Footer() {
                   <p style={{fontSize:"medium"}}>&nbsp;Herbalalerya@gmail.com</p>
                   
                   <a className="footerphone"
-                  href="tel: +905464753883"
+                  href="tel: +905345699125"
                   style={{ float: "left"}}
                 >
                   <SettingsPhoneIcon style={{fontSize:"24px"}}/> 
                   </a> 
-                  <p style={{fontSize:"medium"}}>&nbsp;0546 475 38 83</p>
+                  <p style={{fontSize:"medium"}}>&nbsp;0534 569 91 25</p>
+
+                  <a className="footerphone"
+                  href="tel: +905526587882"
+                  style={{ float: "left"}}
+                >
+                  <SettingsPhoneIcon style={{fontSize:"24px"}}/> 
+                  </a> 
+                  <p style={{fontSize:"medium"}}>&nbsp;0552 658 78 82</p>
+
+                  <a className="footerphone"
+                  href="tel: +905525754132"
+                  style={{ float: "left"}}
+                >
+                  <SettingsPhoneIcon style={{fontSize:"24px"}}/> 
+                  </a> 
+                  <p style={{fontSize:"medium"}}>&nbsp;0552 575 41 32</p>
 
                   <a href="https://www.instagram.com/herbal_alerya?r=nametag" target="_blank">
                     <InstagramIcon  
                         style={{float:"left"}}
                     />
                   </a>
-                  <p style={{fontSize:"medium"}}>&nbsp;Instagram</p>
-
                   <a href="https://www.facebook.com/HerbalAlerya" target="_blank">
-                    <FacebookIcon style={{float: "left"}}/>
+                    <FacebookIcon style={{float: "left",marginLeft:"0.5rem"}}/>
                   </a>
-                  <p style={{fontSize:"medium"}}>&nbsp;Facebook</p>
+                 
 
 
           </div>

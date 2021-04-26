@@ -82,7 +82,7 @@ function Menu() {
             </NavbarText>
            
             <NavbarText>
-               <p className="ceptel" data-toggle="tooltip" title=" 0542 458 78 78"><CallIcon/> 0542 458 78 78</p>
+               <p className="ceptel" data-toggle="tooltip" title=" 0542 458 78 78"><CallIcon/> 0546 475 38 83</p>
             </NavbarText>
             </div>
 

@@ -28,6 +28,7 @@
     animation-name: roof-whatsapp;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    z-index: 1000;
   }
   
 /* The animation code */
@@ -89,6 +90,7 @@
   animation-name: roof-phone;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  z-index: 1000;
 }
 
 /* The animation code */

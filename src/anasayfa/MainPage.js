@@ -6,6 +6,7 @@ import Ürün from "../ürün-component/Ürün.js";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.min.css";
 import "owl.carousel/dist/assets/owl.theme.default.min.css";
+import OwlCarouselForVideos from "../owlcarouselForVideo/owlcarouselForVideos.js";
 
 import Owl from "../owlcarousel/Owl.js";
 import { Link } from "react-router-dom";
@@ -227,8 +228,11 @@ function MainPage() {
         </div>
       </div>
 
-      <Carousel />
-      <br />
+      <div class="row m-2">
+          <OwlCarouselForVideos/>
+      </div>
+      
+      <br/>
       <div className="container mt-2">
         <div className="row">
           <div className="col-md-6 col-sm-6 col-12 mb-2">
@@ -259,13 +263,13 @@ function MainPage() {
                   Beslenme hedeflerinize ulaşmanıza yardımcı olmak için
                   tasarlandı.
                 </p>
-
+                <br/>
                 <Link
                   className="text-decoration-none w-100 btn btn-light text-dark"
                   to="/magaza/ozel-setler"
                 >
                   <strong>
-                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
+                    <span style={{ color: "#EFE560" }}>Tümünü Gör</span>
                   </strong>
                 </Link>
               </div>
@@ -307,13 +311,13 @@ function MainPage() {
                   Beslenme hedeflerinize ulaşmanıza yardımcı olmak için
                   tasarlandı.
                 </p>
-
+                <br/>
                 <Link
                   className="text-decoration-none w-100 btn btn-light"
                   to="/magaza/ozel-setler"
                 >
                   <strong>
-                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
+                    <span style={{ color: "#81bac3" }}>Tümünü Gör</span>
                   </strong>
                 </Link>
               </div>
@@ -354,12 +358,13 @@ function MainPage() {
                   Herbalife SKIN® ve Herbal Aloe güzellik ürünlerimiz, cilt ve
                   saç bakımı için uzman çözümler sunar.
                 </p>
+                <br/>
                 <Link
                   className="text-decoration-none w-100 btn btn-light"
                   to="/magaza/kisisel-bakim"
                 >
                   <strong>
-                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
+                    <span style={{ color: "#bcc6be" }}>Tümünü Gör</span>
                   </strong>
                 </Link>
               </div>
@@ -400,12 +405,13 @@ function MainPage() {
                   Vücudunuzun ihtiyaç duyabileceği vitamin ve mineralleri
                   sağlamak için geliştirilmiştir.
                 </p>
+                <br/>
                 <Link
                   className="text-decoration-none w-100 btn btn-light"
                   to="/magaza/takviye-edici-gidalar"
                 >
                   <strong>
-                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
+                    <span style={{ color: "#9ec1a3" }}>Tümünü Gör</span>
                   </strong>
                 </Link>
               </div>
@@ -445,12 +451,13 @@ function MainPage() {
                   Yaşam tarzı olarak Herbalife’ı seçtiğinizi gösteren faydalı
                   ürünler.
                 </p>
+                <br/>
                 <Link
                   className="text-decoration-none w-100 btn btn-light"
                   to="/magaza/tanitim-urunleri"
                 >
                   <strong>
-                    <span style={{ color: "#F3F1AA" }}>Tümünü Gör</span>
+                    <span style={{ color: "#70a9a2" }}>Tümünü Gör</span>
                   </strong>
                 </Link>
               </div>
