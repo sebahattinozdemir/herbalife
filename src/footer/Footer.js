@@ -2,6 +2,11 @@ import "./Footer.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import SettingsPhoneIcon from "@material-ui/icons/SettingsPhone";
+import EmailIcon from '@material-ui/icons/Email';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+
 function Footer() {
   const scrollToTop = (e)=>{
       window.scrollTo({
@@ -15,7 +20,7 @@ function Footer() {
       <div className="container">
         <hr />
         <div className="row p-3">
-          <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12">
             <p
               className="font-weight-bold text-dark"
               style={{ fontSize: "large" }}
@@ -27,7 +32,7 @@ function Footer() {
               çalışanıyla 90’dan fazla ülkede faaliyet göstermektedir.
             </p>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-6 col-12 p-1">
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12 p-1">
             <p
               className="font-weight-bold text-dark ml-3"
               style={{ fontSize: "large" }}
@@ -57,7 +62,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-6 col-12 p-1">
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12 p-1">
             <p
               className="font-weight-bold text-dark ml-3"
               style={{ fontSize: "large" }}
@@ -89,6 +94,44 @@ function Footer() {
             </ul>
 
           </div>
+
+          <div className="col-lg-3 col-md-6 col-sm-6 col-12 p-1">
+            <p
+                className="font-weight-bold text-dark ml-3"
+                style={{ fontSize: "large" }}
+              >
+                İletişim
+              </p>
+
+              <a className="footeremail" href="mailto:Herbalalerya@gmail.com" style={{ float: "left"}} >
+                    <EmailIcon style={{fontSize:"24px"}}/>
+                  </a> 
+                  <p style={{fontSize:"medium"}}>&nbsp;Herbalalerya@gmail.com</p>
+                  
+                  <a className="footerphone"
+                  href="tel: +905464753883"
+                  style={{ float: "left"}}
+                >
+                  <SettingsPhoneIcon style={{fontSize:"24px"}}/> 
+                  </a> 
+                  <p style={{fontSize:"medium"}}>&nbsp;0546 475 38 83</p>
+
+                  <a href="https://www.instagram.com/herbal_alerya?r=nametag" target="_blank">
+                    <InstagramIcon  
+                        style={{float:"left"}}
+                    />
+                  </a>
+                  <p style={{fontSize:"medium"}}>&nbsp;Instagram</p>
+
+                  <a href="https://www.facebook.com/HerbalAlerya" target="_blank">
+                    <FacebookIcon style={{float: "left"}}/>
+                  </a>
+                  <p style={{fontSize:"medium"}}>&nbsp;Facebook</p>
+
+
+          </div>
+
+
         </div>
       </div>
       <div className="w-100 footer-alt ">
