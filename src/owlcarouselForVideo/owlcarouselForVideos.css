@@ -1,8 +1,8 @@
 .owl-for-videos{
     background-image: url("./bgi.jpg");
     border-radius: 1rem;
+    padding-right: 1rem !important;
     
-
    
 }
 .react-player{
@@ -42,6 +42,9 @@
        
         margin-bottom: 0.5rem !important;
         
+    }
+    .ilkvideo{
+        margin-left: -0.2rem !important;
     }
      
  }

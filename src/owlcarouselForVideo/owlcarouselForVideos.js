@@ -58,12 +58,12 @@ export default function owlcarouselForVideos() {
 
             <div className="item owl-slider">
                 <ReactPlayer
-                    className="react-player"
+                    className="react-player ilkvideo"
                     style={{margin:"auto",  overFlow: "hidden" }}
                     url={herbal1}
                     controls={true}
                     height="20rem"
-                    width="25rem" 
+                    width="24rem" 
                     
                 />
             </div>
@@ -75,7 +75,7 @@ export default function owlcarouselForVideos() {
                     url={herbal2}
                     controls={true}
                     height="20rem"
-                    width="25rem" 
+                    width="24rem" 
                 />
             </div>
 
@@ -86,20 +86,11 @@ export default function owlcarouselForVideos() {
                     url={herbal3}
                     controls={true}
                     height="20rem"
-                    width="25rem" 
+                    width="24rem" 
                 />
             </div>
 
-            <div className="item owl-slider">
-                <ReactPlayer
-                    className="react-player"
-                    style={{margin:"auto",  overFlow: "hidden" }}
-                    url={herbal3}
-                    controls={true}
-                    height="20rem"
-                    width="25rem" 
-                />
-            </div>
+          
            
 
            
