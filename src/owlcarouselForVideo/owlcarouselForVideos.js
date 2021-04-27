@@ -40,7 +40,7 @@ const options = {
         },
         1000: {
             items: 3,
-            autoplay: true,
+            autoplay: false,
         }
     },
   };
