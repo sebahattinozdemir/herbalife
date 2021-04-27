@@ -14,6 +14,8 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import { Link } from "react-router-dom";
 
+import Header from "../headerComponent/Header.js";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
@@ -458,9 +460,10 @@ function Magaza() {
 
   return (
     <div className="w-100 mx-2">
-      <div className="row p-3 bg-dark text-white">
-        <h3>ANASAYFA / MAĞAZA</h3>
-      </div>
+      <Header
+        page_title="Mağaza"
+      />
+      
 
       <div className="row py-4">
         <div className="container bg-light">

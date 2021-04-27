@@ -4,6 +4,7 @@ import "./Ürün.css";
 import { Link } from "react-router-dom";
 
 export default class Ürün extends Component {
+ 
   render() {
     //Destructing
     const {
@@ -16,6 +17,13 @@ export default class Ürün extends Component {
       urun_ekbilgi,
       urun_kategori,
     } = this.props;
+
+    const scrollToTop = (e)=>{
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
     return (
       <div class="col-12">
         <img src={ürünün_resmi} class="ürünün_resmi" alt=""></img>
@@ -30,6 +38,7 @@ export default class Ürün extends Component {
              {/* replaceing turkish char to english chars*/}
           <Link
             className="ürünün_ismi"
+            onClick={scrollToTop}
             to=""
             // eslint-disable-next-line react/jsx-no-duplicate-props
             to={{

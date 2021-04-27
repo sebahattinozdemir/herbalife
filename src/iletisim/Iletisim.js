@@ -1,13 +1,15 @@
 import "./İletisim.css";
 import React from "react";
 import useDocumentTitle from "../useDocumentTitle";
+import Header from "../headerComponent/Header.js";
 
 function Iletisim() {
   useDocumentTitle('İletişim - Herbalife')
   return (
     <div>
+        <Header page_title="İletişim" />
+
       <div className="container">
-        <h3 className="mt-4">İLETİŞİM</h3>
 
         
        

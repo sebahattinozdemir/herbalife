@@ -2,7 +2,7 @@ import "./KitleEndeks.css";
 import İlgiliÜrün from "../ilginizi_cekebilecek_urunler/İlgi";
 import React, { useEffect, useState } from "react";
 import useDocumentTitle from "../useDocumentTitle";
-
+import Header from "../headerComponent/Header.js";
 
 function KitleEndeks() {
   useDocumentTitle('Vücut Kitle İndeksi - Herbalife')
@@ -63,11 +63,15 @@ function KitleEndeks() {
     
 
   return (
+    <div>
+        <Header page_title="Vücut Kitle Endeksi"/>
+
     <div className="container border border-5">
       <div className="row">
-        <div className="col-md-6 col-sm-6 col-12">
-          <h3 className="kitle-index mt-4">Vücut Kitle Endeksi Hesaplama</h3>
 
+        
+        <div className="col-md-6 col-sm-6 col-12">
+       
           <div className="jumbotron">
             <form>
               <div className="form-group">
@@ -215,6 +219,7 @@ function KitleEndeks() {
           
       </div>
 
+    </div>
     </div>
   );
 }

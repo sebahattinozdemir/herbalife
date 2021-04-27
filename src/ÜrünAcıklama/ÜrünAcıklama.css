@@ -4,7 +4,8 @@
     background-color:#37ACB0;
     border-radius: 1rem;
     color: white;
-    padding: 5px;   
+    padding: 5px;  
+    z-index: +100; 
 }
 
 
@@ -71,5 +72,32 @@ a:hover{
 }
 .acıklama_tabs:hover{
     background-color: #F2F4F5 !important;
+    color:black !important;
+
+}
+
+
+.urunAciklamaResmi{
+    width: 80%;
+    display: block;
+    margin: auto;
+    
+}
+.urunAciklamaIsmi{
+    font-size: xx-large;
+
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 700px) {
+    .urunAciklamaResmi{
+        width: 100%;
+       
+    }
+    .urunAciklamaIsmi{
+        font-size: large;
+    
+    }
+    
 
 }

@@ -8,6 +8,8 @@ import html from "react-inner-html";
 import React, { useState, useEffect } from "react";
 import {db} from "../firebase";
 
+import Header from "../headerComponent/Header.js";
+
 function Blog() {
   const [blogs, setBlogs] = useState([]);
     const [url, setUrl] = useState("");
@@ -38,6 +40,9 @@ function Blog() {
 
   useDocumentTitle('Blog - Herbalife')
     return (
+    <div>
+      <Header page_title="Blog" />
+
     <div className="container border border-5">
       <div className="row">
            
@@ -51,21 +56,10 @@ function Blog() {
           </div>
            
           ))}
-
-
-                
-
-
-                
-
-                
-
-
-
             </div>    
       </div>
 
-   
+      </div>
     )
 }
 

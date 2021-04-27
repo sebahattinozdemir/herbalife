@@ -1,0 +1,11 @@
+.page_header{
+    
+    background-image: url("./bgi2.jpg");
+    height: 4rem;
+}
+.page_header_title{
+    font-size: x-large;
+    color:white;
+    margin: auto;
+    margin-left:2rem;
+}

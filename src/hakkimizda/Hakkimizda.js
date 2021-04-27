@@ -3,18 +3,20 @@ import "./Hakkimizda.css";
 import React from "react";
 import { Helmet } from 'react-helmet';
 import useDocumentTitle from '../useDocumentTitle';
+import Header from "../headerComponent/Header.js";
 
 
 function Hakkimizda() {
   useDocumentTitle('Hakkımızda - Herbalife')
       
   return (
-    
+    <div>
+        <Header page_title="Hakkımızda"/>
       
     
     <div className="container">
       
-      <h3 className="mt-4">HAKKIMIZDA</h3>
+     
 
       <div className="row mt-5">
         <div className="col-lg-4 col-xs-12">
@@ -110,6 +112,7 @@ function Hakkimizda() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

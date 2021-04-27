@@ -101,7 +101,7 @@ function Menu() {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="m-auto" navbar>
               <NavItem >
-                <Link className="text-decoration-none btn text-white menu-item" to="/" style={{backgroundColor:"black"}}>
+                <Link className="text-decoration-none btn text-white menu-item" to="/">
                 <HomeIcon style={{fontSize:"large",marginRight:"3px"}} />ANASAYFA 
                 </Link>
               </NavItem>

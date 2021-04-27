@@ -46,18 +46,18 @@ export default function ÜrünAcıklama(props) {
 
   return (
     <div className="container">
-      <div className="row bg-white" style={{ padding: "2rem" }}>
+      <div className="row bg-white" style={{ padding: "0.5rem" }}>
         <div className="col-lg-6 col-xs-12">
           <h4 className="ürünacıklama_indirim mt-5">İndirim!</h4>
           <img
             src={props.location.state.ürünün_resmi}
-            className="img-fluid"
+            className="img-fluid urunAciklamaResmi"
             alt="urun resmi"
           ></img>
         </div>
 
         <div className="col-lg-6 col-xs-12">
-          <h3 className="mt-3">{props.location.state.ürünün_ismi}</h3>
+          <p className="urunAciklamaIsmi mt-3">{props.location.state.ürünün_ismi}</p>
           <hr />
           <div className="row mx-auto">
             <div className="col-lg-6 col-sm-12">
@@ -69,46 +69,21 @@ export default function ÜrünAcıklama(props) {
               </p>
             </div>
 
-            <div className="col-lg-6 col-sm-12">
-              <div
-                class="btn-group w-100"
-                role="group"
-                aria-label="Basic example"
-              >
-                <button
-                  className="btn btn-light btn-sm ürünacıklama_azalt"
-                  onClick={azalt}
-                  style={{ width: "3rem", height: "3rem", fontSize: "x-large" }}
-                >
-                  -
-                </button>
-                <span
-                  className="px-3 py-1"
-                  style={{
-                    fontSize: "x-large",
-                  }}
-                >
-                  {miktar}
-                </span>
-                <button
-                  className="btn btn-light btn-sm ürünacıklama_arttır"
-                  onClick={arttır}
-                  style={{ width: "3rem", height: "3rem", fontSize: "x-large" }}
-                >
-                  +
-                </button>
+            <div className="arttırAzalt">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-secondary" onClick={azalt}>-</button>
+                  <button type="button" class="btn btn-light">{miktar}</button>
+                  <button type="button" class="btn btn-secondary" onClick={arttır}>+</button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <button type="button" class="btn btn-success" onClick={sepeteEkle}>Sepete Ekle</button>
               </div>
-              <button
-                className="btn btn-success w-100 mx-1"
-                style={{
-                  fontSize: "medium",
-                }}
-                onClick={sepeteEkle}
-              >
-                Sepete Ekle
-              </button>
-            </div>
+
+           </div>
+
           </div>
+
+         
+
 
           <div className="whatsappMesajıGönder" style={{ marginTop: "5rem" }}>
             <a
@@ -143,16 +118,7 @@ export default function ÜrünAcıklama(props) {
           </div>
           <br />
           <hr style={{ marginBottom: "2px" }} />
-          <p style={{ fontSize: "small", marginBottom: "2px" }}>
-            Stok Kodu: 5561
-          </p>
-          <hr
-            style={{
-              style: "dotted",
-              marginBottom: "2px",
-              marginTop: "-2px",
-            }}
-          />
+          
           <p style={{ fontSize: "small" }}>
             {" "}
             <strong>Kategori:</strong> {props.location.state.urun_kategori}
@@ -170,7 +136,7 @@ export default function ÜrünAcıklama(props) {
               <Tab
                 className="acıklama_tabs"
                 tabFor="one"
-                style={{ backgroundColor: "#F4F5EC", borderRadius: "0.5rem" }}
+                style={{ backgroundColor: "#37ACB0", borderRadius: "0.5rem",color:"white" }}
               >
                 Açıklama
               </Tab>
@@ -178,18 +144,18 @@ export default function ÜrünAcıklama(props) {
               <Tab
                 className="acıklama_tabs"
                 tabFor="two"
-                style={{ backgroundColor: "#F4F5EC", borderRadius: "0.5rem" }}
+                style={{ backgroundColor: "#37ACB0", borderRadius: "0.5rem",color:"white"}}
               >
                 Ek Bilgi
               </Tab>
             </TabList>
-            <TabPanel tabId="one" style={{ margin: "2rem" }}>
+            <TabPanel tabId="one" style={{ margin: "1rem" }}>
               <p
                 style={{ textAlign: "justify", fontSize: "small" }}
                 {...html(props.location.state.urun_aciklama)}
               ></p>
             </TabPanel>
-            <TabPanel tabId="two" style={{ margin: "2rem" }}>
+            <TabPanel tabId="two" style={{ margin: "1rem" }}>
               <p
                 style={{ textAlign: "justify", fontSize: "small" }}
                 {...html(props.location.state.urun_ekbilgi)}
