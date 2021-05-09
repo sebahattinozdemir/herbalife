@@ -1,5 +1,8 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
+import { CookiesProvider } from 'react-cookie';
+
+
 
 import {
   BrowserRouter as Router,
@@ -56,6 +59,8 @@ function App() {
   
 
   return (
+    <CookiesProvider>
+
     <SnackbarProvider>
       <BrowserRouter>
         <div className="app w-100">
@@ -120,6 +125,8 @@ function App() {
         </div>
       </BrowserRouter>
     </SnackbarProvider>
+    </CookiesProvider>
+
   );
 }
 

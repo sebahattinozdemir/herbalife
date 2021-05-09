@@ -3,9 +3,13 @@ import İlgiliÜrün from "../ilginizi_cekebilecek_urunler/İlgi";
 import React, { useEffect, useState } from "react";
 import useDocumentTitle from "../useDocumentTitle";
 import Header from "../headerComponent/Header.js";
+import SiparisOzet from "../store/SiparisOzet";
 
 function KitleEndeks() {
   useDocumentTitle('Vücut Kitle İndeksi - Herbalife')
+
+  const [orderList,setOrderList]=useState(SiparisOzet.UrunSiparisListesi)
+ 
 
   const [kilo, setKilo] = useState('')
   const [boy, setBoy] = useState('')
@@ -20,6 +24,10 @@ function KitleEndeks() {
     setBoy("")
     setİndeks("")
     setSonuc("")
+    orderList.forEach(element => {
+      console.log(element.urunAdi);
+      
+  });
   }
 
 

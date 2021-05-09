@@ -8,6 +8,7 @@ import Header from "../headerComponent/Header.js";
 
 function Hakkimizda() {
   useDocumentTitle('Hakkımızda - Herbalife')
+  
       
   return (
     <div>
@@ -90,7 +91,7 @@ function Hakkimizda() {
             </div>
           </div>
           <br/>
-          <div className="card">
+          <div className="card" >
             <div className="card-header">
               <span
                 style={{ color: "#7ac043" }}
@@ -100,7 +101,7 @@ function Hakkimizda() {
                 HAYATA DOKUNMAK
               </span>
             </div>
-            <div className="collapse show" data-parent="#accordion">
+            <div className="collapse show" data-parent="#accordion" >
               <div className="card-body" style={{textAlign:"justify"}}>
                Bu bakımdan, kar amacı gütmeyen bir kuruluş
                 olan Herbalife Nutrition Vakfı tarafından iyi beslenmeyi ve

@@ -1,0 +1,22 @@
+.gizlilik_ssl_sertifikasi{
+    
+}
+.gizlilik_ssl{
+    
+}
+/* On screens that are less than 800px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+
+    .gizlilik_ssl_sertifikasi{
+        display: block !important;
+        margin: auto !important;
+        align-content: center !important;
+        width:300px !important;
+    }
+    .gizlilik_ssl{
+        display: block !important;
+        margin: auto !important;
+        align-content: center !important;
+        width:300px !important;
+    }
+}

@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import { Button } from 'primereact/button';
+import SiparisOzet from "../store/SiparisOzet";
+import { useCookies } from "react-cookie";
+
 
 export default function SepetToplamı() {
-  const [miktar, setMiktar] = useState(1)
- 
+    const [orderList,setOrderList]=useState(SiparisOzet.UrunSiparisListesi)
+
+  const [miktar, setMiktar] = useState('')
+  const [cookies, setCookie] = useCookies(['orderList']);
+
+ const urunuSepettenKaldir = ()=>{
+    
+    cookies.orderList.splice(2,1);
+    console.log(cookies.orderList);
+    cookies.orderList.pop();
+    
+ }
   
   const arttır = (e)=>{
     e.preventDefault();
@@ -11,6 +24,13 @@ export default function SepetToplamı() {
     if(miktar>8){
       setMiktar(9);
     }
+    console.log(cookies.orderList);
+   /* cookies.orderList.forEach(element => {
+        console.log(element.urunAdi);
+        
+    }); */
+
+   
   }
 
   const azalt = (e)=>{
@@ -19,6 +39,7 @@ export default function SepetToplamı() {
     if(miktar<1){
       setMiktar(0);
     } 
+    
   }
 
     return (
@@ -36,53 +57,48 @@ export default function SepetToplamı() {
                         <th scope="col-2">Ara Toplam</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>    
-                            <img src={"https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"}
-                                style={{width:"5rem",height:"5rem",marginTop:"-0.5rem"}}
-                            ></img>
-                            <a href="" style={{fontSize:"small"}}>Besleyici Shake Karışımı Formül 1 (Vanilya Aromalı)</a>
+                    
+                        
 
-                        </td>
-                        <td style={{marginTop:"1rem"}}>90₺</td>
-                        <td style={{marginTop:"1rem"}}>
-                            <div style={{display:"inline",float:"left"}}>
-                                <button className="btn btn-light ürünacıklama_azalt" onClick={azalt} style={{fontSize:"x-large"}} >-</button>
-                                <span  style={{marginLeft:".5rem",marginRight:".5rem",fontSize:"medium"}}>{miktar}</span>
-                                <button className="btn btn-light ürünacıklama_arttır" onClick={arttır} style={{fontSize:"x-large",margin:"auto"}}>+
-                                </button>    
-                                    
-                            </div>
-                        </td>
-                        <td>270₺</td>
-                        </tr>
+                        
+                        {cookies.orderList.map((order, index) => (
+                            
+                        <tbody key={index}>
 
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>    
-                            <img src={"https://herbaldamla.com/wp-content/uploads/2021/01/tanisma-paketi-247x247.jpg"}
-                                style={{width:"5rem",height:"5rem",marginTop:"-0.5rem"}}
-                            ></img>
-                            <a href="" style={{fontSize:"small"}}>Besleyici Shake Karışımı Formül 1 (Vanilya Aromalı)</a>
+                            <tr>
+                                <th scope="row"><Button label="x" onClick={urunuSepettenKaldir} className="p-button-text p-button-rounded p-button-danger" /></th>
+                        
+                                <td>    
+                                <img src={order.urununResmi}
+                                    style={{width:"5rem",height:"5rem",marginTop:"-0.5rem"}}
+                                ></img>
+                                <a href="" style={{fontSize:"small"}}>{order.urunAdi}</a>
 
-                        </td>
-                        <td>90₺</td>
-                        <td>
-                            <div style={{display:"inline",float:"left"}}>
-                                <button className="btn btn-light ürünacıklama_azalt" onClick={azalt} style={{fontSize:"x-large"}} >-</button>
-                                <span  style={{marginLeft:".5rem",marginRight:".5rem",fontSize:"medium"}}>{miktar}</span>
-                                <button className="btn btn-light ürünacıklama_arttır" onClick={arttır} style={{fontSize:"x-large",margin:"auto"}}>+
-                                </button>    
-                                    
-                            </div>
-                        </td>
-                        <td>270₺</td>
-                        </tr>
+                                </td>
+                                <td style={{marginTop:"1rem"}}>{order.urunFiyati}₺</td>
+                                <td style={{marginTop:"1rem"}}>
+                                <div style={{display:"inline",float:"left"}}>
+                                    <button className="btn btn-light ürünacıklama_azalt" onClick={azalt} style={{fontSize:"x-large"}} >-</button>
+                                    <span  style={{marginLeft:".5rem",marginRight:".5rem",fontSize:"medium"}}>{order.miktar}</span>
+                                    <button className="btn btn-light ürünacıklama_arttır" onClick={arttır} style={{fontSize:"x-large",margin:"auto"}}>+
+                                    </button>    
+                                        
+                                </div>
+                                </td>
+                                <td>{(order.urunFiyati)*(order.miktar)}₺</td>
+                            </tr>
+                        </tbody>
+                                        //((order.urunFiyati).slice(0, -1))
+
+
+                        ))}
+                        
+
+                       
+                       
                         
                        
-                    </tbody>
+                    
                 </table>
         </div>
    

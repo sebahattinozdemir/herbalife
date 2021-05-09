@@ -6,9 +6,14 @@ import ZoomOutMapIcon from "@material-ui/icons/ZoomOutMap";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import SettingsPhoneIcon from "@material-ui/icons/SettingsPhone";
 import html from "react-inner-html";
+import SiparisOzet from "../store/SiparisOzet";
+import { useCookies } from "react-cookie";
+
 
 export default function ÜrünAcıklama(props) {
   const [miktar, setMiktar] = useState(1);
+  const [cookies, setCookie] = useCookies(['orderList']);
+
 
   const arttır = (e) => {
     e.preventDefault();
@@ -16,6 +21,7 @@ export default function ÜrünAcıklama(props) {
     if (miktar > 8) {
       setMiktar(9);
     }
+    
   };
 
   const azalt = (e) => {
@@ -24,6 +30,8 @@ export default function ÜrünAcıklama(props) {
     if (miktar < 1) {
       setMiktar(0);
     }
+    
+   
   };
 
   const [eklenenUrunler, setEklenenUrunler] = useState([]);
@@ -42,6 +50,25 @@ export default function ÜrünAcıklama(props) {
     setTimeout(() => {
       console.log(eklenenUrunler);
     }, 500);
+
+    
+    let order=
+    {
+      urunAdi: props.location.state.ürünün_ismi,
+      urununResmi: props.location.state.ürünün_resmi,
+      miktar: miktar,
+      urunFiyati: props.location.state.ürünün_son_fiyatı.slice(0, -1),
+    }
+   
+    let orderList=[];
+    if(cookies.orderList.length>0){
+      orderList=cookies.orderList;
+      
+    }
+    orderList.push(order);
+   
+    
+    setCookie("orderList",JSON.stringify(orderList),{ path: '/' });
   };
 
   return (

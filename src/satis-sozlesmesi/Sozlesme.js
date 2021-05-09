@@ -1,12 +1,16 @@
 import React from "react";
 import useDocumentTitle from "../useDocumentTitle";
+import Header from "../headerComponent/Header.js";
+
+
 
 function Sozlesme() {
   useDocumentTitle('Satış Sözleşmesi - Herbalife')
   return (
     <div classNameName="row">
+      <Header page_title="Mesafeli Satış Sözleşmesi" />
       <div className="container">
-        <h1 className="mt-2">Mesafeli Satış Sözleşmesi</h1>
+        
 
         <p>
           1.TARAFLAR
