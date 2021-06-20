@@ -28,9 +28,9 @@ export default class Ürün extends Component {
       <div class="col-12">
         <img src={ürünün_resmi} class="ürünün_resmi" alt=""></img>
         <p className="ürün_indirim_etiketi">İndirim!</p>
-        <a href="">
+        <Link to="siparis-toplami-odeme">
           <Sepet className="sepet_ikonu" />
-        </a>
+        </Link>
         <br />
         <div style={{ height: "auto" }}>
 
@@ -70,8 +70,8 @@ export default class Ürün extends Component {
 
         <br />
         <div className="ürünlerin_fiyat_bilgileri">
-          <p className="ürünün_ilk_fiyatı">{ürünün_ilk_fiyatı}</p>
-          <p className="ürünün_son_fiyatı">{ürünün_son_fiyatı}</p>
+          <p className="ürünün_ilk_fiyatı">{ürünün_ilk_fiyatı}₺</p>
+          <p className="ürünün_son_fiyatı">{ürünün_son_fiyatı}₺</p>
         </div>
       </div>
     );

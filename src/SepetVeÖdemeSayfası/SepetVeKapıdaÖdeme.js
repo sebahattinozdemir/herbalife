@@ -1,8 +1,10 @@
 import React from 'react'
 import KapıdaÖdeme from "../kapıda_ödeme_formu/Kayıt.js";
 import SepetToplamı from "../SepettekiÜrünlerToplamı/SepetToplamı.js";
-
-export default function SepetVeKapıdaÖdeme() {
+import { bindActionCreators } from 'redux';
+import * as cartActions from "./../redux/actions/cartActions";
+import { connect } from 'react-redux';
+function SepetVeKapıdaÖdeme() {
     return (
         <div className="row sepetVeKapıdaÖdemeSayfası" style={{margin:"auto",padding:"1%",height:"auto"}}>
                         
@@ -18,3 +20,12 @@ export default function SepetVeKapıdaÖdeme() {
 </div>
     )
 }
+
+function mapStateToProps(state) {
+        return {
+          cart: state.cartReducer,
+        };
+      }
+      
+export default connect(mapStateToProps)(SepetVeKapıdaÖdeme);
+      

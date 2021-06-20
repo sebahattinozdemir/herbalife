@@ -8,12 +8,13 @@ import SettingsPhoneIcon from "@material-ui/icons/SettingsPhone";
 import html from "react-inner-html";
 import SiparisOzet from "../store/SiparisOzet";
 import { useCookies } from "react-cookie";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import * as cartActions from "./../redux/actions/cartActions";
 
-
-export default function ÜrünAcıklama(props) {
+function ÜrünAcıklama(props) {
   const [miktar, setMiktar] = useState(1);
-  const [cookies, setCookie] = useCookies(['orderList']);
-
+  const [cookies, setCookie] = useCookies(["orderList"]);
 
   const arttır = (e) => {
     e.preventDefault();
@@ -21,7 +22,6 @@ export default function ÜrünAcıklama(props) {
     if (miktar > 8) {
       setMiktar(9);
     }
-    
   };
 
   const azalt = (e) => {
@@ -30,45 +30,12 @@ export default function ÜrünAcıklama(props) {
     if (miktar < 1) {
       setMiktar(0);
     }
-    
-   
   };
 
-  const [eklenenUrunler, setEklenenUrunler] = useState([]);
 
-  const sepeteEkle = () => {
-    setEklenenUrunler((eklenenUrunler) => [
-      ...eklenenUrunler,
-      {
-        urunAdi: props.location.state.ürünün_ismi,
-        urununResmi: props.location.state.ürünün_resmi,
-        miktar: miktar,
-        urunFiyati: props.location.state.ürünün_son_fiyatı,
-      },
-    ]);
 
-    setTimeout(() => {
-      console.log(eklenenUrunler);
-    }, 500);
-
-    
-    let order=
-    {
-      urunAdi: props.location.state.ürünün_ismi,
-      urununResmi: props.location.state.ürünün_resmi,
-      miktar: miktar,
-      urunFiyati: props.location.state.ürünün_son_fiyatı.slice(0, -1),
-    }
-   
-    let orderList=[];
-    if(cookies.orderList.length>0){
-      orderList=cookies.orderList;
-      
-    }
-    orderList.push(order);
-   
-    
-    setCookie("orderList",JSON.stringify(orderList),{ path: '/' });
+  const sepeteEkle = (product) => {
+    props.actions.addToCart({ product});
   };
 
   return (
@@ -84,33 +51,53 @@ export default function ÜrünAcıklama(props) {
         </div>
 
         <div className="col-lg-6 col-xs-12">
-          <p className="urunAciklamaIsmi mt-3">{props.location.state.ürünün_ismi}</p>
+          <p className="urunAciklamaIsmi mt-3">
+            {props.location.state.ürünün_ismi}
+          </p>
           <hr />
           <div className="row mx-auto">
             <div className="col-lg-6 col-sm-12">
               <p className="ürünacıklama_ilk_fiyat">
-                {props.location.state.ürünün_ilk_fiyatı}
+                {props.location.state.ürünün_ilk_fiyatı}₺
               </p>
               <p className="ürünacıklama_indirimli_fiyat">
-                {props.location.state.ürünün_son_fiyatı}
+                {props.location.state.ürünün_son_fiyatı}₺
               </p>
             </div>
 
             <div className="arttırAzalt">
               <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-secondary" onClick={azalt}>-</button>
-                  <button type="button" class="btn btn-light">{miktar}</button>
-                  <button type="button" class="btn btn-secondary" onClick={arttır}>+</button>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <button type="button" class="btn btn-success" onClick={sepeteEkle}>Sepete Ekle</button>
+                <button type="button" class="btn btn-secondary" onClick={azalt}>
+                  -
+                </button>
+                <button type="button" class="btn btn-light">
+                  {miktar}
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  onClick={arttır}
+                >
+                  +
+                </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  onClick={() =>
+                    sepeteEkle({
+                      urunAdi: props.location.state.ürünün_ismi,
+                      urununResmi: props.location.state.ürünün_resmi,
+                      miktar: miktar,
+                      urunFiyati: props.location.state.ürünün_son_fiyatı,
+                    })
+                  }
+                >
+                  Sepete Ekle
+                </button>
               </div>
-
-           </div>
-
+            </div>
           </div>
-
-         
-
 
           <div className="whatsappMesajıGönder" style={{ marginTop: "5rem" }}>
             <a
@@ -145,7 +132,7 @@ export default function ÜrünAcıklama(props) {
           </div>
           <br />
           <hr style={{ marginBottom: "2px" }} />
-          
+
           <p style={{ fontSize: "small" }}>
             {" "}
             <strong>Kategori:</strong> {props.location.state.urun_kategori}
@@ -163,7 +150,11 @@ export default function ÜrünAcıklama(props) {
               <Tab
                 className="acıklama_tabs"
                 tabFor="one"
-                style={{ backgroundColor: "#37ACB0", borderRadius: "0.5rem",color:"white" }}
+                style={{
+                  backgroundColor: "#37ACB0",
+                  borderRadius: "0.5rem",
+                  color: "white",
+                }}
               >
                 Açıklama
               </Tab>
@@ -171,7 +162,11 @@ export default function ÜrünAcıklama(props) {
               <Tab
                 className="acıklama_tabs"
                 tabFor="two"
-                style={{ backgroundColor: "#37ACB0", borderRadius: "0.5rem",color:"white"}}
+                style={{
+                  backgroundColor: "#37ACB0",
+                  borderRadius: "0.5rem",
+                  color: "white",
+                }}
               >
                 Ek Bilgi
               </Tab>
@@ -198,3 +193,20 @@ export default function ÜrünAcıklama(props) {
     </div>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    currentCategory: state.changeCategoryReducer,
+    products: state.productListReducer,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      addToCart: bindActionCreators(cartActions.addToCart, dispatch),
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ÜrünAcıklama);

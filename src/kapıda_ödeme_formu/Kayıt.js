@@ -3,6 +3,9 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./Kayıt.css";
+import { bindActionCreators } from 'redux';
+import * as cartActions from "./../redux/actions/cartActions";
+import { connect } from 'react-redux';
 
 
 // Email validation
@@ -93,9 +96,13 @@ class Kayıt extends Component {
         province:province,
         address : address,
         additionalNotes:additionalNotes,
+        siparisler: this.props.cart.map(cartItem=>{
+          return {urunAdi:cartItem.product.urunAdi,miktar:cartItem.product.miktar,fiyat:cartItem.product.urunFiyati,urunResmi:cartItem.product.urununResmi}
+        })
 
       };
 
+  
       emailjs.send(
         "herbalalerya", 
         "herbalalerya_template",
@@ -112,7 +119,8 @@ class Kayıt extends Component {
         City:${city}
         Province:${province}
         Address: ${address}
-        AdditionalNotes:${additionalNotes}
+        AdditionalNotes:${additionalNotes},
+        siparisler:${JSON.stringify(this.props.cart)}
 
       `);
 
@@ -361,4 +369,20 @@ class Kayıt extends Component {
   }
 }
 
-export default Kayıt;
+function mapStateToProps(state) {
+  return {
+    cart: state.cartReducer,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      removeFromCart: bindActionCreators(cartActions.removeFromCart, dispatch),
+      addQuantityToProduct: bindActionCreators(cartActions.addQuantityToProduct, dispatch),
+      decreaseQuantityToProduct: bindActionCreators(cartActions.decreaseQuantityToProduct, dispatch),
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Kayıt);
