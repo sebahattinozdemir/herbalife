@@ -5,6 +5,8 @@ import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import CallIcon from "@material-ui/icons/Call";
 import SearchIcon from "@material-ui/icons/Search";
 import { Divider } from "primereact/divider";
+import logo from "./herbalalerya_logo.png";
+import logo2 from "./hl2.png";
 
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
@@ -47,7 +49,7 @@ function Menu(props) {
               <a href="/">
                 <img
                   className="img-fluid analogo"
-                  src="https://wooticaret.com/herbalife/wp-content/uploads/2020/10/logo.png"
+                  src={logo2}
                   alt="Herbalalerya"
                   title="Herbalalerya"
                 />
