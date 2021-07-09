@@ -289,8 +289,8 @@ function MainPage() {
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
                       ürünün_ismi={product.urunAdi}
-                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
-                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      ürünün_ilk_fiyatı={product.urunFiyati}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyatiW}
                       urun_aciklama={product.urunAciklamasi}
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
@@ -336,8 +336,8 @@ function MainPage() {
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
                       ürünün_ismi={product.urunAdi}
-                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
-                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      ürünün_ilk_fiyatı={product.urunFiyati}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati}
                       urun_aciklama={product.urunAciklamasi}
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
@@ -383,8 +383,8 @@ function MainPage() {
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
                       ürünün_ismi={product.urunAdi}
-                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
-                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      ürünün_ilk_fiyatı={product.urunFiyati}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati}
                       urun_aciklama={product.urunAciklamasi}
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
@@ -430,8 +430,8 @@ function MainPage() {
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
                       ürünün_ismi={product.urunAdi}
-                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
-                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      ürünün_ilk_fiyatı={product.urunFiyati}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati}
                       urun_aciklama={product.urunAciklamasi}
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
@@ -477,8 +477,8 @@ function MainPage() {
                       /* ürünün_resmi,ürünün_kategorisi,ürünün_ismi,ürünün_linki,ürünün_ilk_fiyatı,ürünün_son_fiyatı */
                       ürünün_resmi={product.urunResmi}
                       ürünün_ismi={product.urunAdi}
-                      ürünün_ilk_fiyatı={product.urunFiyati + "₺"}
-                      ürünün_son_fiyatı={product.urunIndirimliFiyati + "₺"}
+                      ürünün_ilk_fiyatı={product.urunFiyati}
+                      ürünün_son_fiyatı={product.urunIndirimliFiyati}
                       urun_aciklama={product.urunAciklamasi}
                       urun_ekbilgi={product.urunEkbilgisi}
                       urun_kategori={product.urunKategorisi}
