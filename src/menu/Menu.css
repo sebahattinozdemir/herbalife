@@ -9,7 +9,10 @@
 .menu-item:focus{
     background-color: #333;
 }
-
+.analogo{
+    height: 7rem !important;
+    margin-top: -2rem !important;
+}
 .anasepet:hover{
     color:white;
     background-color: black;
@@ -30,6 +33,7 @@
     }
     .analogo{
         width:10rem !important;
+        margin-bottom: -2rem !important;
     }
     .anasepet{
         float:right !important;
