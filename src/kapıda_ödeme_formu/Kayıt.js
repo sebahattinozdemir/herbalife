@@ -121,7 +121,6 @@ class Kayıt extends Component {
         Address: ${address}
         AdditionalNotes:${additionalNotes},
         siparisler:${JSON.stringify(this.props.cart)}
-
       `);
 
       this.toastifySuccess();
