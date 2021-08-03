@@ -44,22 +44,22 @@ function Footer() {
             </p>
             <ul className="list-group footer-list-group">
               <li >
-                <Link className="text-decoration-none footer-btn-link" to="/" onClick={scrollToTop}>
+                <Link className="text-decoration-none footer-btn-link" to="/magaza/takviye-edici-gidalar" onClick={scrollToTop}>
                   Sporcu Beslenmesi
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/" onClick={scrollToTop}>
+                <Link className="text-decoration-none footer-btn-link" to="/magaza/tanitim-urunleri" onClick={scrollToTop}>
                   Shaker / Suluklar
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/" onClick={scrollToTop}>
+                <Link className="text-decoration-none footer-btn-link" to="/magaza/kisisel-bakim" onClick={scrollToTop}>
                   Kişisel Bakım Ürünleri
                 </Link>
               </li>
               <li  >
-                <Link className="text-decoration-none footer-btn-link" to="/" onClick={scrollToTop}>
+                <Link className="text-decoration-none footer-btn-link" to="/magaza/kilo-yonetimi" onClick={scrollToTop}>
                   Atıştırmalıklar
                 </Link>
               </li>
