@@ -210,7 +210,7 @@ class Kayıt extends Component {
                 
               }}
             >
-               KAPIDA ÖDEME SAYFASI
+               Kapıda Ödeme Sayfası
             </p>
             
             <form id="contact-form" style={{marginLeft:"10%",marginRight:"10%"}} onSubmit={this.handleSubmit} noValidate>

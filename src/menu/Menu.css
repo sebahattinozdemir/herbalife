@@ -23,6 +23,30 @@
     right:5rem;
 }
 
+
+
+.icon_top{
+    font-size: x-large !important;
+    /*color: #2E6772 !important;*/
+
+  transition: 0.6s linear;
+  animation-duration: 50ms;
+  animation-name: icon_top;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* The animation code */
+@keyframes icon_top {
+    from {color: black;}
+    to {color: #7ac043}
+  }
+
+.icon_top:hover{
+    color:#45C1DA !important;
+}
+
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 1220px) {
     .nav{
@@ -44,7 +68,23 @@
     .yediyirmidort{
         display: none !important;
     }
+    .sepetUrunSayisi{
+        float:right !important;
+        position:absolute !important;
+        top:1rem !important;
+        right:1rem !important;
+    }
 
 
 }
 
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sepetUrunSayisi{
+        float:right !important;
+        position:absolute !important;
+        top:1rem !important;
+        right:1rem !important;
+    }
+
+}

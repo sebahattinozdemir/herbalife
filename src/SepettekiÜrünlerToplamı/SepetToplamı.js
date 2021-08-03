@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "primereact/button";
-
+import "./SepetToplamı.css";
 import { bindActionCreators } from "redux";
 import * as cartActions from "./../redux/actions/cartActions";
 import { connect } from "react-redux";
+import useDocumentTitle from "../useDocumentTitle";
+
 
 function SepetToplamı(props) {
   const [miktar, setMiktar] = useState("");
@@ -45,53 +47,63 @@ function SepetToplamı(props) {
     calculateTotalPrice()
   }, [])
 
+  useDocumentTitle('Sepet - Herbalife')
   return (
+
     <div
       className="container"
       style={{ backgroundColor: "white", borderRadius: "0.5rem" }}
     >
-      <h3>SEPET</h3>
+     
       <br />
       <table class="table caption-top">
         <caption></caption>
         <thead>
           <tr>
-            <th scope="col-1">#</th>
-            <th scope="col-4">Ürün</th>
-            <th scope="col-2">Fiyat</th>
-            <th scope="col-3">Miktar</th>
-            <th scope="col-2">Ara Toplam</th>
+            <th scope="col-1" className="tabloRow">#</th>
+            <th scope="col-5" className="tabloUrun">Ürün</th>
+            <th scope="col-2" className="tabloFiyat">Fiyat</th>
+            <th scope="col-" className="tabloMiktar">Miktar</th>
+            <th scope="col-2" className="tabloAraToplam">Ara Toplam</th>
           </tr>
         </thead>
 
         {props.cart.map((cartItem, index) => (
           <tbody key={index}>
             <tr>
-              <th scope="row">
+              
+
+              <td>
                 <Button
                   label="x"
                   onClick={() => urunuSepettenKaldir(cartItem)}
-                  className="p-button-text p-button-rounded p-button-danger"
+                  className="p-button-text p-button-rounded p-button-danger sepettenCikar"
+                  style={{float:"left",marginLeft:"-1rem"}}
                 />
-              </th>
-
-              <td>
                 <img
+                  className="sepetUrunResmi"
                   src={cartItem.product.urununResmi}
                   style={{
                     width: "5rem",
                     height: "5rem",
                     marginTop: "-0.5rem",
+                    float:"left",
                   }}
                 />
 
-                <p style={{ fontSize: "small" }}>{cartItem.product.urunAdi}</p>
+                
               </td>
-              <td style={{ marginTop: "1rem" }}>
+              <td>
+                  <p className="tabloIciUrunİsmi" style={{ fontSize: "small",float:"left" }}>{cartItem.product.urunAdi}</p>
+                  <br/>
+                  <p className="miktarXfiyat"><b>{cartItem.product.miktar} x {cartItem.product.urunFiyati}₺ = {cartItem.product.urunFiyati * cartItem.product.miktar}₺</b> </p>
+
+              </td>
+              <td className="tabloFiyat" style={{  }}>
                 {cartItem.product.urunFiyati}₺
               </td>
               <td style={{ marginTop: "1rem" }}>
-                <div style={{ display: "inline", float: "left" }}>
+                <div className="miktarArttirAzaltDiv" style={{ display: "inline"}}>
                   <button
                     className="btn btn-light ürünacıklama_azalt"
                     onClick={() => azalt(cartItem)}
@@ -100,6 +112,7 @@ function SepetToplamı(props) {
                     -
                   </button>
                   <span
+                   className="butonArasiMiktar"
                     style={{
                       marginLeft: ".5rem",
                       marginRight: ".5rem",
@@ -117,16 +130,17 @@ function SepetToplamı(props) {
                   </button>
                 </div>
               </td>
-              <td>{cartItem.product.urunFiyati * cartItem.product.miktar}₺</td>
+              <td className="tabloAraToplam">{cartItem.product.urunFiyati * cartItem.product.miktar}₺</td>
             </tr>
           </tbody>
         ))}
       </table>
 
       <div className="mb-4 pb-4">
-        <b style={{ fontSize: "larger" }}>TOPLAM = {totalPrice} ₺</b>
+        <b className="sepetToplamTutari" style={{ fontSize: "large" }}>Sepet Toplamı = {totalPrice} ₺</b>
       </div>
     </div>
+   
   );
 }
 

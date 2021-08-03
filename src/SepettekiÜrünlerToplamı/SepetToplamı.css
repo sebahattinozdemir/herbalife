@@ -1,0 +1,72 @@
+
+.miktarXfiyat{
+    display: none !important;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+
+    .sepetUrunResmi{
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    th{
+        font-size: small !important;
+        color: #7ac043 !important;
+    }
+    .ürünacıklama_arttır{
+        font-size: small !important;
+        width: 2rem !important;
+        height: 2rem !important;
+        float: left !important;
+        
+        
+    }
+    .ürünacıklama_azalt{
+        font-size: small !important;
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+    .tabloAraToplam,.tabloFiyat{
+        display: none !important;
+
+    }
+    .tabloIciUrunİsmi{
+        font-size: small !important;
+        float: center !important;
+        overflow: hidden !important;
+        display: block !important;
+        margin: auto !important;
+        text-align: justify !important;
+    }
+    .sepettenCikar{
+        font-size: medium !important;
+        
+    }
+    .miktarXfiyat{
+        display:contents !important;
+        font-size: small !important;
+        margin-top: 1rem !important;
+    }
+    .sepetToplamTutari{
+        font-size: medium !important;
+    }
+    .butonArasiMiktar{
+        
+        font-size: small !important;
+        text-align: center !important;
+        padding: 2px !important;
+        
+    }
+    .miktarArttirAzaltDiv{
+        justify-content: center !important;
+        display: block !important;
+        margin: auto !important;
+        float: right !important;
+        
+        padding-left: 1rem !important;
+    }
+    
+
+}

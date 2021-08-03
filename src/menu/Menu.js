@@ -85,8 +85,9 @@ function Menu(props) {
                     border: "1px gray solid",
                     borderRadius: "0.5rem",
                   }}
+                  
                 />
-                {props.cart.length > 0 ? <span className="badge badge-danger">{props.cart.length}</span> : <span></span>}
+                {props.cart.length > 0 ? <span className="badge badge-danger sepetUrunSayisi">{props.cart.length}</span> : <span></span>}
                 
               </Link>
             </div>
@@ -98,7 +99,10 @@ function Menu(props) {
                   style={{ marginRight: "2rem" }}
                   title="7/24 | Siparis Hizmeti"
                 >
-                  <AccessTimeIcon /> 7/24
+                  <a className="footerphone"
+                  target="_blank"
+                  href="https://www.google.com/maps?q=Fatih+Mahallesi+200.+Cadde+No:12+Daire:10+Merkez/Isparta&rlz=1C1GCEU_enTR867TR868&um=1&ie=UTF-8&sa=X&ved=2ahUKEwj11Oq4uJXyAhVPg_0HHX-WBAcQ_AUoAXoECAEQAw"
+                ><AccessTimeIcon className="icon_top"/> </a> 7/24
                 </p>
               </NavbarText>
 
@@ -108,7 +112,10 @@ function Menu(props) {
                   data-toggle="tooltip"
                   title=" 0542 458 78 78"
                 >
-                  <CallIcon /> 0546 475 38 83
+                 <a className="footerphone"
+                  href="tel: +905345699125"
+                  target="_blank"
+                > <CallIcon className="icon_top"/></a> 0546 475 38 83
                 </p>
               </NavbarText>
             </div>
